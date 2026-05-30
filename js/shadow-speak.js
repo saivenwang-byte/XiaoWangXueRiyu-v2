@@ -221,8 +221,8 @@ const ShadowSpeak = (() => {
       const wx = isWeChat();
       toast(
         wx
-          ? "回放失败：请再点一次 ▶；仍不行请右上角「···」→ 在浏览器中打开"
-          : "回放失败：请再点一次 ▶"
+          ? "回放失败：① 再点 ▶ ② 允许媒体播放 ③ 右上角 ⋯→在浏览器打开 ④ 换 WiFi/流量"
+          : "回放失败：① 再点 ▶ ② 检查音量与静音 ③ 刷新页面后重试"
       );
     }
   }
@@ -501,13 +501,89 @@ const ShadowSpeak = (() => {
       startSilenceWatch(btn);
       toast(
         mode === "dialogue"
-          ? "录音中… 读完点 🎤 结束，再点 ✓ 评估"
-          : "录音中… 再点 🎤 结束，静音 3 秒自动停"
+          ? "按住 🎤 录音，松手结束；再点 ✓ 评估"
+          : "按住 🎤 录音，松手结束（静音 3 秒也会自动停）"
       );
     } catch (_) {
       cleanupRecordUi();
       toast("请允许麦克风权限");
     }
+  }
+
+  function recordPayloadFromRow(btn) {
+    const row = btn.closest(".ss-action-row");
+    const playBtn = row?.querySelector("[data-speak],[data-jp]");
+    let payload = playBtn?.dataset.speak || playBtn?.dataset.jp || "";
+    try {
+      if (playBtn?.dataset.speak) payload = JSON.parse(playBtn.dataset.speak);
+    } catch (_) {}
+    return payload;
+  }
+
+  function bindRecordButton(btn) {
+    if (btn.dataset.ssRecBound === "1") return;
+    btn.dataset.ssRecBound = "1";
+    const rowId = btn.dataset.ssRow;
+    const row = btn.closest(".ss-action-row");
+    let holdActive = false;
+    let suppressClick = false;
+
+    async function beginHold() {
+      if (holdActive) return;
+      if (mediaRecorder && recordRowId === rowId && mediaRecorder.state === "recording") return;
+      holdActive = true;
+      suppressClick = true;
+      const mode = btn.dataset.ssMode || row?.dataset?.ssMode || "";
+      if (mode === "dialogue") clearDialogueScores();
+      await startRecord(btn, rowId, recordPayloadFromRow(btn));
+    }
+
+    async function endHold() {
+      if (!holdActive) return;
+      holdActive = false;
+      if (mediaRecorder && recordRowId === rowId && mediaRecorder.state === "recording") {
+        await stopRecord(btn);
+      }
+    }
+
+    btn.addEventListener(
+      "pointerdown",
+      (e) => {
+        if (e.pointerType === "mouse" && e.button !== 0) return;
+        e.stopPropagation();
+        e.preventDefault();
+        try {
+          btn.setPointerCapture(e.pointerId);
+        } catch (_) {}
+        beginHold();
+      },
+      { passive: false }
+    );
+    btn.addEventListener("pointerup", (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      try {
+        btn.releasePointerCapture(e.pointerId);
+      } catch (_) {}
+      endHold();
+    });
+    btn.addEventListener("pointercancel", () => {
+      endHold();
+    });
+    btn.addEventListener("lostpointercapture", () => {
+      endHold();
+    });
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (suppressClick) {
+        suppressClick = false;
+        return;
+      }
+      const mode = btn.dataset.ssMode || row?.dataset?.ssMode || "";
+      if (mode === "dialogue") clearDialogueScores();
+      await startRecord(btn, rowId, recordPayloadFromRow(btn));
+    });
   }
 
   function bind(root) {
@@ -524,24 +600,7 @@ const ShadowSpeak = (() => {
         }
       });
     });
-    root.querySelectorAll("[data-ss-record]").forEach((btn) => {
-      if (btn.dataset.ssRecBound === "1") return;
-      btn.dataset.ssRecBound = "1";
-      const rowId = btn.dataset.ssRow;
-      const row = btn.closest(".ss-action-row");
-      const playBtn = row?.querySelector("[data-speak],[data-jp]");
-      btn.addEventListener("click", async (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        const mode = btn.dataset.ssMode || row?.dataset?.ssMode || "";
-        if (mode === "dialogue") clearDialogueScores();
-        let payload = playBtn?.dataset.speak || playBtn?.dataset.jp || "";
-        try {
-          if (playBtn?.dataset.speak) payload = JSON.parse(playBtn.dataset.speak);
-        } catch (_) {}
-        await startRecord(btn, rowId, payload);
-      });
-    });
+    root.querySelectorAll("[data-ss-record]").forEach((btn) => bindRecordButton(btn));
     root.querySelectorAll("[data-ss-replay]").forEach((btn) => {
       if (btn.dataset.ssReplayBound === "1") return;
       btn.dataset.ssReplayBound = "1";

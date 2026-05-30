@@ -161,13 +161,25 @@ const SpeakUI = (() => {
       const mobile = wechat || /iPhone|iPad|iPod|Android/i.test(ua);
       const ver =
         typeof ShareWechat !== "undefined" && ShareWechat.CACHE_VER ? ShareWechat.CACHE_VER : "";
-      showToast(
-        wechat
-          ? `语音加载失败，请再点一次喇叭；确认链接带 ?v=${ver || "最新"}，并允许流量/WiFi`
-          : mobile
-            ? "朗读失败：请再点一次；首次加载约 1～2 秒，请保持网络畅通"
-            : "朗读失败：请再点一次；首次加载语音包约 1～2 秒"
-      );
+      const gitee =
+        Array.isArray(window.HYOUGA_TTS_MIRROR_ORIGINS) && window.HYOUGA_TTS_MIRROR_ORIGINS[0]
+          ? window.HYOUGA_TTS_MIRROR_ORIGINS[0].replace(/\/$/, "")
+          : "";
+      if (wechat) {
+        showToast(
+          `语音加载失败：① 再点喇叭 ② 确认 ?v=${ver || "最新"} ③ 允许 WiFi/流量` +
+            (gitee ? ` ④ 国内慢可换 ${gitee}/index.html?v=${ver || "最新"}` : ""),
+          5200
+        );
+      } else if (mobile) {
+        showToast(
+          `朗读失败：① 再点喇叭 ② 等 1～2 秒 ③ 刷新 ?v=${ver || "最新"}` +
+            (gitee ? " ④ GitHub 慢时试 Gitee 镜像链接" : ""),
+          4200
+        );
+      } else {
+        showToast("朗读失败：再点喇叭；首次加载约 1～2 秒，请保持网络畅通", 3200);
+      }
     }
     return ok;
   }

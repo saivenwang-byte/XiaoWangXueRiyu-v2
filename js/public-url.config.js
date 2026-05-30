@@ -11,5 +11,10 @@ window.HYOUGA_PUBLIC_ORIGIN = "https://saivenwang-byte.github.io/XiaoWangXueRiyu
 /** 语音包静态根（不含 /tts-cache/）；留空 = 与当前页面同源 */
 window.HYOUGA_TTS_ORIGIN = "";
 
+/** 国内镜像（GitHub 慢/失败时依次尝试）；与 docs/deploy-target.json gitee 一致 */
+window.HYOUGA_TTS_MIRROR_ORIGINS = [
+  "https://saivenwang-byte.gitee.io/xiao-wang-xue-riyu-v2",
+];
+
 /** 与 share-wechat.js CACHE_VER、tts-cache/sw-manifest.json 同步 */
-window.HYOUGA_TTS_CACHE_VER = "406";
+window.HYOUGA_TTS_CACHE_VER = "410";

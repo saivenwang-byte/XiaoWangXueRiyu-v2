@@ -2210,8 +2210,10 @@ body.mvp-app .gate-tab.active:active {
 .btn-ss-replay,
 .btn-ss-evaluate {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -2220,6 +2222,8 @@ body.mvp-app .gate-tab.active:active {
   line-height: 1;
   cursor: pointer;
   box-shadow: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-ss-evaluate {
@@ -6902,10 +6906,10 @@ body.mvp-app.is-splash-open #main-content {
   --splash-safe-top: env(safe-area-inset-top, 0px);
   --splash-safe-bottom: env(safe-area-inset-bottom, 0px);
   --splash-brand-inset-top: max(10px, env(safe-area-inset-top, 0px));
-  --splash-cta-inset-bottom: max(12px, env(safe-area-inset-bottom, 0px));
-  --splash-cta-lift: 8px;
+  --splash-cta-inset-bottom: max(4px, env(safe-area-inset-bottom, 0px));
+  --splash-cta-lift: 0px;
   --splash-cover-anchor-x: 50%;
-  --splash-cover-anchor-y: 50%;
+  --splash-cover-anchor-y: 44%;
   --splash-cover-fit: cover;
   position: relative;
   box-sizing: border-box;

@@ -37,7 +37,7 @@ const SpeechEngine = (() => {
     return "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2";
   }
 
-  /** 页面同源（GitHub Pages 最新）→ jsDelivr CDN → 公网根（首点失败时依次试） */
+  /** 页面同源 → 自定义 TTS 源 → Gitee 等镜像 → 公网 GitHub 根 */
   function ttsMp3UrlCandidates(line) {
     const file = `${ttsCacheKey(line)}.mp3`;
     const urls = [];
@@ -56,6 +56,11 @@ const SpeechEngine = (() => {
         urls.push(`${custom}/tts-cache/${file}`);
       }
     }
+    const mirrors = (typeof window !== "undefined" && window.HYOUGA_TTS_MIRROR_ORIGINS) || [];
+    mirrors.forEach((origin) => {
+      const o = String(origin || "").trim().replace(/\/$/, "");
+      if (o && /^https:\/\//i.test(o)) urls.push(`${o}/tts-cache/${file}`);
+    });
     urls.push(`${ttsPublicOrigin()}/tts-cache/${file}`);
     return [...new Set(urls)];
   }
