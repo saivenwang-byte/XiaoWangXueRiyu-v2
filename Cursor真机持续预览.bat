@@ -22,6 +22,6 @@ if errorlevel 1 (
   timeout /t 3 /nobreak >nul
 )
 
-start "" "%URL%"
-echo  已打开。保存 css/js/html 后真机框自动刷新一次（须 watch 服务；可关「改码即刷」）。
+python scripts\open-preview-url.py "%URL%"
+echo  已打开（Edge/Chrome）。保存 css/js/html 后真机框自动刷新一次（须 watch 服务；可关「改码即刷」）。
 pause

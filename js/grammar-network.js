@@ -152,6 +152,21 @@ const GrammarNetwork = (() => {
     return `gn-link gn-link-${type}`;
   }
 
+  /** 五关课内：文法关联链仅作知识卡式提示，不跳转（用户 2026-05-30 拍板） */
+  function isHintOnlyLink(link) {
+    if (!link || link.type === "contrast") return false;
+    return isMvpFiveGatePanel();
+  }
+
+  function renderLinkEl(link, nodeIdx) {
+    const cls = linkClass(link.type) + (isHintOnlyLink(link) ? " gn-link-hint-only" : "");
+    const label = escapeHtml(link.label);
+    if (isHintOnlyLink(link)) {
+      return `<span class="${cls}" role="note">${label}</span>`;
+    }
+    return `<button type="button" class="${cls}" data-gn-link-idx="${nodeIdx}">${label}</button>`;
+  }
+
   function lessonModalEl() {
     let el = document.getElementById("lesson-modal");
     if (!el) {
@@ -573,10 +588,7 @@ const GrammarNetwork = (() => {
       SpeechEngine.warmPhrases(collectDepthWarmLines(node.depthSections));
     }
     const linksHtml = (node.links || [])
-      .map(
-        (link) =>
-          `<button type="button" class="${linkClass(link.type)}" data-gn-link-idx="${lesson.grammarNodes.indexOf(node)}">${escapeHtml(link.label)}</button>`
-      )
+      .map((link) => renderLinkEl(link, lesson.grammarNodes.indexOf(node)))
       .join("");
     return `
       <div class="gn-node-body-inner">

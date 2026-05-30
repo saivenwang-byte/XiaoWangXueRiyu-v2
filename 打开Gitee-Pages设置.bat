@@ -18,11 +18,11 @@ echo.
 echo  [请你做 1 次 · 约 1 分钟]
 echo.
 echo   1. 浏览器登录 https://gitee.com
-echo   2. 打开仓库（已自动打开）：
+echo   2. 打开仓库（已自动打开，注意用户名是 saiven 不是 saiwen）：
 echo      https://gitee.com/saivenwang-byte/xiao-wang-xue-riyu-v2
-echo   3. 左侧或顶部菜单 → 服务 → Gitee Pages
-echo      （若未见「服务」，点仓库名下方「···」或设置）
-echo   4. 分支选 main，目录选 /（根目录）→ 启动
+echo   3. 仓库页 → 服务 → Gitee Pages
+echo      （或：设置 → 左侧 Gitee Pages；勿手输 …/pages 会 404）
+echo   4. 分支 main，目录 / → 启动
 echo   5. 等 1～3 分钟，再双击：帮你发布-Gitee国内.bat
 echo.
 echo  [Pages 生效后的学员链接]

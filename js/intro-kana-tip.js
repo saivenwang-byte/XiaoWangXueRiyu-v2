@@ -11,6 +11,7 @@ const IntroKanaTip = (() => {
   }
 
   function speakBtn(kana) {
+    if (typeof KanaSpeak !== "undefined") return KanaSpeak.btnHtml(kana);
     if (typeof SpeakUI === "undefined") return "";
     const payload = { jp: kana, kana, ttsLine: kana };
     return SpeakUI.btnHtml(payload, 'class="btn-speak-icon" title="听"');

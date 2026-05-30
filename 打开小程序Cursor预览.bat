@@ -13,13 +13,14 @@ echo.
 
 python scripts\start-local-server.py --probe >nul 2>&1
 if errorlevel 1 (
-  echo  启动本地服务 8765 …
-  start "日语学习-本地服务" /min cmd /c "cd /d "%~dp0" && python -m http.server 8765"
+  echo  启动本地服务 8765 （改码即刷）…
+  python scripts\start-local-server.py --start
   timeout /t 3 /nobreak >nul
 )
 
-start "" "%PHONE%"
+python scripts\open-preview-url.py "%PHONE%"
 echo.
+echo  已打开（Edge/Chrome）。关页面前请先关「改码即刷」或整页退出，避免 Electron 壳报错。
 echo  Cursor 侧边预览：Ctrl+Shift+P → Simple Browser: Show
 echo  粘贴: %PHONE%
 echo.

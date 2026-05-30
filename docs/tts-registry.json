@@ -2184,7 +2184,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -7775,7 +7776,8 @@
       "hasMp3": true,
       "size": 7488,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -8473,7 +8475,8 @@
       "hasMp3": true,
       "size": 10080,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -9594,7 +9597,8 @@
       "hasMp3": true,
       "size": 9216,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -9895,7 +9899,8 @@
       "hasMp3": true,
       "size": 8640,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -11739,7 +11744,8 @@
       "hasMp3": true,
       "size": 8640,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -12138,7 +12144,8 @@
       "hasMp3": true,
       "size": 10080,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -13583,7 +13590,8 @@
       "hasMp3": true,
       "size": 10224,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -17600,7 +17608,8 @@
       "hasMp3": true,
       "size": 10368,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -18246,7 +18255,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -18736,7 +18746,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -19268,7 +19279,8 @@
         "js/data/lessons-data.js:string",
         "js/data/intro-content.js:string",
         "js/data/intro-content.js:kana→dense",
-        "js/data/intro-content.js:kana"
+        "js/data/intro-content.js:kana",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -19945,7 +19957,8 @@
       "hasMp3": true,
       "size": 9072,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -20598,7 +20611,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -20680,7 +20694,8 @@
       "sources": [
         "js/data/lessons-data.js:string",
         "js/data/unit2-dialogue-abc-l5-8.js:string",
-        "js/data/unit2-knowledge-tips.js:string"
+        "js/data/unit2-knowledge-tips.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -21038,7 +21053,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -21060,7 +21076,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -21353,7 +21370,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -24941,7 +24959,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -25627,7 +25646,8 @@
       "hasMp3": true,
       "size": 8640,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -25638,7 +25658,8 @@
       "hasMp3": true,
       "size": 10224,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -26081,7 +26102,8 @@
         "js/data/lessons-data.js:string",
         "js/data/intro-content.js:string",
         "js/data/intro-content.js:kana→dense",
-        "js/data/intro-content.js:kana"
+        "js/data/intro-content.js:kana",
+        "js/data/unit1-knowledge-tips.js:string"
       ]
     },
     {
@@ -26180,7 +26202,8 @@
       "hasMp3": true,
       "size": 9936,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -26248,7 +26271,8 @@
       "hasMp3": true,
       "size": 9936,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -26344,7 +26368,9 @@
       "hasMp3": true,
       "size": 8784,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27275,7 +27301,8 @@
       "hasMp3": true,
       "size": 9792,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27470,7 +27497,8 @@
       "hasMp3": true,
       "size": 9360,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27481,7 +27509,8 @@
       "hasMp3": true,
       "size": 9936,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27661,7 +27690,9 @@
       "hasMp3": true,
       "size": 9936,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27825,7 +27856,8 @@
       "hasMp3": true,
       "size": 10656,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27836,7 +27868,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -27940,7 +27973,9 @@
       "hasMp3": true,
       "size": 9936,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28006,7 +28041,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28208,7 +28244,8 @@
       "hasMp3": true,
       "size": 10224,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28423,7 +28460,8 @@
       "hasMp3": true,
       "size": 8496,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28698,7 +28736,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28753,7 +28792,8 @@
       "hasMp3": true,
       "size": 9072,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -28907,7 +28947,8 @@
       "hasMp3": true,
       "size": 10368,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string"
       ]
     },
     {
@@ -29140,7 +29181,8 @@
       "hasMp3": true,
       "size": 9216,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -29209,7 +29251,8 @@
       "hasMp3": true,
       "size": 10656,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -29389,7 +29432,8 @@
       "hasMp3": true,
       "size": 10224,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -29513,7 +29557,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string"
       ]
     },
     {
@@ -30656,7 +30701,8 @@
       "hasMp3": true,
       "size": 9360,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -31115,7 +31161,8 @@
       "hasMp3": true,
       "size": 10656,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -31126,7 +31173,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -33884,7 +33932,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -35094,7 +35143,8 @@
       "hasMp3": true,
       "size": 10080,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -35321,7 +35371,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -36228,7 +36279,8 @@
       "hasMp3": true,
       "size": 11088,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -36843,7 +36895,8 @@
       "hasMp3": true,
       "size": 9792,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -37437,7 +37490,8 @@
       "hasMp3": true,
       "size": 10080,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/unit2-knowledge-tips.js:string"
       ]
     },
     {
@@ -41661,7 +41715,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -42344,7 +42399,8 @@
       "hasMp3": true,
       "size": 8928,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -42781,7 +42837,8 @@
       "hasMp3": true,
       "size": 9792,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -45487,7 +45544,8 @@
       "hasMp3": true,
       "size": 11088,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -45658,7 +45716,8 @@
       "hasMp3": true,
       "size": 9504,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -45816,7 +45875,8 @@
       "hasMp3": true,
       "size": 8496,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -46027,7 +46087,8 @@
       "hasMp3": true,
       "size": 8352,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -46392,7 +46453,8 @@
       "hasMp3": true,
       "size": 9648,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {
@@ -47564,7 +47626,8 @@
       "hasMp3": true,
       "size": 9504,
       "sources": [
-        "js/data/lessons-data.js:string"
+        "js/data/lessons-data.js:string",
+        "js/data/lessons-9-24-knowledge-tips.js:string"
       ]
     },
     {

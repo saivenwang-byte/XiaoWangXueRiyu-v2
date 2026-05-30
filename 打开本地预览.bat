@@ -32,9 +32,9 @@ if errorlevel 1 (
   echo  本地服务正常
 )
 
-start "" "%URL%"
+python scripts\open-preview-url.py "%URL%"
 echo.
-echo  已打开浏览器。Cursor 里也可复制上面链接预览。
+echo  已打开浏览器（Edge/Chrome）。Cursor 里也可复制上面链接预览。
 echo.
 echo  [双通道] 小程序真机框 390x844: 打开双通道预览.bat 或 打开小程序Cursor预览.bat
 echo  规范: docs\双通道验收-浏览器与手机真机框.md

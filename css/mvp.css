@@ -1617,6 +1617,15 @@ body.mvp-app .nav-item.active {
 }
 .gn-link-extension { background: var(--c-accent-green-bg); color: var(--c-accent-green); }
 
+/* 文法关联 · 仅提示（不可点 · 类似知识卡灰字链） */
+.gn-link-hint-only {
+  display: block;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.92;
+  border: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
 .gn-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .gn-tag { font-size: 12px; background: #efebe9; padding: 4px 8px; border-radius: 8px; }
 
@@ -6894,9 +6903,9 @@ body.mvp-app.is-splash-open #main-content {
   --splash-safe-bottom: env(safe-area-inset-bottom, 0px);
   --splash-brand-inset-top: max(10px, env(safe-area-inset-top, 0px));
   --splash-cta-inset-bottom: max(12px, env(safe-area-inset-bottom, 0px));
-  --splash-cta-lift: 50px;
+  --splash-cta-lift: 8px;
   --splash-cover-anchor-x: 50%;
-  --splash-cover-anchor-y: calc(52% + 10px);
+  --splash-cover-anchor-y: 50%;
   --splash-cover-fit: cover;
   position: relative;
   box-sizing: border-box;

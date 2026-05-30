@@ -100,9 +100,12 @@ const WriteKanaL0 = (function () {
       : "intro.html";
   }
 
-  function speakBtnHtml(text) {
+  function speakBtnHtml(kana) {
+    if (typeof KanaSpeak !== "undefined") {
+      return KanaSpeak.btnHtml(kana, "write-l0-speak");
+    }
     if (typeof SpeakUI === "undefined") return "";
-    const payload = { jp: text, kana: text, ttsLine: text };
+    const payload = { jp: kana, kana, ttsLine: kana };
     return SpeakUI.btnHtml(payload, 'class="btn-speak-icon write-l0-speak" title="听"');
   }
 
@@ -459,7 +462,8 @@ const WriteKanaL0 = (function () {
       renderGrid();
     });
 
-    if (typeof SpeakUI !== "undefined") SpeakUI.bindAll(hostEl);
+    if (typeof KanaSpeak !== "undefined") KanaSpeak.bindButtons(hostEl);
+    else if (typeof SpeakUI !== "undefined") SpeakUI.bind(hostEl);
   }
 
   function render(root, state, onPersist) {

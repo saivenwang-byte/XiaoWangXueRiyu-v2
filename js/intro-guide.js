@@ -9,10 +9,12 @@
   }
 
   function speakPayload(text) {
+    if (typeof KanaSpeak !== "undefined") return KanaSpeak.payload(text);
     return { jp: text, kana: text, ttsLine: text };
   }
 
   function speakBtn(text, extraClass) {
+    if (typeof KanaSpeak !== "undefined") return KanaSpeak.btnHtml(text, extraClass);
     if (typeof SpeakUI === "undefined") return "";
     const cls = extraClass ? `btn-speak-icon ${extraClass}` : "btn-speak-icon";
     return SpeakUI.btnHtml(speakPayload(text), `class="${cls}" title="听"`);

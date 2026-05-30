@@ -172,7 +172,7 @@ const SpeakUI = (() => {
     return ok;
   }
 
-  function bind(root) {
+  function bind(root, opts) {
     if (!root) return;
     const sel =
       "[data-speak], [data-jp], .btn-speak-icon, .btn-speak-round, .btn-speak, .dg-play-a, .dg-model, #dg-model, .gn-contrast-speak, .gn-hero-speak, .gn-ex-speak-inline, .gn-dense-speak, .qz-opt-speak, .qz-q-speak, .vf-speak, #vf-lesson-speak, #vf-speak-jp, #vf-speak-ex, #vf-speak-repeat, #lesson-speak-title, #gn-speak-explain, #gn-speak-example, #mini-speak-title, #mini-speak-ex";
@@ -193,7 +193,7 @@ const SpeakUI = (() => {
         speakFromButton(btn);
       });
     });
-    prefetchRoot(root);
+    if (!(opts && opts.skipPrefetch)) prefetchRoot(root);
   }
 
   function observe(container) {

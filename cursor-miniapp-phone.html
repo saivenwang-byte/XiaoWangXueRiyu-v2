@@ -374,9 +374,8 @@
       var v =
         typeof ShareWechat !== "undefined" ? ShareWechat.CACHE_VER : "292";
       var WEBVIEW_H = 844 - 47 - 44;
-      var LOCAL_ROOT =
-        location.origin +
-        location.pathname.replace(/[^/]+$/, "");
+      /* 本机 H5 固定走 8765，避免壳页从其它端口打开时 iframe 空白 */
+      var LOCAL_ROOT = "http://127.0.0.1:8765/";
 
       document.getElementById("webview-px").textContent = String(WEBVIEW_H);
 
@@ -408,9 +407,27 @@
 
       function detectFrameError() {
         var frame = document.getElementById("app-frame");
+        var isLocal =
+          document.querySelector('input[name="src"]:checked').value ===
+          "local";
         try {
           var doc = frame.contentDocument;
-          if (!doc || !doc.body) return;
+          if (!doc || !doc.body) {
+            if (isLocal) {
+              showFrameError(
+                "WebView 未加载。请先双击 重启本地服务.bat，再点「刷新 WebView」。"
+              );
+            }
+            return;
+          }
+          var innerLen = (doc.body.innerHTML || "").length;
+          var plain = (doc.body.innerText || "").replace(/\s+/g, "");
+          if (isLocal && innerLen < 400 && plain.length < 20) {
+            showFrameError(
+              "WebView 空白：本机 8765 未启动或 index.html 未响应。请 重启本地服务.bat 后刷新。"
+            );
+            return;
+          }
           var text =
             (doc.title || "") +
             " " +
@@ -419,12 +436,29 @@
             showFrameError(
               "当前页返回 503。开发预览请用「本机 8765」，并双击 重启本地服务.bat。"
             );
-          } else {
+          } else if (innerLen >= 400 || plain.length >= 20) {
             hideFrameError();
           }
         } catch (e) {
           /* 公网跨域无法读正文，见 pickOrigin 提示 */
         }
+      }
+
+      function probeLocalServer() {
+        var isLocal =
+          document.querySelector('input[name="src"]:checked').value ===
+          "local";
+        if (!isLocal) return;
+        fetch(LOCAL_ROOT + "index.html", { cache: "no-store" })
+          .then(function (r) {
+            if (!r.ok) throw new Error("bad status");
+            hideFrameError();
+          })
+          .catch(function () {
+            showFrameError(
+              "本机 8765 未启动。请双击 重启本地服务.bat，再打开本页或点「刷新 WebView」。"
+            );
+          });
       }
 
       function buildH5Url(bust) {
@@ -473,6 +507,7 @@
       }
 
       function loadFrame(bust) {
+        if (!pageActive) return;
         hideFrameError();
         var isPublic =
           document.querySelector('input[name="src"]:checked').value ===
@@ -510,6 +545,7 @@
       document.getElementById("app-frame").addEventListener("load", function () {
         updateLiveSize();
         detectFrameError();
+        setTimeout(detectFrameError, 1200);
       });
 
       var RELOAD_URL =
@@ -520,6 +556,7 @@
       var watchTimer = null;
       var fallbackTimer = null;
       var syncMode = "";
+      var pageActive = true;
 
       function liveEnabled() {
         var q = new URLSearchParams(location.search);
@@ -576,6 +613,7 @@
       }
 
       function onReloadTick(data) {
+        if (!pageActive || document.hidden) return;
         var n = data && data.n ? data.n : 0;
         if (lastReloadN === 0) {
           lastReloadN = n;
@@ -589,7 +627,7 @@
       }
 
       function pollReload() {
-        if (!liveEnabled()) return;
+        if (!pageActive || document.hidden || !liveEnabled()) return;
         fetch(RELOAD_URL, { cache: "no-store" })
           .then(function (r) {
             if (!r.ok) throw new Error("no reload api");
@@ -637,7 +675,23 @@
       });
 
       window.addEventListener("resize", fitPhoneScale);
+      window.addEventListener("pagehide", function () {
+        pageActive = false;
+        stopLiveSync();
+      });
+      window.addEventListener("beforeunload", function () {
+        pageActive = false;
+        stopLiveSync();
+      });
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          stopLiveSync();
+        } else if (pageActive && liveEnabled()) {
+          startLiveSync();
+        }
+      });
       fitPhoneScale();
+      probeLocalServer();
       loadFrame(false);
       startLiveSync();
 

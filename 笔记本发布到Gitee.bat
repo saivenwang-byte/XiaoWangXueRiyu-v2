@@ -70,7 +70,8 @@ git push gitee main
 echo.
 echo [6/6] 开启 Gitee Pages：
 echo   仓库 → 服务 → Gitee Pages → 启动（分支 main）
-start "" "https://gitee.com/!GITEE_USER!/%REPO%/pages"
+start "" "https://gitee.com/!GITEE_USER!/%REPO%"
+start "" "https://gitee.com/!GITEE_USER!/%REPO%/settings#pages"
 
 echo.
 echo   Pages 生效后双击：帮你发布-Gitee国内.bat

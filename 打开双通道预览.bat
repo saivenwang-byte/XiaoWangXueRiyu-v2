@@ -38,11 +38,11 @@ if errorlevel 1 (
   echo  本地服务正常
 )
 
-start "" "%URL_A%"
+start "" python scripts\open-preview-url.py "%URL_A%"
 timeout /t 1 /nobreak >nul
-start "" "%URL_B%"
+start "" python scripts\open-preview-url.py "%URL_B%"
 echo.
-echo  已打开 A + B。改代码后请两页都强刷，再交付。
+echo  已打开 A + B（Edge/Chrome，避免 Electron 默认浏览器关窗报错）。
 echo  仅开发者满配四关/彩蛋: 开发者竖屏验收.bat
 echo.
 pause
