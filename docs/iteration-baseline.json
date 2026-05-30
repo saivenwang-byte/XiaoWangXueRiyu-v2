@@ -1,6 +1,6 @@
 {
   "schema": "hyouga-iteration-baseline/v1",
-  "updated": "2026-05-25",
+  "updated": "2026-05-30",
   "mvp_status": {
     "phase": "frozen",
     "frozen_at": "2026-05-21",
@@ -694,8 +694,9 @@
     },
     {
       "id": "stage-3-lessons-1-12",
-      "status": "in_progress",
-      "note": "第1单元第1–4课 MVP locked v246；第5–12课五关待"
+      "status": "content_done",
+      "since_cache": "408",
+      "note": "L1–12 内容层 v408 已齐（单词/文法黄卡/ABC）；五关壳 L5–12 金标深度待 wave"
     },
     {
       "id": "notes-panel-v2",
@@ -709,8 +710,9 @@
     },
     {
       "id": "stage-4-lessons-21-24",
-      "status": "planned",
-      "note": "作者增补 PRD 后按课播种"
+      "status": "content_done",
+      "since_cache": "408",
+      "note": "L21–24 内容层 v408 已齐；L21 文法链 hint-only v409；金标深度待 wave"
     },
     {
       "id": "p3-light-in-lesson-links",
@@ -928,6 +930,24 @@
         "docs/TTS-P0-P1-国内加速与SW.md"
       ],
       "acceptance": "MP3 走 HYOUGA_TTS_ORIGIN；SW 仅代际变更清理；index 不再每次 unregister"
+    },
+    {
+      "id": "l1-24-ship-v410",
+      "since_cache": "410",
+      "title": "L1–24 收官 · 内容层 v408 + 体验 v409–410",
+      "files": [
+        "docs/L1-24-收官报告-v410.md",
+        "docs/L1-24-手机验收清单-v410.md",
+        "VERSION.md",
+        "js/share-wechat.js",
+        "js/public-url.config.js",
+        "js/kana-speak.js",
+        "js/shadow-speak.js",
+        "js/grammar-network.js",
+        "css/mvp.css",
+        "scripts/ship-l1-depth-full.py"
+      ],
+      "acceptance": "pre-ship 全 OK；TTS 0 缺失；PRD 1–24 24/24；GitHub v2 + Gitee main 同 HEAD；Gitee Pages 待用户手动开通"
     }
   ],
   "forbidden_without_explicit_user_request": [

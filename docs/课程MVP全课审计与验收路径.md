@@ -1,8 +1,8 @@
 # 24 课 MVP 全课审计 · PM 审核 · 验收路径（唯一真源）
 
-> **更新**：2026-05-21 · cache **v=93**  
-> **金标参照课**：第 **14** 课（`lessons-mvp.js` + `lessons-mvp-depth.js` 完整深度）  
-> **机器审计**：`python scripts/audit-curriculum-mvp.py` → `docs/curriculum-mvp-audit.json`
+> **更新**：2026-05-30 · cache **v=410** · **L1–24 内容层已 ship**（见 [L1-24-收官报告-v410.md](./L1-24-收官报告-v410.md)）  
+> **金标参照课**：第 **14** 课  
+> **机器审计**：`python scripts/audit-curriculum-mvp.py` → `docs/curriculum-mvp-audit.json`（脚本待适配合并后数据源）
 
 ---
 

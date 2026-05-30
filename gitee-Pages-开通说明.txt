@@ -5,6 +5,7 @@
 【常见 404 原因 · 先看这里】
 
   × 用户名拼错：saiwenwang-byte  →  ✅ saivenwang-byte（多一个 i）
+  × 只打开 gitee.io 根域           →  ✅ 必须带仓库路径 …/xiao-wang-xue-riyu-v2/
   × 直接打开 …/pages 后缀        →  ✅ 从仓库首页进「服务 → Gitee Pages」
   × 未登录 / 不是仓库所有者       →  ✅ 用推送代码的 Gitee 账号登录
 
@@ -12,7 +13,7 @@
 
   https://gitee.com/saivenwang-byte/xiao-wang-xue-riyu-v2
 
-  应能看到 README、main 分支、最新 commit ship(v408)…
+  应能看到 README、main 分支、最新 commit ship(v410)…
 
 ───────────────────────────────────────────────────────
 一、启动 Pages（约 1 分钟 · 须浏览器手动点一次）
@@ -45,7 +46,7 @@
 二、Pages 生效后 · 微信转发（国内学员链）
 ───────────────────────────────────────────────────────
 
-  https://saivenwang-byte.gitee.io/xiao-wang-xue-riyu-v2/index.html?v=408
+  https://saivenwang-byte.gitee.io/xiao-wang-xue-riyu-v2/index.html?v=410
 
   双击：帮你发布-Gitee国内.bat（须先执行 apply-deploy-target 切到 gitee）
 
@@ -60,10 +61,14 @@
   1. 发布前自检.bat
   2. git push gitee main
   3. Pages 自动重新部署（或 Pages 页点「更新」）
-  4. 学员仍用同一条 index.html?v=408
+  4. 学员仍用同一条 index.html?v=410（发版时 bump cache）
 
 【备份 · GitHub（较慢但已可用）】
 
-  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=408
+  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410
+
+【收官文档】
+
+  docs/L1-24-收官报告-v410.md
 
 ═══════════════════════════════════════════════════════

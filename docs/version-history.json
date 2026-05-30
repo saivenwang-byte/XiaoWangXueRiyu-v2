@@ -6,6 +6,8 @@
     "date": "2026-05-30",
     "note": "v410：开机CTA下移·TTS Gitee镜像·按住录音·多渠道失败提示",
     "git_tag": null,
+    "ship_doc": "docs/L1-24-收官报告-v410.md",
+    "checklist": "docs/L1-24-手机验收清单-v410.md",
     "baseline": "docs/iteration-baseline.json",
     "discipline": "docs/Agent文递自归.md",
     "paradigm": "docs/项目知识库-文递自归.md"
@@ -24,10 +26,39 @@
     ],
     "doc": "docs/MVP-FREEZE.md",
     "checklist": "docs/MVP收官-手机验收清单.md",
-    "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu/index.html?v=404",
-    "local": "http://localhost:8765/index.html?v=404"
+    "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410",
+    "local": "http://localhost:8765/index.html?v=410"
   },
   "releases": [
+    {
+      "product": "1.0.2",
+      "cache": "410",
+      "date": "2026-05-30",
+      "git": "9dc10d6",
+      "note": "收官：splash CTA·TTS Gitee镜像·按住录音·多渠道失败提示",
+      "local": "http://localhost:8765/index.html?v=410",
+      "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410",
+      "gitee": "https://saivenwang-byte.gitee.io/xiao-wang-xue-riyu-v2/index.html?v=410",
+      "ship_doc": "docs/L1-24-收官报告-v410.md"
+    },
+    {
+      "product": "1.0.2",
+      "cache": "409",
+      "date": "2026-05-30",
+      "git": "16f449a",
+      "note": "splash/L21 hint-only/KanaSpeak/真机壳 probe/Gitee 发布脚本",
+      "local": "http://localhost:8765/index.html?v=409",
+      "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=409"
+    },
+    {
+      "product": "1.0.2",
+      "cache": "408",
+      "date": "2026-05-30",
+      "git": "c35ba1f",
+      "note": "L1–24精写：954单词+101文法黄卡+24格highlight泡+376场景ABC导出",
+      "local": "http://localhost:8765/index.html?v=408",
+      "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=408"
+    },
     {
       "product": "1.0.2",
       "cache": "406",
