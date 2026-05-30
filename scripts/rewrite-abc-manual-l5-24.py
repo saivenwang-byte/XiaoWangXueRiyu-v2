@@ -235,6 +235,10 @@ def build_entry(dlg: dict, lid: int, zh_map: dict[str, str]) -> dict | None:
         c_jp = variant_c(b_jp + " ")
         if c_jp == b_jp:
             c_jp = a_jp[:-1] + "ね。" if a_jp.endswith("。") else a_jp + "ね"
+    title = (dlg.get("title") or "会話").split("（")[0].strip()
+    theme = LESSON_SCENE_HINT.get(lid, "会話")
+    b_zh = zh_lookup(b_jp, lid, zh_map) if b_jp != a_jp else a_zh
+    c_zh = zh_lookup(c_jp, lid, zh_map) if c_jp != a_jp else a_zh
     return {
         "abcGuideZh": abc_guide(dlg, lid),
         "userTurn": {"speaker": speaker},
@@ -244,20 +248,20 @@ def build_entry(dlg: dict, lid: int, zh_map: dict[str, str]) -> dict | None:
                 "rank": 1,
                 "japanese": a_jp,
                 "chinese": a_zh,
-                "noteZh": f"课文原句（{speaker}）。与教材会話一致，标准答.",
+                "noteZh": f"A 标准答（{speaker}）：「{title}」· {theme}；与教材会話一致.",
             },
             {
                 "label": "B",
                 "rank": 2,
                 "japanese": b_jp,
-                "chinese": (a_zh + "（更短/口语）") if b_jp != a_jp and a_zh else a_zh,
+                "chinese": b_zh or a_zh,
                 "noteZh": note_b(a_jp, b_jp, speaker),
             },
             {
                 "label": "C",
                 "rank": 3,
                 "japanese": c_jp,
-                "chinese": (a_zh + "（更礼貌）") if c_jp != a_jp and a_zh else a_zh,
+                "chinese": c_zh or a_zh,
                 "noteZh": note_c(a_jp, c_jp, speaker),
             },
         ],
@@ -381,7 +385,7 @@ def write_l9_24(maps: dict[int, dict]) -> None:
     body.append(
         """
 /** 合并第9–24课课文对话与 ABC 扩展 */
-function applyLessons924DialogueAbc(lessonId, dialogues) {
+function applyLessons9_24DialogueAbc(lessonId, dialogues) {
   const map = LESSONS_9_24_DIALOGUE_ABC[Number(lessonId)];
   if (!map || !Array.isArray(dialogues)) return dialogues;
   return dialogues.map((d) => {

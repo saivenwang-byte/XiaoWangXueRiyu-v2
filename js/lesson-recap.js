@@ -139,6 +139,7 @@ const LessonRecap = (function () {
   /** L1 单课彩蛋弹层 · 课文 + 本课要点 + 知识小卡片 */
   function renderEggContent(lessonId, unit) {
     const data = buildRecapData(lessonId, unit);
+    const { panel } = panelForLesson(data.unitId, data.lessonId);
     const imgs = lessonEggImageCandidates(data.unitId, data.lessonId, data.panelIndex);
     const primary = imgs[0];
 
@@ -161,8 +162,16 @@ const LessonRecap = (function () {
         ? SpeakUI.btnHtml(jp, 'class="btn-speak-icon story-egg-dialogue-speak" title="听"')
         : "";
 
-    const dialogueHtml = data.dialogue.length
-      ? `<section class="story-egg-dialogue" aria-label="会話">
+    let dialogueHtml = "";
+    if (typeof StoryComicUi !== "undefined" && panel?.bubbles?.length) {
+      dialogueHtml = `<section class="story-egg-dialogue story-egg-dialogue--comic" aria-label="会話四格">
+          <p class="story-egg-block-label">会話 · 四格</p>
+          <div class="story-egg-comic-inner">${StoryComicUi.renderPanelInterior(panel, {
+            maxBubbles: StoryComicUi.MAX_BUBBLES_ZOOM || 4,
+          })}</div>
+        </section>`;
+    } else if (data.dialogue.length) {
+      dialogueHtml = `<section class="story-egg-dialogue" aria-label="会話">
           <p class="story-egg-block-label">会話 · 再听一遍</p>
           <ul class="story-egg-dialogue-list">${data.dialogue
             .map(
@@ -183,8 +192,8 @@ const LessonRecap = (function () {
                 </li>`
             )
             .join("")}</ul>
-        </section>`
-      : "";
+        </section>`;
+    }
 
     return `
       <section class="story-egg-lesson-block" aria-label="課文">

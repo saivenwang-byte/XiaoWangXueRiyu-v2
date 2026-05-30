@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""L2–24 会話场景黄卡 · L1 深度（opener + A 课文 + B/C 提示 + 文法链接）"""
+"""L1–24 会話场景黄卡 · L1 深度（opener + A 课文 + B/C 提示 + 文法链接）"""
 from __future__ import annotations
 
 import json
@@ -18,6 +18,7 @@ _spec = importlib.util.spec_from_file_location(
 )
 _mod = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_mod)
+load_l1_abc = _mod.load_l1_abc
 load_u1_abc = _mod.load_u1_abc
 load_u2_abc = _mod.load_u2_abc
 load_924_abc = _mod.load_924_abc
@@ -31,6 +32,7 @@ def load_lessons() -> dict[int, dict]:
 
 def merge_abc() -> dict[int, dict[str, dict]]:
     out: dict[int, dict[str, dict]] = {}
+    out.update(load_l1_abc())
     out.update(load_u1_abc())
     out.update(load_u2_abc())
     out.update(load_924_abc())
@@ -88,11 +90,19 @@ def tip_for_scene(d: dict, idx: int, lid: int, abc: dict | None) -> dict:
 
     bnote = (b.get("noteZh") or "").strip()
     if bnote and b.get("japanese") and b["japanese"] != ajp:
-        lines.append({"ja": b["japanese"], "zh": f"B 变体：{bnote}"})
+        bzh = (b.get("chinese") or "").strip()
+        if bzh and bzh != (a.get("chinese") or rzh) and "（更短/口语）" not in bzh:
+            lines.append({"ja": b["japanese"], "zh": bzh})
+        else:
+            lines.append({"ja": b["japanese"], "zh": bnote})
 
     cnote = (c.get("noteZh") or "").strip()
     if cnote and c.get("japanese") and c["japanese"] not in (ajp, b.get("japanese")):
-        lines.append({"ja": c["japanese"], "zh": f"C 变体：{cnote}"})
+        czh = (c.get("chinese") or "").strip()
+        if czh and czh != (a.get("chinese") or rzh) and "（更礼貌）" not in czh:
+            lines.append({"ja": c["japanese"], "zh": czh})
+        else:
+            lines.append({"ja": c["japanese"], "zh": cnote})
 
     if len(lines) == 1 and title:
         lines.append({"zh": f"本场景练习「{title}」；完成 ABC 三答后听录评分。"})
@@ -127,30 +137,41 @@ def merge_into_tips(path: Path, dmap: dict[int, list]) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def merge_l1_dialogue(path: Path, tips: list) -> None:
+    text = path.read_text(encoding="utf-8")
+    block = "  const DIALOGUE = " + json.dumps(tips, ensure_ascii=False, indent=4) + ";\n"
+    text = re.sub(r"  const DIALOGUE = \[[\s\S]*?\];\n", block, text, count=1)
+    path.write_text(text, encoding="utf-8")
+
+
 def main() -> int:
     lessons = load_lessons()
     abc_all = merge_abc()
     u1: dict[int, list] = {}
     u2: dict[int, list] = {}
     u924: dict[int, list] = {}
-    for lid in range(2, 25):
+    l1_tips: list = []
+    for lid in range(1, 25):
         ds = lessons[lid].get("dialogues") or []
         abc_map = abc_all.get(lid, {})
         tips = [
             tip_for_scene(d, i, lid, abc_map.get(d.get("id", "")))
             for i, d in enumerate(ds)
         ]
-        if lid <= 4:
+        if lid == 1:
+            l1_tips = tips
+        elif lid <= 4:
             u1[lid] = tips
         elif lid <= 8:
             u2[lid] = tips
         else:
             u924[lid] = tips
         print(f"[OK] L{lid}: {len(tips)} kcards")
+    merge_l1_dialogue(ROOT / "js/data/l1-knowledge-tips.js", l1_tips)
     merge_into_tips(ROOT / "js/data/unit1-knowledge-tips.js", u1)
     merge_into_tips(ROOT / "js/data/unit2-knowledge-tips.js", u2)
     merge_into_tips(ROOT / "js/data/lessons-9-24-knowledge-tips.js", u924)
-    print("Merged L2–24 dialogue kcards (L1 depth pattern)")
+    print("Merged L1–24 dialogue kcards (L1 depth pattern)")
     return 0
 
 

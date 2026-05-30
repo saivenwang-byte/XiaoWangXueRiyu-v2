@@ -1,10 +1,12 @@
 /**
  * 第1課 · 会話 ABC 回答（A=课文 · B/C=可替换说法 + 老师提示）
  * 对齐【产品PRD】第1单元第01课 · 应用课文「出迎え」
+ * depth · scripts/rewrite-abc-l1-4-depth.py
  */
+
 const L1_DIALOGUE_ABC = {
-  l1_dlg_1: {
-    abcGuideZh: "本句由小野回答接机确认。A 为课文原句；B/C 为自然变体。",
+  "l1_dlg_1": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 小野应答。A＝课文「はい、小野です。李秀麗さんですか…」；B＝同场景口语/缩短；C＝更礼貌或郑重。 本句由小野回答接机确认。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -12,7 +14,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はい、小野です。李秀麗さんですか。",
         chinese: "是的，我是小野。您是李秀丽吗？",
-        noteZh: "课文标准答：先肯定身份，再反问确认对方姓名。接机、职场第一次见面用 A。",
+        noteZh: "A 标准答（小野）：「出迎え」· 先肯定身份，再反问确认对方姓名。接机、职场第一次见面用 A。",
       },
       {
         label: "B",
@@ -30,8 +32,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_2: {
-    abcGuideZh: "本句由李回答。寒暄句建议整段连贯读出。",
+  "l1_dlg_2": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 李应答。A＝课文「はい、李秀麗です。はじめまして。…」；B＝同场景口语/缩短；C＝更礼貌或郑重。 本句由李回答。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -39,7 +41,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はい、李秀麗です。はじめまして。どうぞ よろしく お願いします。",
         chinese: "是的，我是李秀丽。初次见面，请多关照。",
-        noteZh: "课文全套寒暄：身份+はじめまして+どうぞよろしく。标准接机自我介绍用 A。",
+        noteZh: "A 标准答（李）：「出迎え」· 身份+はじめまして+どうぞよろしく。标准接机自我介绍用 A。",
       },
       {
         label: "B",
@@ -57,8 +59,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_3: {
-    abcGuideZh: "小野回礼自我介绍，注意「はじめまして」词首「は」读 ha。",
+  "l1_dlg_3": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 小野应答。A＝课文「はじめまして、小野緑です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 小野回礼自我介绍，注意「はじめまして」词首「は」读 ha。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -66,7 +68,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はじめまして、小野緑です。",
         chinese: "初次见面，我是小野绿。",
-        noteZh: "课文原句：寒暄+全名。同事、同级第一次见用 A。",
+        noteZh: "A 标准答（小野）：「出迎え」· 寒暄+全名。同事、同级第一次见用 A。",
       },
       {
         label: "B",
@@ -84,8 +86,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_4: {
-    abcGuideZh: "森向李打招呼。本句发起者为森（同事侧）。",
+  "l1_dlg_4": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 森应答。A＝课文「李さん、こんにちは。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 森向李打招呼。",
     userTurn: { speaker: "森" },
     replies: [
       {
@@ -93,7 +95,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "李さん、こんにちは。",
         chinese: "李小姐，你好。",
-        noteZh: "课文原句：白天见面简单问候。同事接机、已见过对方时用 A。",
+        noteZh: "A 标准答（森）：「出迎え」· 白天见面简单问候。同事接机、已见过对方时用 A。",
       },
       {
         label: "B",
@@ -111,8 +113,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_5: {
-    abcGuideZh: "李误认森为吉田。发起者为李。",
+  "l1_dlg_5": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 李应答。A＝课文「吉田さんですか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 李误认森为吉田。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -120,7 +122,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "吉田さんですか。",
         chinese: "您是吉田先生吗？",
-        noteZh: "课文原句：直接确认身份。认错人、需要核实时用 A。",
+        noteZh: "A 标准答（李）：「出迎え」· 直接确认身份。认错人、需要核实时用 A。",
       },
       {
         label: "B",
@@ -138,8 +140,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_6: {
-    abcGuideZh: "森否定并自报姓名。练习「ではありません」否定句。",
+  "l1_dlg_6": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 森应答。A＝课文「いいえ、私は 吉田では ありませ…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "森" },
     replies: [
       {
@@ -147,7 +149,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "いいえ、私は 吉田では ありません。森です。",
         chinese: "不，我不是吉田。我是森。",
-        noteZh: "课文完整否定+更正：先否定再报本名。与第1课课文一致，用 A。",
+        noteZh: "A 标准答（森）：「出迎え」· 先否定再报本名。与第1课课文一致，用 A。",
       },
       {
         label: "B",
@@ -165,8 +167,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_7: {
-    abcGuideZh: "李道歉并确认森的身份。注意「すみません」此处表歉意/打扰。",
+  "l1_dlg_7": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 李应答。A＝课文「あっ、森さんですか。すみません。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 李道歉并确认森的身份。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -174,7 +176,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "あっ、森さんですか。すみません。",
         chinese: "啊，是森先生吗？不好意思。",
-        noteZh: "课文原句：「あっ」惊讶+确认+すみません。认错人后标准用 A。",
+        noteZh: "A 标准答（李）：「出迎え」· 「あっ」惊讶+确认+すみません。认错人后标准用 A。",
       },
       {
         label: "B",
@@ -192,8 +194,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_8: {
-    abcGuideZh: "森接话并重新寒暄。发起者为森。",
+  "l1_dlg_8": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 森应答。A＝课文「いいえ。李秀麗さんですね。はじめ…」；B＝同场景口语/缩短；C＝更礼貌或郑重。 森接话并重新寒暄。",
     userTurn: { speaker: "森" },
     replies: [
       {
@@ -201,7 +203,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "いいえ。李秀麗さんですね。はじめまして。",
         chinese: "不。是李秀丽小姐啊。初次见面。",
-        noteZh: "课文原句：「いいえ」在此非道歉，表示「没关系」+确认+寒暄。用 A。",
+        noteZh: "A 标准答（森）：「出迎え」· 「いいえ」在此非道歉，表示「没关系」+确认+寒暄。用 A。",
       },
       {
         label: "B",
@@ -219,8 +221,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_9: {
-    abcGuideZh: "李再次完整自我介绍。与第2句类似，可对比语气长短。",
+  "l1_dlg_9": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 李应答。A＝课文「はじめまして、李秀麗です。よろし…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -228,7 +230,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はじめまして、李秀麗です。よろしく お願いします。",
         chinese: "初次见面，我是李秀丽。请多关照。",
-        noteZh: "课文原句：寒暄+姓名+よろしく。对森正式介绍用 A。",
+        noteZh: "A 标准答（李）：「出迎え」· 寒暄+姓名+よろしく。对森正式介绍用 A。",
       },
       {
         label: "B",
@@ -246,8 +248,8 @@ const L1_DIALOGUE_ABC = {
       },
     ],
   },
-  l1_dlg_10: {
-    abcGuideZh: "森回应「よろしく」。必学「こちらこそ」，不可省略。",
+  "l1_dlg_10": {
+    abcGuideZh: "「出迎え」（迎接）· 自己紹介 · 出迎え · 森应答。A＝课文「こちらこそ。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 森回应「よろしく」。",
     userTurn: { speaker: "森" },
     replies: [
       {
@@ -255,7 +257,7 @@ const L1_DIALOGUE_ABC = {
         rank: 1,
         japanese: "こちらこそ。",
         chinese: "我才要（请您多关照）。",
-        noteZh: "课文原句：回应「よろしくお願いします」的固定答法。必须用 A，不能说「どういたしまして」。",
+        noteZh: "A 标准答（森）：「出迎え」· 回应「よろしくお願いします」的固定答法。必须用 A，不能说「どういたしまして」。",
       },
       {
         label: "B",

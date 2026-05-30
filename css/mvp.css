@@ -10609,6 +10609,26 @@ a.story-dev-link {
   color: rgba(255, 255, 255, 0.88);
 }
 
+.story-egg-dialogue--comic {
+  margin-top: 8px;
+}
+
+.story-egg-comic-inner .manga-panel-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 4px 4px;
+}
+
+.story-egg-comic-inner .manga-bubble {
+  max-width: 100%;
+}
+
+.story-egg-comic-inner .manga-bubble-jp {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
 .story-egg-unit-recap {
   margin: 0 0 12px;
   padding: 10px 12px;

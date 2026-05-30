@@ -10,6 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "js" / "data" / "lessons-data.js"
 STORY = ROOT / "js" / "data" / "unit-strip-storyboard.js"
 
+# 手修 sceneCloud（彩蛋/条带）· sync 只改 bubbles/headline
+MANUAL_SCENE_CLOUD: dict[int, str] = {
+    20: "可能 · ことができる · 〜前に",
+    21: "経験 · たことがある · たあとで",
+}
+
 
 def load_lessons() -> dict[int, dict]:
     text = DATA.read_text(encoding="utf-8")
@@ -119,9 +125,9 @@ def patch_storyboard(lessons: dict[int, dict]) -> int:
             if re.search(hp, text):
                 text = re.sub(hp, rf"\g<1>{headline}\g<3>", text, count=1)
 
-        sc = scene_cloud(L)
+        sc = MANUAL_SCENE_CLOUD.get(lid) or scene_cloud(L)
         sp = rf"(lessonId:\s*{lid},[\s\S]*?sceneCloud:\s*\")([^\"]*)(\")"
-        if re.search(sp, text):
+        if re.search(sp, text) and lid not in MANUAL_SCENE_CLOUD:
             text = re.sub(sp, rf"\g<1>{sc}\g<3>", text, count=1)
 
         n += 1

@@ -3,8 +3,8 @@
  * 对齐第1课 l1-dialogue-abc.js 产品与 UI
  */
 const L2_DIALOGUE_ABC = {
-  l2_dlg_1: {
-    abcGuideZh: "李回答「那是什么」。A 为课文；B/C 为同事看照片时的自然说法。",
+  "l2_dlg_1": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「これは 私の 家族の 写真です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -12,7 +12,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "これは 私の 家族の 写真です。",
         chinese: "这是我家人的照片。",
-        noteZh: "课文原句：これ＋の＋名词。向同事介绍随身照片用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· これ＋の＋名词。向同事介绍随身照片用 A。",
       },
       {
         label: "B",
@@ -30,8 +30,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_2: {
-    abcGuideZh: "小野问「这位是谁」。练习 この方・どなた。",
+  "l2_dlg_2": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「この 方は どなたですか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -39,7 +39,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "この 方は どなたですか。",
         chinese: "这位是谁？",
-        noteZh: "课文标准：この方＋どなた（礼貌）。职场、对客户用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· 课文标准：この方＋どなた（礼貌）。职场、对客户用 A。",
       },
       {
         label: "B",
@@ -57,8 +57,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_3: {
-    abcGuideZh: "李指认父亲。",
+  "l2_dlg_3": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「私の 父です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -66,7 +66,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "私の 父です。",
         chinese: "是我父亲。",
-        noteZh: "课文原句：私の＋亲属名词。直接指认用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· 私の＋亲属名词。直接指认用 A。",
       },
       {
         label: "B",
@@ -84,8 +84,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_4: {
-    abcGuideZh: "小野问年龄。注意 おいくつ 与 お父さん 敬称。",
+  "l2_dlg_4": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「お父さんは おいくつですか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。 小野问年龄。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -93,7 +93,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "お父さんは おいくつですか。",
         chinese: "您父亲多大岁数？",
-        noteZh: "课文原句：お父さん＋おいくつ。谈对方家人用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· お父さん＋おいくつ。谈对方家人用 A。",
       },
       {
         label: "B",
@@ -111,8 +111,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_5: {
-    abcGuideZh: "李回答年龄。",
+  "l2_dlg_5": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「五十八歳です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -120,7 +120,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "五十八歳です。",
         chinese: "五十八岁。",
-        noteZh: "课文原句：数字＋歳です。标准答用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· 数字＋歳です。标准答用 A。",
       },
       {
         label: "B",
@@ -138,8 +138,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_6: {
-    abcGuideZh: "小野转向另一张。",
+  "l2_dlg_6": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「そうですか。じゃ、これは？」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -147,7 +147,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "そうですか。じゃ、これは？",
         chinese: "是吗。那么，这是？",
-        noteZh: "课文原句：そうですか＋じゃ＋これは。自然接话用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· そうですか＋じゃ＋これは。自然接话用 A。",
       },
       {
         label: "B",
@@ -165,8 +165,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_7: {
-    abcGuideZh: "李说明也是父亲、年轻时长。",
+  "l2_dlg_7": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「それも 父です。若い 時の 写真…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -174,7 +174,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "それも 父です。若い 時の 写真です。",
         chinese: "那也是父亲。年轻时的照片。",
-        noteZh: "课文两句：それも＋若い時。教材主线用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· それも＋若い時。教材主线用 A。",
       },
       {
         label: "B",
@@ -192,8 +192,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_8: {
-    abcGuideZh: "小野惊讶气质不同。",
+  "l2_dlg_8": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「えっ、同じ 方ですか。雰囲気が …」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -201,7 +201,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "えっ、同じ 方ですか。雰囲気が 違いますね。",
         chinese: "啊，是同一个人吗。气质不一样呢。",
-        noteZh: "课文原句：えっ＋同じ方＋雰囲気。自然反应用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· えっ＋同じ方＋雰囲気。自然反应用 A。",
       },
       {
         label: "B",
@@ -219,8 +219,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_9: {
-    abcGuideZh: "李确认二十岁时的照片。",
+  "l2_dlg_9": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「はい。この 写真は 二十歳の 時…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -228,7 +228,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はい。この 写真は 二十歳の 時の 父です。",
         chinese: "是的。这张照片是二十岁时的父亲。",
-        noteZh: "课文原句：この写真は…時の父。标准说明用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· この写真は…時の父。标准说明用 A。",
       },
       {
         label: "B",
@@ -246,8 +246,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_10: {
-    abcGuideZh: "小野问远处那张。练习 あれ・どなた。",
+  "l2_dlg_10": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「あれは どなたの 写真ですか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -255,7 +255,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "あれは どなたの 写真ですか。",
         chinese: "那是谁的照片？",
-        noteZh: "课文：あれ＋どなたの。离双方都远时用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· 课文：あれ＋どなたの。离双方都远时用 A。",
       },
       {
         label: "B",
@@ -273,8 +273,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_11: {
-    abcGuideZh: "李指认母亲。",
+  "l2_dlg_11": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「私の 母です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -282,7 +282,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "私の 母です。",
         chinese: "是我母亲。",
-        noteZh: "课文原句。与「私の父です」同一结构，用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· 课文原句。与「私の父です」同一结构，用 A。",
       },
       {
         label: "B",
@@ -300,8 +300,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_12: {
-    abcGuideZh: "小野称赞母亲。练习 ～そうですね。",
+  "l2_dlg_12": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 小野应答。A＝课文「優しそうな 方ですね。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -309,7 +309,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "優しそうな 方ですね。",
         chinese: "看上去是很和蔼的人。",
-        noteZh: "课文原句：优しそうな方ですね。标准恭维用 A。",
+        noteZh: "A 标准答（小野）：「家族の写真」· 优しそうな方ですね。标准恭维用 A。",
       },
       {
         label: "B",
@@ -327,8 +327,8 @@ const L2_DIALOGUE_ABC = {
       },
     ],
   },
-  l2_dlg_13: {
-    abcGuideZh: "李道谢。",
+  "l2_dlg_13": {
+    abcGuideZh: "「家族の写真」（家人的照片）· 指示語 · これ/それ/あれ · 李应答。A＝课文「ありがとうございます。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -336,7 +336,7 @@ const L2_DIALOGUE_ABC = {
         rank: 1,
         japanese: "ありがとうございます。",
         chinese: "谢谢。",
-        noteZh: "课文标准感谢。接受称赞后用 A。",
+        noteZh: "A 标准答（李）：「家族の写真」· 课文标准感谢。接受称赞后用 A。",
       },
       {
         label: "B",
@@ -357,8 +357,8 @@ const L2_DIALOGUE_ABC = {
 };
 
 const L3_DIALOGUE_ABC = {
-  l3_dlg_1: {
-    abcGuideZh: "李确认酒店。练习 ここ・そうです。",
+  "l3_dlg_1": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「はい、そうです。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -366,7 +366,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はい、そうです。",
         chinese: "是的。",
-        noteZh: "课文原句：肯定「ここはホテル」。标准答用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· 肯定「ここはホテル」。标准答用 A。",
       },
       {
         label: "B",
@@ -384,8 +384,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_2: {
-    abcGuideZh: "小野介绍公园。练习 あそこ・きれいです。",
+  "l3_dlg_2": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「あそこが 公園です。とても きれ…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -393,7 +393,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "あそこが 公園です。とても きれいですよ。",
         chinese: "那边是公园。很漂亮哦。",
-        noteZh: "课文原句：あそこ＋形容詞よ。导游式介绍用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· あそこ＋形容詞よ。导游式介绍用 A。",
       },
       {
         label: "B",
@@ -411,8 +411,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_3: {
-    abcGuideZh: "李问红色建筑。练习 あの・何ですか。",
+  "l3_dlg_3": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「そうですか。あの 赤い 建物は …」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -420,7 +420,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "そうですか。あの 赤い 建物は 何ですか。",
         chinese: "是吗。那座红色的建筑是什么？",
-        noteZh: "课文两句：そうですか＋あの建物。标准问法用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· そうですか＋あの建物。标准问法用 A。",
       },
       {
         label: "B",
@@ -438,8 +438,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_4: {
-    abcGuideZh: "小野答车站。练习 あれは。",
+  "l3_dlg_4": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「あれは 駅です。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -447,7 +447,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "あれは 駅です。",
         chinese: "那是车站。",
-        noteZh: "课文：あれは＋名词。离双方都远用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· 课文：あれは＋名词。离双方都远用 A。",
       },
       {
         label: "B",
@@ -465,8 +465,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_5: {
-    abcGuideZh: "李问便利店。练习 どこですか。",
+  "l3_dlg_5": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「じゃ、コンビニは どこですか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -474,7 +474,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "じゃ、コンビニは どこですか。",
         chinese: "那么，便利店在哪儿？",
-        noteZh: "课文：じゃ＋どこですか。接上文自然过渡用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· 课文：じゃ＋どこですか。接上文自然过渡用 A。",
       },
       {
         label: "B",
@@ -492,8 +492,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_6: {
-    abcGuideZh: "小野指路。练习 隣・あそこ。",
+  "l3_dlg_6": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「コンビニは あそこです。ホテルの…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -501,7 +501,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "コンビニは あそこです。ホテルの 隣です。",
         chinese: "便利店在那边。在酒店旁边。",
-        noteZh: "课文两句：あそこ＋隣。标准指路用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· あそこ＋隣。标准指路用 A。",
       },
       {
         label: "B",
@@ -519,8 +519,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_7: {
-    abcGuideZh: "李问银行。练习 どこにありますか。",
+  "l3_dlg_7": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「銀行は どこに ありますか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -528,7 +528,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "銀行は どこに ありますか。",
         chinese: "银行在哪儿？",
-        noteZh: "课文：どこにありますか（存在场所）。用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· 课文：どこにありますか（存在场所）。用 A。",
       },
       {
         label: "B",
@@ -546,8 +546,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_8: {
-    abcGuideZh: "小野答银行位置。",
+  "l3_dlg_8": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「銀行は あちらの 交差点の 左で…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -555,7 +555,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "銀行は あちらの 交差点の 左です。",
         chinese: "银行在那边十字路口的左侧。",
-        noteZh: "课文原句：あちら＋交差点の左。标准指路用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· あちら＋交差点の左。标准指路用 A。",
       },
       {
         label: "B",
@@ -573,8 +573,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_9: {
-    abcGuideZh: "李省略问餐厅。",
+  "l3_dlg_9": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「レストランは？」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -582,7 +582,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "レストランは？",
         chinese: "餐厅呢？",
-        noteZh: "课文省略句：前文已问「どこ」、只换主题用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· 课文省略句：前文已问「どこ」、只换主题用 A。",
       },
       {
         label: "B",
@@ -600,8 +600,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_10: {
-    abcGuideZh: "小野答餐厅在百货里。练习 にあります。",
+  "l3_dlg_10": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「レストランは デパートの 中に …」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -609,7 +609,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "レストランは デパートの 中に あります。",
         chinese: "餐厅在百货商店里面。",
-        noteZh: "课文：の中にあります。标准答用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· 课文：の中にあります。标准答用 A。",
       },
       {
         label: "B",
@@ -627,8 +627,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_11: {
-    abcGuideZh: "李感谢。",
+  "l3_dlg_11": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 李应答。A＝课文「小野さん、どうも ありがとうござ…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -636,7 +636,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "小野さん、どうも ありがとうございます。",
         chinese: "小野，非常感谢。",
-        noteZh: "课文：称呼＋どうもありがとう。标准用 A。",
+        noteZh: "A 标准答（李）：「ホテルの周辺」· 课文：称呼＋どうもありがとう。标准用 A。",
       },
       {
         label: "B",
@@ -654,8 +654,8 @@ const L3_DIALOGUE_ABC = {
       },
     ],
   },
-  l3_dlg_12: {
-    abcGuideZh: "小野回应不客气。",
+  "l3_dlg_12": {
+    abcGuideZh: "「ホテルの周辺」（酒店周边）· 場所 · ここ/そこ/あそこ · 小野应答。A＝课文「いいえ。どういたしまして。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -663,7 +663,7 @@ const L3_DIALOGUE_ABC = {
         rank: 1,
         japanese: "いいえ。どういたしまして。",
         chinese: "不客气。",
-        noteZh: "课文原句。对「ありがとう」标准回应用 A。",
+        noteZh: "A 标准答（小野）：「ホテルの周辺」· 课文原句。对「ありがとう」标准回应用 A。",
       },
       {
         label: "B",
@@ -684,8 +684,8 @@ const L3_DIALOGUE_ABC = {
 };
 
 const L4_DIALOGUE_ABC = {
-  l4_dlg_1: {
-    abcGuideZh: "李评价房间。练习 どうです・きれい。",
+  "l4_dlg_1": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「とても きれいです。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -693,7 +693,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "とても きれいです。",
         chinese: "非常漂亮。",
-        noteZh: "课文：とても＋い形容词。称赞房间用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· 课文：とても＋い形容词。称赞房间用 A。",
       },
       {
         label: "B",
@@ -711,8 +711,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_2: {
-    abcGuideZh: "小野问有什么。练习 何がありますか。",
+  "l4_dlg_2": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「何が ありますか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -720,7 +720,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "何が ありますか。",
         chinese: "有什么？",
-        noteZh: "课文原句：何が＋ありますか。存在询问用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· 何が＋ありますか。存在询问用 A。",
       },
       {
         label: "B",
@@ -738,8 +738,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_3: {
-    abcGuideZh: "李列举家具与桌上物品。",
+  "l4_dlg_3": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「机と 椅子と ベッドが あります…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -747,7 +747,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "机と 椅子と ベッドが あります。机の上に パソコンや 本などが あります。",
         chinese: "有桌子、椅子和床。桌子上有电脑、书之类的东西。",
-        noteZh: "课文两句：と列举＋や＋など。标准介绍用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· と列举＋や＋など。标准介绍用 A。",
       },
       {
         label: "B",
@@ -765,8 +765,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_4: {
-    abcGuideZh: "小野问窗旁。练习 隣にありますか。",
+  "l4_dlg_4": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「窓の 隣に 何が ありますか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -774,7 +774,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "窓の 隣に 何が ありますか。",
         chinese: "窗户旁边有什么？",
-        noteZh: "课文：隣に何が。位置询问用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· 课文：隣に何が。位置询问用 A。",
       },
       {
         label: "B",
@@ -792,8 +792,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_5: {
-    abcGuideZh: "李答书架。",
+  "l4_dlg_5": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「本棚が あります。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -801,7 +801,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "本棚が あります。",
         chinese: "有书架。",
-        noteZh: "课文原句。存在回答用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· 课文原句。存在回答用 A。",
       },
       {
         label: "B",
@@ -819,8 +819,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_6: {
-    abcGuideZh: "小野问床下。练习 何かありますか。",
+  "l4_dlg_6": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「ベッドの 下に 何か ありますか…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -828,7 +828,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "ベッドの 下に 何か ありますか。",
         chinese: "床底下有什么吗？",
-        noteZh: "课文：何かありますか（不确定有无）。用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· 课文：何かありますか（不确定有无）。用 A。",
       },
       {
         label: "B",
@@ -846,8 +846,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_7: {
-    abcGuideZh: "李答有鞋。",
+  "l4_dlg_7": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「はい、靴が あります。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -855,7 +855,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "はい、靴が あります。",
         chinese: "有，有鞋子。",
-        noteZh: "课文：はい＋があります。肯定存在用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· 课文：はい＋があります。肯定存在用 A。",
       },
       {
         label: "B",
@@ -873,8 +873,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_8: {
-    abcGuideZh: "小野问电视位置。",
+  "l4_dlg_8": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「テレビは どこに ありますか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -882,7 +882,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "テレビは どこに ありますか。",
         chinese: "电视在哪儿？",
-        noteZh: "课文：どこにありますか。标准问法用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· 课文：どこにありますか。标准问法用 A。",
       },
       {
         label: "B",
@@ -900,8 +900,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_9: {
-    abcGuideZh: "李答电视挂墙上。练习 かかっています。",
+  "l4_dlg_9": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「テレビは 机の 前の 壁に かか…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -909,7 +909,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "テレビは 机の 前の 壁に かかっています。",
         chinese: "电视挂在桌子前面的墙上。",
-        noteZh: "课文：かかっています（挂着）。标准答用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· 课文：かかっています（挂着）。标准答用 A。",
       },
       {
         label: "B",
@@ -927,8 +927,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_10: {
-    abcGuideZh: "小野接话并问猫。",
+  "l4_dlg_10": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「そうですか。猫は いますか。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -936,7 +936,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "そうですか。猫は いますか。",
         chinese: "是吗。有猫吗？",
-        noteZh: "课文：そうですか＋いますか（有生命）。用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· 课文：そうですか＋いますか（有生命）。用 A。",
       },
       {
         label: "B",
@@ -954,8 +954,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_11: {
-    abcGuideZh: "李否定并补充小鸟。",
+  "l4_dlg_11": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 李应答。A＝课文「いいえ、猫は いません。でも、庭…」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "李" },
     replies: [
       {
@@ -963,7 +963,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "いいえ、猫は いません。でも、庭に 小鳥が います。",
         chinese: "没有猫。不过院子里有小鸟。",
-        noteZh: "课文：いいえ＋いません＋でも。标准答用 A。",
+        noteZh: "A 标准答（李）：「部屋の様子」· 课文：いいえ＋いません＋でも。标准答用 A。",
       },
       {
         label: "B",
@@ -981,8 +981,8 @@ const L4_DIALOGUE_ABC = {
       },
     ],
   },
-  l4_dlg_12: {
-    abcGuideZh: "小野称赞房间。",
+  "l4_dlg_12": {
+    abcGuideZh: "「部屋の様子」（房间的样子）· 存在 · あります/います · 小野应答。A＝课文「いい 部屋ですね。」；B＝同场景口语/缩短；C＝更礼貌或郑重。",
     userTurn: { speaker: "小野" },
     replies: [
       {
@@ -990,7 +990,7 @@ const L4_DIALOGUE_ABC = {
         rank: 1,
         japanese: "いい 部屋ですね。",
         chinese: "房间不错啊。",
-        noteZh: "课文原句：いい部屋ですね。结束参观用 A。",
+        noteZh: "A 标准答（小野）：「部屋の様子」· いい部屋ですね。结束参观用 A。",
       },
       {
         label: "B",
