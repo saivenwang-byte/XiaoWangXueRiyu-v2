@@ -10,6 +10,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：これは 本です。" },
       { zh: "これは离说话人近的事物；会話 A 轨常用。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
@@ -17,6 +18,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：それは 何ですか。" },
       { zh: "それ＝离听话人近；これ／あれ对照记忆。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
@@ -24,198 +26,234 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：あれは だれの 傘ですか。" },
       { zh: "あれ＝离双方都远；看不见场所用あそこ（第3课）。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_4": {
     lines: [
       { zh: "どれが～ですか；不能单独どれですか。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g4" }],
   },
   "l2_v_5": {
     lines: [
       { zh: "本课：书；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_6": {
     lines: [
       { zh: "本课：杂志；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_7": {
     lines: [
       { zh: "本课：词典；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_8": {
     lines: [
       { zh: "本课：笔记本；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_9": {
     lines: [
       { zh: "本课：照相机；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_10": {
     lines: [
       { zh: "本课：伞；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_11": {
     lines: [
       { zh: "本课：鞋；结合会話 ABC 的 A 轨朗读。" },
+      { ja: "くつ", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_12": {
     lines: [
       { zh: "本课：报纸；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_13": {
     lines: [
       { zh: "本课：电视机；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_14": {
     lines: [
       { zh: "本课：手机；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_15": {
     lines: [
       { zh: "本课：铅笔；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_16": {
     lines: [
       { zh: "本课：圆珠笔；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_17": {
     lines: [
       { zh: "本课：橡皮；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_18": {
     lines: [
       { zh: "本课：钱包；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_19": {
     lines: [
       { zh: "本课：钥匙；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_20": {
     lines: [
       { zh: "本课：电话；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_21": {
     lines: [
       { zh: "本课：书桌；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_22": {
     lines: [
       { zh: "本课：椅子；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_23": {
     lines: [
       { zh: "本课：地图；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_24": {
     lines: [
       { zh: "本课：照片；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_25": {
     lines: [
       { zh: "本课：汽车；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_26": {
     lines: [
       { zh: "本课：自行车；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_27": {
     lines: [
       { zh: "本课：名字；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_28": {
     lines: [
       { zh: "本课：什么；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_29": {
     lines: [
       { zh: "本课：是啊；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_30": {
     lines: [
       { zh: "本课：啊？（惊讶）；结合会話 ABC 的 A 轨朗读。" },
+      { ja: "えっ", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_31": {
     lines: [
       { zh: "本课：哪位（敬称）；结合会話 ABC 的 A 轨朗读。" },
+      { ja: "どなた", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "第2课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_32": {
     lines: [
       { zh: "本课：国家（敬称）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_33": {
     lines: [
       { zh: "本课：位（敬称）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_34": {
     lines: [
       { zh: "本课：父亲（对外）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
   "l2_v_35": {
     lines: [
       { zh: "本课：母亲（对外）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l2_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l2_g1" }],
   },
@@ -223,6 +261,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：ここは デパートです。" },
       { zh: "ここは教室です；场所指示＝这里。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
@@ -230,6 +269,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：あそこが 図書館です。" },
       { zh: "そこは事務所です；那里。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
@@ -237,6 +277,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：あそこが 図書館です。" },
       { zh: "あそこは食堂です；远处场所。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
@@ -244,162 +285,189 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：トイレは どこですか。" },
       { zh: "教室はどこですか；疑问场所。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g2" }],
   },
   "l3_v_5": {
     lines: [
       { zh: "本课：百货商店；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_6": {
     lines: [
       { zh: "本课：邮局；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_7": {
     lines: [
       { zh: "本课：银行；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_8": {
     lines: [
       { zh: "本课：图书馆；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_9": {
     lines: [
       { zh: "本课：美术馆；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_10": {
     lines: [
       { zh: "本课：车站；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_11": {
     lines: [
       { zh: "本课：便利店；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_12": {
     lines: [
       { zh: "本课：公园；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_13": {
     lines: [
       { zh: "本课：动物园；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_14": {
     lines: [
       { zh: "本课：学校；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_15": {
     lines: [
       { zh: "本课：大学；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_16": {
     lines: [
       { zh: "本课：医院；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_17": {
     lines: [
       { zh: "本课：书店；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_18": {
     lines: [
       { zh: "本课：咖啡馆；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_19": {
     lines: [
       { zh: "本课：西餐厅；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_20": {
     lines: [
       { zh: "本课：厕所；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_21": {
     lines: [
       { zh: "本课：楼梯；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_22": {
     lines: [
       { zh: "本课：自动扶梯；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_23": {
     lines: [
       { zh: "本课：电梯；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_24": {
     lines: [
       { zh: "本课：～楼；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_25": {
     lines: [
       { zh: "本课：～日元；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_26": {
     lines: [
       { zh: "本课：多少钱；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_27": {
     lines: [
       { zh: "本课：一千日元；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_28": {
     lines: [
       { zh: "本课：一万日元；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_29": {
     lines: [
       { zh: "こちらは会社の食堂です；礼貌说法。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_30": {
     lines: [
       { zh: "そちらは会議室です。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
@@ -407,72 +475,84 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：銀行は あちらです。" },
       { zh: "あちらは受付です。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_32": {
     lines: [
       { zh: "お国はどちらですか。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g2" }],
   },
   "l3_v_33": {
     lines: [
       { zh: "本课：对面；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_34": {
     lines: [
       { zh: "本课：右边；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_35": {
     lines: [
       { zh: "本课：左边；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_36": {
     lines: [
       { zh: "本课：正中间；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_37": {
     lines: [
       { zh: "本课：道路；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_38": {
     lines: [
       { zh: "本课：红绿灯；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_39": {
     lines: [
       { zh: "本课：十字路口；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_40": {
     lines: [
       { zh: "本课：～丁目（街区）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_41": {
     lines: [
       { zh: "本课：～号（门牌）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第3课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
   "l3_v_42": {
     lines: [
       { zh: "本课：请不要（敬语）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l3_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l3_g1" }],
   },
@@ -480,6 +560,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：部屋に 机といすがあります。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -487,6 +568,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：部屋に 机といすがあります。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -494,6 +576,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：椅子；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -501,6 +584,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：包、手提包；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -508,6 +592,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "课文：庭に 猫がいます。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -515,6 +600,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：狗；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -522,6 +608,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：箱子；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -529,6 +616,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：电、电灯；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -536,6 +624,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：书架；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -543,6 +632,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：被褥；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -550,6 +640,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：榻榻米；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -557,6 +648,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：画、图画；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -564,6 +656,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：汽车；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -571,6 +664,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：自行车；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -578,6 +672,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：记事本；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -585,6 +680,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：照片；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -600,6 +696,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "机の下に…" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g4" }],
   },
@@ -607,6 +704,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "駅の前に…" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g4" }],
   },
@@ -614,6 +712,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "いすの後ろに…" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g4" }],
   },
@@ -621,6 +720,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：左边；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -628,6 +728,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：右边；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -643,6 +744,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：外面；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -650,6 +752,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "隣に…＝旁边。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g4" }],
   },
@@ -657,6 +760,7 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：附近；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -664,54 +768,66 @@ const Unit1KnowledgeTips = (function () {
     lines: [
       { zh: "本课：之间；结合会話 ABC 的 A 轨朗读。" },
       { zh: "存在句：场所+に+物が+あります／人が+います。" },
+      { zh: "名词搭配は／が／を／に；见文法 l4_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_28": {
     lines: [
       { zh: "本课：有（非生物）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第4课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_29": {
     lines: [
       { zh: "本课：有、在（生物）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第4课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_30": {
     lines: [
       { zh: "课文：部屋に 机といすがあります。" },
+      { ja: "と", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_31": {
     lines: [
       { zh: "本课：和（部分列举）；结合会話 ABC 的 A 轨朗读。" },
+      { ja: "や", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_32": {
     lines: [
       { zh: "本课：等等；结合会話 ABC 的 A 轨朗读。" },
+      { ja: "など", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_33": {
     lines: [
       { zh: "本课：任何地方都不（+否定）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_34": {
     lines: [
       { zh: "本课：完全（+否定/肯定）；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
   "l4_v_35": {
     lines: [
       { zh: "本课：非常、不得了；结合会話 ABC 的 A 轨朗读。" },
+      { zh: "第4课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l4_g1" }],
   },
@@ -1946,17 +2062,18 @@ const GRAMMAR = {
   "l2_g1": {
     "lines": [
         {
-            "zh": "句型：单独使用，指代事物。"
+            "ja": "单独使用，指代事物。",
+            "zh": "指示代词"
         },
         {
             "zh": "「どれ」不能单独构成疑问句（×「どれですか」），必须放在句中：「どれが～ですか」。"
         },
         {
-            "zh": "「あれ」指远处可看见的事物，如果看不见则用「あそこ」（第3课）。"
-        },
-        {
             "ja": "これは 本です。",
             "zh": "这是书。"
+        },
+        {
+            "zh": "これ＝物；ここ＝场所（第3课）"
         },
         {
             "zh": "これ＝物；ここ＝场所（第3课）"
@@ -1978,6 +2095,12 @@ const GRAMMAR = {
         {
             "ja": "必须后接名词，不能单独使用。",
             "zh": "连体词"
+        },
+        {
+            "zh": "句型：必须后接名词，不能单独使用。"
+        },
+        {
+            "zh": "例：这是日语书。"
         },
         {
             "ja": "この 本は 日本語の 本です。",
@@ -2007,6 +2130,12 @@ const GRAMMAR = {
             "zh": "所属・所有"
         },
         {
+            "zh": "句型：名1 は 名2 の 名3 です（所属・所有）"
+        },
+        {
+            "zh": "例：这是我的书。"
+        },
+        {
             "ja": "これは 私の 本です。",
             "zh": "这是我的书。"
         }
@@ -2025,7 +2154,14 @@ const GRAMMAR = {
   "l2_g4": {
     "lines": [
         {
+            "ja": "句尾加「ね」，说明向对方确认或寻求同感。",
+            "zh": "确认・共感"
+        },
+        {
             "zh": "句型：句尾加「ね」，说明向对方确认或寻求同感。"
+        },
+        {
+            "zh": "例：今天天气真好呢。（共感）"
         },
         {
             "ja": "今日はいい天気ですね。",
@@ -2051,17 +2187,18 @@ const GRAMMAR = {
   "l3_g1": {
     "lines": [
         {
-            "zh": "句型：单独使用，指代地点/场所。"
+            "ja": "单独使用，指代地点/场所。",
+            "zh": "场所指示词"
         },
         {
             "zh": "「ここ・そこ・あそこ」本身就是名词，不能用「の」修饰（×ここの部屋）。要说「この部屋」。"
         },
         {
-            "zh": "「どこ」不能单独成句，必须用在「～はどこですか」或「どこが～ですか」。"
-        },
-        {
             "ja": "ここは デパートです。",
             "zh": "这里是百货商店。"
+        },
+        {
+            "zh": "ここ＝场所；これ＝物品"
         },
         {
             "zh": "ここ＝场所；これ＝物品"
@@ -2083,6 +2220,12 @@ const GRAMMAR = {
         {
             "ja": "名 は どこですか",
             "zh": "询问某物/某处在哪里。"
+        },
+        {
+            "zh": "句型：名 は どこですか"
+        },
+        {
+            "zh": "例：厕所在哪里？"
         },
         {
             "ja": "トイレは どこですか。",
@@ -2133,7 +2276,14 @@ const GRAMMAR = {
   "l3_g4": {
     "lines": [
         {
+            "ja": "数字・お金（～円、いくら）",
+            "zh": "～円、いくら"
+        },
+        {
             "zh": "句型：数字・お金（～円、いくら）"
+        },
+        {
+            "zh": "例：1000円です。"
         },
         {
             "ja": "この本は いくらですか。",
@@ -2159,7 +2309,8 @@ const GRAMMAR = {
   "l3_g5": {
     "lines": [
         {
-            "zh": "句型：丁寧な言い方（こちら／そちら／あちら／どちら）"
+            "ja": "丁寧な言い方（こちら／そちら／あちら／どちら）",
+            "zh": "こちら／そちら／あちら／どちら"
         },
         {
             "zh": "「どちら」还可以问“哪一位”（指人），如「あの方はどちらですか」。"
@@ -2195,11 +2346,11 @@ const GRAMMAR = {
             "zh": "生物与非生物的区别：树木、植物、机械等通常用「あります」，但有时人与动物也可以使用「あります」是绝对错误。"
         },
         {
-            "zh": "某地存在某物时，地点后必须用「に」，事物后必须用「が」。"
-        },
-        {
             "ja": "部屋に 机があります。",
             "zh": "房间里有书桌。"
+        },
+        {
+            "zh": "あります＝无生命；います＝有生命"
         },
         {
             "zh": "あります＝无生命；います＝有生命"
@@ -2221,6 +2372,12 @@ const GRAMMAR = {
         {
             "ja": "名2 は 名1 に あります / います",
             "zh": "某物/人在某处。"
+        },
+        {
+            "zh": "句型：名2 は 名1 に あります / います"
+        },
+        {
+            "zh": "例：书桌在房间里。"
         },
         {
             "ja": "机は 部屋にあります。",
@@ -2250,6 +2407,12 @@ const GRAMMAR = {
             "zh": "列举事例（非全部），相当于“像…啦…啦之类的”。"
         },
         {
+            "zh": "句型：名1 や 名2 など"
+        },
+        {
+            "zh": "例：书桌上有书啦、笔啦之类的。"
+        },
+        {
             "ja": "机の上に 本やペンなどがあります。",
             "zh": "书桌上有书啦、笔啦之类的。"
         }
@@ -2275,6 +2438,12 @@ const GRAMMAR = {
         {
             "ja": "名1 の ＋方位词 ＋ に ＋ あります/います。",
             "zh": "位置关系"
+        },
+        {
+            "zh": "句型：名1 の ＋方位词 ＋ に ＋ あります/います。"
+        },
+        {
+            "zh": "例：书桌上面有书。"
         },
         {
             "ja": "机の上に 本があります。",

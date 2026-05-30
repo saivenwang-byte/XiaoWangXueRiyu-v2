@@ -3,8 +3,8 @@
  * 数据：UNIT_STRIP_STORYBOARD
  */
 const StoryComicUi = (function () {
-  const MAX_BUBBLES_STRIP = 2;
-  const MAX_BUBBLES_ZOOM = 4;
+  const MAX_BUBBLES_STRIP = 4;
+  const MAX_BUBBLES_ZOOM = 8;
 
   function escapeHtml(s) {
     const d = document.createElement("div");
@@ -56,7 +56,7 @@ const StoryComicUi = (function () {
     const maxBubbles =
       options && options.maxBubbles != null ? options.maxBubbles : MAX_BUBBLES_STRIP;
     const { place, tag } = sceneParts(panel.sceneCloud);
-    const picked = pickBubbles(panel, maxBubbles);
+    const picked = pickBubbles(panel, maxBubbles, options);
     const bubbles = picked.map(renderMangaBubble).join("");
     const narration =
       panel.captionSmall && picked.length < maxBubbles

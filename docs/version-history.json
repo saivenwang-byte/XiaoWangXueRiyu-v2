@@ -2,9 +2,9 @@
   "schema": "hyouga-version-history/v1",
   "current": {
     "product": "1.0.2",
-    "cache": "406",
+    "cache": "408",
     "date": "2026-05-30",
-    "note": "L2-24黄卡L1深度·知识图L3-24闭环·条带4泡zoom·ABC润色 v403",
+    "note": "L1–24精写：954单词+101文法黄卡+24格highlight泡+376场景ABC导出 v408",
     "git_tag": null,
     "baseline": "docs/iteration-baseline.json",
     "discipline": "docs/Agent文递自归.md",

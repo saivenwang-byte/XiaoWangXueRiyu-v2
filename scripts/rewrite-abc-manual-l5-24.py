@@ -59,6 +59,18 @@ except ImportError:
         return ""
 
 
+from abc_variants import (  # noqa: E402
+    audit_visible,
+    b_chinese,
+    is_narrative,
+    norm_jp,
+    note_b,
+    note_c,
+    variant_b,
+    variant_c,
+    vis_norm,
+)
+
 NARRATIVE_RE = re.compile(r"^[（(].*[）)]$")
 
 
@@ -78,10 +90,6 @@ def load_zh_l9_24() -> dict[str, str]:
     return json.loads(m.group(1)) if m else {}
 
 
-def norm_jp(s: str) -> str:
-    return re.sub(r"\s+", " ", (s or "").strip())
-
-
 def zh_lookup(jp: str, lid: int, zh_map: dict[str, str]) -> str:
     n = norm_jp(jp)
     if lid <= 8:
@@ -90,123 +98,6 @@ def zh_lookup(jp: str, lid: int, zh_map: dict[str, str]) -> str:
     if z:
         return z
     return zh_map.get(n, "")
-
-
-def is_narrative(jp: str) -> bool:
-    s = norm_jp(jp)
-    return bool(NARRATIVE_RE.match(s)) or "ナレーション" in s
-
-
-def variant_b(jp: str) -> str:
-    """B：同事/接上文 · 缩短或省略 · 必须与 A 不同（叙述句除外）"""
-    a = norm_jp(jp)
-    if not a or is_narrative(a):
-        return a
-    s = a
-    for prefix in ("はい、", "いいえ、", "えっ、", "あっ、", "そうですね。", "じゃあ、", "それから、", "そして、"):
-        if s.startswith(prefix):
-            s = norm_jp(s[len(prefix) :])
-            break
-    if not s:
-        s = a.replace("。", "、そう思います。") if a.endswith("。") else "ええ、" + a
-    s = re.sub(r"^私は\s+", "", s)
-    s = re.sub(r"^わたしは\s+", "", s)
-    s = re.sub(r"どうも\s+", "", s)
-    s = re.sub(r"本当に\s+", "", s)
-    s = re.sub(r"とても\s+", "", s)
-    # 读信/引用：読みましょう。『…』 — 勿按句号拆破引号
-    qm = re.match(r"^(.+?『)(.+)(』)$", s)
-    if qm:
-        prefix, inner, suffix = qm.group(1), qm.group(2), qm.group(3)
-        if "。" in inner:
-            inner_parts = [p.strip() for p in inner.split("。") if p.strip()]
-            if len(inner_parts) >= 2:
-                shorter = inner_parts[0] + "。"
-                cand = norm_jp(prefix + shorter + suffix)
-                if cand and cand != a:
-                    return cand
-    if "。" in s and s.count("。") >= 2 and "『" not in s:
-        parts = [p.strip() for p in s.split("。") if p.strip()]
-        if len(parts) >= 2:
-            s = parts[-1] + "。"
-    if s == a and "いつも" in s:
-        s = s.replace("いつも", "だいたい")
-    if s == a and s.endswith("です。"):
-        s = s[:-3] + "だよ。"
-    if s == a and s.endswith("ます。"):
-        s = s[:-3] + "るよ。"
-    if s == a and s.endswith("でした。"):
-        s = s[:-4] + "だった。"
-    if s == a and s.endswith("ですか。"):
-        s = re.sub(r"^(.+?)は\s+", "", s)
-    if s == a and s.endswith("ますか。"):
-        s = s.replace("ますか。", "る？")
-    if s == a and "ください" in s:
-        s = s.replace("ください", "ちょうだい")
-    if s == a and s in ("そうですね。", "はい。", "ええ。"):
-        s = s.replace("。", "、そう思います。")
-    if s == a and len(s) <= 6:
-        s = "ええ、" + s if not s.startswith("ええ") else s[:-1] + "、そのとおりです。"
-    if s == a and len(s) > 8:
-        s = s.replace("、", "")
-    if s == a:
-        s = "ええ、" + a if not a.startswith("ええ") else a[:-1] + "、短く言うと同じ意味です。"
-    return norm_jp(s) or a
-
-
-def variant_c(jp: str) -> str:
-    """C：更礼貌/郑重 · 必须与 A 不同"""
-    a = norm_jp(jp)
-    if not a or is_narrative(a):
-        return a
-    s = a
-    if s.endswith("ください。"):
-        return s.replace("ください。", "いただけますでしょうか。")
-    if s.endswith("ですか。"):
-        return s[:-4] + "でしょうか。"
-    if s.endswith("ますか。"):
-        return s[:-4] + "ますでしょうか。"
-    if s.endswith("？"):
-        body = s[:-1]
-        return body + "でしょうか。"
-    if "ありがとう" in s and s.endswith("。"):
-        if "ございます" not in s:
-            return s.replace("ありがとう", "ありがとうございます")
-        return s[:-1] + "。心より感謝いたします。"
-    if s.endswith("です。"):
-        body = s[:-3]
-        if "ございます" in body:
-            return s[:-1] + "。恐れ入ります。"
-        if "さん" in body:
-            return body.replace("さん", "様") + "でございます。"
-        return body + "でございます。"
-    if s.endswith("ます。"):
-        return s[:-3] + "ますね。"
-    if s.endswith("でした。"):
-        return s[:-4] + "でしたね。"
-    if s == a:
-        return s[:-1] + "ね。" if s.endswith("。") else s + "ね"
-    return s
-
-
-def note_b(a_jp: str, b_jp: str, speaker: str) -> str:
-    if b_jp == a_jp:
-        return "B 与课文同句：叙述/旁白块，三种选项均为跟读（非选答）."
-    if len(b_jp) < len(a_jp):
-        return f"B 更短：省略主语或前半，同事间接上文时用（{speaker}，可沟通）."
-    if "だよ" in b_jp or "るよ" in b_jp:
-        return f"B 口语体：です→だよ/るよ，轻松场合用（{speaker}，非错答）."
-    return f"B 同场景变体：节奏快、信息略减（{speaker}，可沟通）."
-
-
-def note_c(a_jp: str, c_jp: str, speaker: str) -> str:
-    if c_jp == a_jp:
-        return "C 与课文同句：叙述块跟读用."
-    if "でしょうか" in c_jp or "ございます" in c_jp or "いただけ" in c_jp:
-        return f"C 更礼貌：对上级/客户或正式场合可选（{speaker}，非错答）."
-    if "様" in c_jp:
-        return f"C 敬称升级：さん→様，商务/郑重场合用（{speaker}）."
-    return f"C 语气更软：句末「ね」等，缓和确认时用（{speaker}，非错答）."
 
 
 def abc_guide(dlg: dict, lid: int) -> str:
@@ -237,7 +128,11 @@ def build_entry(dlg: dict, lid: int, zh_map: dict[str, str]) -> dict | None:
             c_jp = a_jp[:-1] + "ね。" if a_jp.endswith("。") else a_jp + "ね"
     title = (dlg.get("title") or "会話").split("（")[0].strip()
     theme = LESSON_SCENE_HINT.get(lid, "会話")
-    b_zh = zh_lookup(b_jp, lid, zh_map) if b_jp != a_jp else a_zh
+    b_zh = (
+        zh_lookup(b_jp, lid, zh_map)
+        if b_jp != a_jp and zh_lookup(b_jp, lid, zh_map)
+        else b_chinese(a_zh, a_jp, b_jp)
+    )
     c_zh = zh_lookup(c_jp, lid, zh_map) if c_jp != a_jp else a_zh
     return {
         "abcGuideZh": abc_guide(dlg, lid),
@@ -291,20 +186,6 @@ def emit_map(name: str, mp: dict) -> list[str]:
         lines.append("  },")
     lines.append("};")
     return lines
-
-
-def audit_maps(all_maps: dict[int, dict]) -> tuple[int, int]:
-    same_b = same_c = 0
-    for mp in all_maps.values():
-        for v in mp.values():
-            rs = v["replies"]
-            a, b, c = rs[0]["japanese"], rs[1]["japanese"], rs[2]["japanese"]
-            if not is_narrative(a):
-                if b == a:
-                    same_b += 1
-                if c == a:
-                    same_c += 1
-    return same_b, same_c
 
 
 def write_l5_8(maps: dict[int, dict]) -> None:
@@ -430,12 +311,12 @@ def main() -> int:
                 mp[d["id"]] = ent
         maps[lid] = mp
         print(f"[OK] L{lid}: {len(mp)} scenes")
-    sb, sc = audit_maps(maps)
-    print(f"[AUDIT] B==A (non-narrative): {sb} · C==A: {sc}")
+    sb, sc, sv = audit_visible(maps)
+    print(f"[AUDIT] B==A: {sb} · C==A: {sc} · vis(B)==vis(A): {sv}")
     write_l5_8({k: maps[k] for k in range(5, 9)})
     write_l9_24({k: maps[k] for k in range(9, 25)})
     print(f"Wrote {OUT_L5_8.name} + {OUT_L9_24.name}")
-    return 0 if sb == 0 else 1
+    return 0 if sb == 0 and sc == 0 and sv == 0 else 1
 
 
 if __name__ == "__main__":

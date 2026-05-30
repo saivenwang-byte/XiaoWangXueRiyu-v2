@@ -10,6 +10,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：森さんは７時に起きます。" },
       { zh: "具体时刻＋に；2类动词ます形。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g3" }],
   },
@@ -17,6 +18,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：昨日、何時に寝ましたか。" },
       { zh: "过去式「寝ました」问睡觉时间。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -24,6 +26,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：田中さんは９時から５時まで働きます。" },
       { zh: "から～まで＝从…到…；时间段。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g4" }],
   },
@@ -31,6 +34,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "休みます；会社を休みます＝请假。" },
       { zh: "ます形四种时态见单词栏。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
@@ -38,6 +42,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "勉強します；サ変动词。" },
       { zh: "図書館で勉強します（第6课で）。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
@@ -45,30 +50,35 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "结束；ます形叙述日常作息。" },
       { zh: "时间用に／から～まで。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第5课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
   "l5_v_7": {
     lines: [
       { zh: "百货商店；场所へ行きます／で働きます（第6课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
   "l5_v_8": {
     lines: [
       { zh: "银行；场所へ行きます／で働きます（第6课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
   "l5_v_9": {
     lines: [
       { zh: "图书馆；场所へ行きます／で働きます（第6课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
   "l5_v_10": {
     lines: [
       { zh: "美术馆；场所へ行きます／で働きます（第6课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
@@ -76,6 +86,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "表现在时刻；今何時ですか。" },
       { zh: "现在；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g3" }],
   },
@@ -83,6 +94,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "～時＝…点；７時、９時。" },
       { zh: "音变：4=よじ、7=しち、9=くじ（见发音块）。" },
+      { zh: "第5课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -90,6 +102,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "～分；１０分、３０分。" },
       { zh: "６時半＝6:30（半＝はん）。" },
+      { zh: "第5课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -97,6 +110,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "６時半に起きます。（课文）" },
       { zh: "半读はん；附在时刻后。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -104,6 +118,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "午前９時；上午时段。" },
       { zh: "上午；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -111,6 +126,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "午後３時；下午。" },
       { zh: "下午；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -118,6 +134,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎朝６時に起きます。（课文）" },
       { zh: "早上；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g3" }],
   },
@@ -125,6 +142,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎晩１０時に寝ます。" },
       { zh: "晚上；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -132,6 +150,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "夜１１時；与晩区分了解。" },
       { zh: "夜晚；本课时间表达。" },
+      { zh: "名词搭配は／が／を／に；见文法 l5_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -139,6 +158,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎朝６時半に起きます。" },
       { zh: "每天早上。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g3" }],
   },
@@ -146,6 +166,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎晩寝ます；频率后接ます形，不加に。" },
       { zh: "每天晚上。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -153,6 +174,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎日働きます；与钟点「に」并用注意语序。" },
       { zh: "每天。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -160,6 +182,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎週１回；本课先识读。" },
       { zh: "每周。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -167,6 +190,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎月；时间频率副词。" },
       { zh: "每月。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -174,6 +198,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "毎年；与来月等名词区分。" },
       { zh: "每年。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -181,6 +206,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "いつも＝总是；第7课再系统讲程度。" },
       { zh: "总是。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -188,6 +214,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "たいてい＝大致；后接肯定。" },
       { zh: "大致、通常。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -195,6 +222,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "時々；第7课与频率副词对比。" },
       { zh: "有时。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -202,6 +230,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "あまり～ない；本课预习，须否定。" },
       { zh: "不太～（后接否定）。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -209,6 +238,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "全然～ない；须否定。" },
       { zh: "完全（不～）（后接否定）。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g2" }],
   },
@@ -216,6 +246,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "それから＝然后；连接时间顺序。" },
       { zh: "接続词，放句首。" },
+      { zh: "接续词连接句意；会話 A 轨可对照朗读。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l5_g1" }],
   },
@@ -223,6 +254,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：来月中国へ行きます。" },
       { zh: "移动方向へ；未来用ます。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第6课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -230,6 +262,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "3类カ変；友達が来ます。" },
       { zh: "起点から：東京から来ました。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第6课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -237,6 +270,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "私はバスで家へ帰ります。（课文）" },
       { zh: "帰る＝回去；へ方向。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第6课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -244,6 +278,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "電車で行きます。" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -251,6 +286,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "私はバスで家へ帰ります。（课文）" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -258,6 +294,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "タクシーで；で＋交通工具。" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -265,6 +302,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "自転車で；也可歩いて。" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -272,6 +310,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "飛行機で；ひこうき＝飛行機表记。" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -279,6 +318,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "フェリーで渡ります。" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -286,6 +326,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "李さんは新幹線で大阪へ行きました。（课文）" },
       { zh: "手段・交通工具＋で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -293,12 +334,15 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "歩いて帰ります；て形表方式。" },
       { zh: "×歩くで → ○歩いて（不再加で）。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
   "l6_v_12": {
     lines: [
       { zh: "友達と行きます（と＝和，第11课）。" },
+      { ja: "友達", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -306,6 +350,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "一人で行きます＝独自。" },
       { zh: "で表方式／状态。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -313,6 +358,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "来月中国へ行きます。（课文）" },
       { zh: "下个月；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -320,6 +366,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "先月行きました；过去用ました。" },
       { zh: "上个月；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -327,6 +374,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "今月；时间名词。" },
       { zh: "这个月；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -334,6 +382,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "来週；へ行きます。" },
       { zh: "下周；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -341,6 +390,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "先週帰りました。" },
       { zh: "上周；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -348,6 +398,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "今週。" },
       { zh: "本周；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -355,6 +406,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "来年；将来。" },
       { zh: "明年；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -362,6 +414,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "去年行きました。" },
       { zh: "去年；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -369,6 +422,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "今年。" },
       { zh: "今年；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -376,6 +430,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "明日行きます。" },
       { zh: "明天；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -383,6 +438,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "昨日帰りました。" },
       { zh: "昨天；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -390,6 +446,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "明後日。" },
       { zh: "后天；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -397,6 +454,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "一昨日。" },
       { zh: "前天；时间词修饰行きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l6_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -404,6 +462,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "どこへ行きますか。" },
       { zh: "疑问词+へ。" },
+      { zh: "第6课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g4" }],
   },
@@ -411,6 +470,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "何で行きますか＝用什么方式。" },
       { zh: "何＋で。" },
+      { zh: "第6课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g4" }],
   },
@@ -418,6 +478,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "方向助词：中国へ行きます。" },
       { zh: "强调方向；到达也可用に。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -425,6 +486,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "手段：バスで、新幹線で。" },
       { zh: "≠第8课语言で；本课=交通方式。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g3" }],
   },
@@ -432,6 +494,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "起点：東京から京都まで。" },
       { zh: "与まで成对。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g2" }],
   },
@@ -439,6 +502,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "终点：５時まで働きます（第5课）／大阪まで。" },
       { zh: "から～まで。" },
+      { zh: "助词须对照当课文法例句；勿按中文语序硬套。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g2" }],
   },
@@ -446,12 +510,14 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "ちょっと待ってください；一会儿。" },
       { zh: "第14课てください再学。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
   "l6_v_34": {
     lines: [
       { zh: "真っ直ぐ行ってください；方向指示。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g1" }],
   },
@@ -459,6 +525,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "どのぐらい＝多久／多远。" },
       { zh: "本课问路程时间。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l6_g5" }],
   },
@@ -466,48 +533,56 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：李さんは毎日コーヒーを飲みます。他动+を。" },
       { zh: "1类动词；对象「コーヒーを」、时间「毎日」不加に。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_2": {
     lines: [
       { zh: "買います＋を：本を買います。1类。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_3": {
     lines: [
       { zh: "撮ります＋を：写真を撮ります。会話常用。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_4": {
     lines: [
       { zh: "書きます＋を：手紙を書きます（第8课でで）。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_5": {
     lines: [
       { zh: "読みます＋を：本を読みます。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_6": {
     lines: [
       { zh: "聞きます：音楽を聞きます／先生に聞きます（问）。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_7": {
     lines: [
       { zh: "2类「食べます」；ご飯を食べます。辞書食べる。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_8": {
     lines: [
       { zh: "2类「見ます」；课文：映画を見ませんか。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g3" }],
   },
@@ -515,120 +590,143 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "会話：コーヒーにします＝选咖啡；选择用「に」不用「を」。" },
       { zh: "×コーヒーをします → ○にします。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g4" }],
   },
   "l7_v_10": {
     lines: [
       { zh: "サ変「掃除します」；部屋を掃除します。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第7课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_11": {
     lines: [
       { zh: "名词；点单「コーヒーをください」或「コーヒーにします」。" },
+      { ja: "コーヒー", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g4" }],
   },
   "l7_v_12": {
     lines: [
       { zh: "「お茶」⓪；美化语「お～」。お茶にします。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g4" }],
   },
   "l7_v_13": {
     lines: [
       { zh: "牛乳を飲みます／牛乳にします。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_14": {
     lines: [
       { zh: "ジュース①型；を／に 搭配。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_15": {
     lines: [
       { zh: "ビールを飲みます；注意を宾语。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_16": {
     lines: [
       { zh: "パンを食べます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_17": {
     lines: [
       { zh: "卵を食べます；数量第13课。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_18": {
     lines: [
       { zh: "りんご⓪；林檎＝苹果；りんごを食べます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_19": {
     lines: [
       { zh: "みかん①；みかんを一つ（第13课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_20": {
     lines: [
       { zh: "手紙を書きます；第8课「日本語で書きます」。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_21": {
     lines: [
       { zh: "写真を撮ります。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_22": {
     lines: [
       { zh: "日記を書きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_23": {
     lines: [
       { zh: "音楽を聞きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_24": {
     lines: [
       { zh: "课文：一緒に映画を見ませんか。对象映画を。" },
+      { ja: "映画", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g3。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g3" }],
   },
   "l7_v_25": {
     lines: [
       { zh: "课文：時々テニスをします。频率+を。" },
+      { ja: "テニス", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
   "l7_v_26": {
     lines: [
       { zh: "サッカーをします。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_27": {
     lines: [
       { zh: "テレビを見ます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
   "l7_v_28": {
     lines: [
       { zh: "ラジオを聞きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l7_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
@@ -636,18 +734,23 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "频率100%；いつも＋肯定：いつもコーヒーを飲みます。" },
       { zh: "不与「あまり／ぜんぜん」混用。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
   "l7_v_30": {
     lines: [
       { zh: "よく＝80%；よく運動します。" },
+      { ja: "よく", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
   "l7_v_31": {
     lines: [
       { zh: "课文：時々テニスをします。50%频率。" },
+      { ja: "時々", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
@@ -655,24 +758,30 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "あまり～ない＝不太；あまり食べません。" },
       { zh: "×あまり食べます → 须否定。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
   "l7_v_33": {
     lines: [
       { zh: "ぜんぜん～ない＝完全不；ぜんぜん分かりません。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g2" }],
   },
   "l7_v_34": {
     lines: [
       { zh: "一緒に映画を見ませんか。邀请固定搭配。" },
+      { ja: "一緒に", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g3" }],
   },
   "l7_v_35": {
     lines: [
       { zh: "课文：昨日、何を食べましたか。疑问词何+を。" },
+      { ja: "何", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "第7课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l7_g1" }],
   },
@@ -680,24 +789,28 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "课文：日本語で手紙を書きます。手段・语言用「で」。" },
       { zh: "≠第6课交通で；本课=工具/语言。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_2": {
     lines: [
       { zh: "差します：名刺を差します。递名片/伞。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_3": {
     lines: [
       { zh: "渡します：物を人に渡します。≠あげる（给予立场不同）。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_4": {
     lines: [
       { zh: "教えます：日本語を教えます。を+に。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
@@ -705,6 +818,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "もらいます：友達から CD をもらいました。" },
       { zh: "视点=接受者；に／から 均可。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g4" }],
   },
@@ -712,6 +826,7 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "あげます：私は妹にプレゼントをあげます。" },
       { zh: "主语=给予者；对长辈慎用あげる。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
@@ -719,204 +834,247 @@ const Unit2KnowledgeTips = (function () {
     lines: [
       { zh: "くれます：先生がお菓子をくれました。" },
       { zh: "主语=给予方；不能用于「我给别人」。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g3" }],
   },
   "l8_v_8": {
     lines: [
       { zh: "借ります：本を借ります。借入。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_9": {
     lines: [
       { zh: "貸します：本を貸します。借出。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_10": {
     lines: [
       { zh: "電話します；で電話する（方式）。" },
+      { zh: "动词ます形叙述；宾语「を」、时间「に」按第8课文法。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_11": {
     lines: [
       { zh: "课文：日本語で手紙を書きます。手紙を。" },
+      { ja: "手紙", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_12": {
     lines: [
       { zh: "葉書を書きます；はがき⓪。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_13": {
     lines: [
       { zh: "会話：これ、プレゼントです。授受核心名词。" },
+      { ja: "プレゼント", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_14": {
     lines: [
       { zh: "品物をあげる／もらう。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g2。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_15": {
     lines: [
       { zh: "文房具を買います。" },
+      { ja: "文房具", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_16": {
     lines: [
       { zh: "はさみで；工具+で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_17": {
     lines: [
       { zh: "はしで食べます；筷子。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_18": {
     lines: [
       { zh: "スプーンで；餐具+で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_19": {
     lines: [
       { zh: "ナイフで切ります。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_20": {
     lines: [
       { zh: "箱に入れます。" },
+      { ja: "箱", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_21": {
     lines: [
       { zh: "レコードをもらいました。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g4。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g4" }],
   },
   "l8_v_22": {
     lines: [
       { zh: "テープを聞きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_23": {
     lines: [
       { zh: "紙で；用纸张。" },
+      { ja: "紙", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_24": {
     lines: [
       { zh: "消しゴム⓪；文具。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_25": {
     lines: [
       { zh: "辞書で調べます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_26": {
     lines: [
       { zh: "日本語で手紙を書きます。语言+で。" },
+      { ja: "日本語", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_27": {
     lines: [
       { zh: "英語で話します。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_28": {
     lines: [
       { zh: "中国語でメールを書きます。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_29": {
     lines: [
       { zh: "何語で話しますか。疑问词+で。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_30": {
     lines: [
       { zh: "見た目がきれいです（第10课ナ形）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_31": {
     lines: [
       { zh: "使い方＝用法；～方（第22课）。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_32": {
     lines: [
       { zh: "自己紹介をします；で+语言介绍。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_33": {
     lines: [
       { zh: "趣味は何ですか。会話话题。" },
+      { zh: "名词搭配は／が／を／に；见文法 l8_g1。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_34": {
     lines: [
       { zh: "形動「得意」；歌が得意です（第11课）。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_35": {
     lines: [
       { zh: "形動「下手」；料理が下手です。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_36": {
     lines: [
       { zh: "日本から来ました；国名。" },
+      { ja: "日本", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_37": {
     lines: [
       { zh: "中国の友達；所属の。" },
+      { ja: "中国", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g1" }],
   },
   "l8_v_38": {
     lines: [
       { zh: "今回のプレゼント；连体词。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g2" }],
   },
   "l8_v_39": {
     lines: [
       { zh: "どちらが作りましたか。敬称疑问。" },
+      { zh: "第8课词汇；会話 ABC 的 A 轨为朗读真源。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g4" }],
   },
   "l8_v_40": {
     lines: [
       { zh: "もちろん、喜んで。当然。" },
+      { ja: "もちろん", zh: "课文锚句；对照会話 A 轨朗读。" },
+      { zh: "副词修饰谓语；注意与否定・过去呼应。" },
     ],
     links: [conv, { label: "→ 文法", gate: 1, ref: "l8_g3" }],
   },
@@ -1057,7 +1215,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "朝ごはんは？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "じゃあ、朝ごはんはでしょうか。",
@@ -1088,7 +1246,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "それから、７時半に家を出ます。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）."
+                "zh": "然后7点半出门。"
             },
             {
                 "ja": "いつも７時に食べます。それから、７時半に家を出ますね。",
@@ -1119,7 +1277,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "会社には何時に着きる？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "会社には何時に着きますでしょうか。",
@@ -1212,7 +1370,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "そして、朝ごはんを食べて、７時に家を出ます。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "然后吃早饭，7点出门。"
             },
             {
                 "ja": "私は６時に起きます。そして、朝ごはんを食べて、７時に家を出ますね。",
@@ -1274,10 +1432,10 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "森さんも早いですよ。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）."
             },
             {
-                "ja": "いいえ、森さんも早いですよね。",
+                "ja": "いいえ、森さんも早いですます。",
                 "zh": "C 语气更软：句末「ね」等，缓和确认时用（李，非错答）."
             }
         ],
@@ -1397,8 +1555,8 @@ const DIALOGUE_BY_LESSON = {
                 "zh": "大家都很努力呢。 A 标准答（小野）：「朝の習慣」· 朝の習慣 · 时间表达；与教材会話一致."
             },
             {
-                "ja": "みんな頑張っていますね。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "ja": "ええ、みんな、頑張っていますね。",
+                "zh": "B 同场景变体：节奏快、信息略减（小野，可沟通）."
             },
             {
                 "ja": "みんな、頑張っていますねね。",
@@ -1431,7 +1589,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "京都へ行く予定です。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 同场景变体：节奏快、信息略减（李，可沟通）."
             },
             {
                 "ja": "はい、京都へ行く予定でございます。",
@@ -1462,7 +1620,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "何で行きますか。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "坐什么去。"
             },
             {
                 "ja": "いいですね。何で行きますでしょうか。",
@@ -1493,7 +1651,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "東京から京都まで２時間半ぐらいです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "从东京到京都大约两个半小时。"
             },
             {
                 "ja": "新幹線で行きます。東京から京都まで２時間半ぐらいでございます。",
@@ -1524,7 +1682,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "一人で行きる？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "一人で行きますでしょうか。",
@@ -1555,7 +1713,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "友達と一緒に行きます。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）."
             },
             {
                 "ja": "いいえ、友達と一緒に行きますね。",
@@ -1586,7 +1744,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "楽しみですね。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "很期待啊。"
             },
             {
                 "ja": "そうですか。楽しみですねね。",
@@ -1617,7 +1775,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "小野さんもどこかへ行きる？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）."
             },
             {
                 "ja": "小野さんもどこかへ行きますでしょうか。",
@@ -1648,7 +1806,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "温泉に行きたいです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "想去泡温泉。"
             },
             {
                 "ja": "私はまだ決めていません。温泉に行きたいでございます。",
@@ -1710,7 +1868,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "ちょっと考えます。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "我再想想。"
             },
             {
                 "ja": "箱根もいいですね。ちょっと考えますね。",
@@ -1741,7 +1899,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "また後で。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）."
             },
             {
                 "ja": "じゃあ、また後でね。",
@@ -1774,7 +1932,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "すみません、ちょっとまだ… 李さん、何にしる？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "すみません、ちょっとまだ… 李さん、何にしますでしょうか。",
@@ -1804,8 +1962,8 @@ const DIALOGUE_BY_LESSON = {
                 "zh": "我点咖啡。小野呢？ A 标准答（李）：「カフェで注文」· カフェで注文 · を/にします/ください；与教材会話一致."
             },
             {
-                "ja": "ええ、私はコーヒーにします。小野さんは？",
-                "zh": "B 同场景变体：节奏快、信息略减（李，可沟通）."
+                "ja": "小野さんは？",
+                "zh": "小野呢？"
             },
             {
                 "ja": "私はコーヒーにします。小野さんはでしょうか。",
@@ -1898,7 +2056,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "それと、ケーキもありますか。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "还有蛋糕吗。"
             },
             {
                 "ja": "はい。それと、ケーキもありますでしょうか。",
@@ -1929,7 +2087,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "今日はチーズケーキとショートケーキです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（店員，可沟通）."
+                "zh": "今天是芝士蛋糕和海绵蛋糕。"
             },
             {
                 "ja": "はい、あります。今日はチーズケーキとショートケーキでございます。",
@@ -1960,7 +2118,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "チーズケーキを一つください。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "じゃあ、チーズケーキを一ついただけますでしょうか。",
@@ -2022,7 +2180,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "少々お待ちください。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（店員，可沟通）."
+                "zh": "请稍等。"
             },
             {
                 "ja": "かしこまりました。少々お待ちいただけますでしょうか。",
@@ -2076,7 +2234,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "李さんはよくカフェへ来る？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）."
             },
             {
                 "ja": "李さんはよくカフェへ来ますでしょうか。",
@@ -2106,8 +2264,8 @@ const DIALOGUE_BY_LESSON = {
                 "zh": "不，不太来。小野呢？ A 标准答（李）：「カフェで注文」· カフェで注文 · を/にします/ください；与教材会話一致."
             },
             {
-                "ja": "あまり来ません。小野さんは？",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "ja": "小野さんは？",
+                "zh": "小野呢？"
             },
             {
                 "ja": "いいえ、あまり来ません。小野さんはでしょうか。",
@@ -2138,7 +2296,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "ここは静かでいいですね。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "这里很安静，不错。"
             },
             {
                 "ja": "私はときどき来ます。ここは静かでいいですねね。",
@@ -2169,7 +2327,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "また一緒に来ましょう。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "下次一起来吧。"
             },
             {
                 "ja": "そうですね。また一緒に来ましょうね。",
@@ -2200,7 +2358,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "ぜひ。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "B 同场景变体：节奏快、信息略减（小野，可沟通）."
             },
             {
                 "ja": "はい、ぜひね。",
@@ -2233,7 +2391,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "開けてもいいですか。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "可以打开吗。"
             },
             {
                 "ja": "まあ、ありがとうございます。開けてもいいでしょうか。",
@@ -2264,7 +2422,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "どうぞ。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 同场景变体：节奏快、信息略减（李，可沟通）."
             },
             {
                 "ja": "はい、どうぞね。",
@@ -2295,7 +2453,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "何が入っていますか。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "里面是什么。"
             },
             {
                 "ja": "わあ、きれいな箱ですね。何が入っていますでしょうか。",
@@ -2357,7 +2515,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "とても嬉しいです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "非常高兴。"
             },
             {
                 "ja": "ありがとうございます。とても嬉しいです。心より感謝いたします。",
@@ -2388,7 +2546,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "どういたしまして。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）."
             },
             {
                 "ja": "いいえ、どういたしましてね。",
@@ -2419,7 +2577,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "私からもプレゼントです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）."
+                "zh": "我也送你礼物。"
             },
             {
                 "ja": "李さん、先月はありがとうございますございました。私からもプレゼントです。",
@@ -2450,7 +2608,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "開けてもいいですか。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "可以打开吗。"
             },
             {
                 "ja": "えっ、いいんですか。開けてもいいでしょうか。",
@@ -2512,7 +2670,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "とても便利そうです。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "zh": "看起来很实用。"
             },
             {
                 "ja": "あっ、日本の文房具ですね。とても便利そうでございます。",
@@ -2573,8 +2731,8 @@ const DIALOGUE_BY_LESSON = {
                 "zh": "森先生、小野，真的非常感谢。 A 标准答（李）：「プレゼントを渡す」· プレゼント · 授受动词；与教材会話一致."
             },
             {
-                "ja": "森さん小野さん本当にありがとうございました。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）."
+                "ja": "ええ、森さん、小野さん、本当にありがとうございました。",
+                "zh": "B 同场景变体：节奏快、信息略减（李，可沟通）."
             },
             {
                 "ja": "森さん、小野さん、本当にありがとうございますございました。",
@@ -2651,7 +2809,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "日本語で書いてありますね。",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）."
+                "zh": "是用日语写的呢。"
             },
             {
                 "ja": "李さんから手紙が来ました。日本語で書いてありますねね。",
@@ -2682,7 +2840,7 @@ const DIALOGUE_BY_LESSON = {
             },
             {
                 "ja": "読みましょう。『お世話になりました。』",
-                "zh": "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）."
+                "zh": "B 更短：省略前半或应答词，同事间接上文时用（森，可沟通）."
             },
             {
                 "ja": "読みましょう。『お世話になりました。日本でとても楽しかったです。また会いましょう。』ね",
@@ -2771,13 +2929,14 @@ const GRAMMAR = {
   "l5_g2": {
     "lines": [
         {
+            "ja": "時間表現（～時～分）",
+            "zh": "～時～分"
+        },
+        {
             "zh": "句型：時間表現（～時～分）"
         },
         {
             "zh": "例：现在是下午3点15分。"
-        },
-        {
-            "zh": "关联：🔗 第6课 · 移动へ・で；📋 对照表 · 第6课 · 〜へ；📋 对照表 · 第4课 · あります/います"
         },
         {
             "ja": "今、ごご３じ１５ぷんです。",
@@ -2810,11 +2969,11 @@ const GRAMMAR = {
             "zh": "「に」用在具体时间点（～時、～分、～曜日、～月～日）"
         },
         {
-            "zh": "不用「に」的情况：毎日、今日、昨日、明日、今、～ごろ等。"
-        },
-        {
             "ja": "森さんは７時に起きます。",
             "zh": "森先生七点起床。（に＝时间点）"
+        },
+        {
+            "zh": "×毎朝に起きる → ○毎朝起きる"
         },
         {
             "zh": "×毎朝に起きる → ○毎朝起きる"
@@ -2869,7 +3028,8 @@ const GRAMMAR = {
   "l5_g5": {
     "lines": [
         {
-            "zh": "句型：時間＋ごろ"
+            "ja": "時間＋ごろ",
+            "zh": "大约～点。"
         },
         {
             "zh": "副词「ごろ」后可以加「に」，也可以不加（口语常省略）。"
@@ -2898,7 +3058,8 @@ const GRAMMAR = {
   "l6_g1": {
     "lines": [
         {
-            "zh": "句型：場所 へ 行きます／来ます／帰ります"
+            "ja": "場所 へ 行きます／来ます／帰ります",
+            "zh": "说明移动的方向或目的地。"
         },
         {
             "zh": "「へ」读作「え」。"
@@ -2932,9 +3093,6 @@ const GRAMMAR = {
             "zh": "例：从家走到车站。"
         },
         {
-            "zh": "关联：📖 第5课 · ます形・に时刻；🔗 第7课 · を宾语；📋 对照表 · 第5课 · 動詞ます形"
-        },
-        {
             "ja": "家から駅まで歩きます。",
             "zh": "从家走到车站。"
         }
@@ -2965,11 +3123,11 @@ const GRAMMAR = {
             "zh": "「歩いて」是「歩く」的て形，说明方式，不加「で」。"
         },
         {
-            "zh": "常见交通工具：電車、バス、タクシー、自転車、飛行機、フェリー、新幹線。"
-        },
-        {
             "ja": "電車で行きます。",
             "zh": "坐电车去。"
+        },
+        {
+            "zh": "交通で（本课）≠ 语言で（第8课）"
         },
         {
             "zh": "交通で（本课）≠ 语言で（第8课）"
@@ -2999,9 +3157,6 @@ const GRAMMAR = {
             "zh": "例：你怎么去公司？（どうやって＝方式）"
         },
         {
-            "zh": "关联：📖 第5课 · ます形・に时刻；🔗 第7课 · を宾语"
-        },
-        {
             "ja": "どうやって会社へ行きますか。",
             "zh": "你怎么去公司？（どうやって＝方式）"
         }
@@ -3025,7 +3180,8 @@ const GRAMMAR = {
   "l6_g5": {
     "lines": [
         {
-            "zh": "句型：時間・空間の範囲の比較"
+            "ja": "時間・空間の範囲の比較",
+            "zh": "时间·空间范围对比"
         },
         {
             "zh": "第5课学时间范围「から～まで」，本课同一结构用在空间：起点から＋终点まで。例：東京から京都まで。"
@@ -3061,9 +3217,6 @@ const GRAMMAR = {
             "zh": "「を」只用在他动词（需要宾语的动作），自动词（不需要宾语）不用。"
         },
         {
-            "zh": "自动词的第4课「あります・います」和第5课「起きます・寝ます」等不接「を」。"
-        },
-        {
             "ja": "李さんは毎日コーヒーを飲みます。",
             "zh": "小李每天喝咖啡。"
         }
@@ -3082,10 +3235,11 @@ const GRAMMAR = {
   "l7_g2": {
     "lines": [
         {
-            "zh": "句型：頻度副詞"
+            "ja": "頻度副詞",
+            "zh": "频率副词"
         },
         {
-            "zh": "例：小李每天喝咖啡。（毎日）"
+            "zh": "句型：頻度副詞"
         },
         {
             "ja": "李さんは毎日コーヒーを飲みます。",
@@ -3111,7 +3265,8 @@ const GRAMMAR = {
   "l7_g3": {
     "lines": [
         {
-            "zh": "句型：～ませんか / ～ましょう（誘い・提案）"
+            "ja": "～ませんか / ～ましょう（誘い・提案）",
+            "zh": "誘い・提案"
         },
         {
             "zh": "「～ませんか」更礼貌，「～ましょう」更积极。"
@@ -3152,6 +3307,9 @@ const GRAMMAR = {
         },
         {
             "zh": "选择用にします；×コーヒーをします"
+        },
+        {
+            "zh": "选择用にします；×コーヒーをします"
         }
     ],
     "links": [
@@ -3178,11 +3336,11 @@ const GRAMMAR = {
             "zh": "第6课的「で」说明交通手段（電車で行く），本课还用来表示语言、工具等。"
         },
         {
-            "zh": "和「を使って」差不多，但「で」更简洁。"
-        },
-        {
             "ja": "李さんは日本語で手紙を書きます。",
             "zh": "小李用日语写信。（课文第1句）"
+        },
+        {
+            "zh": "本课で＝语言/工具"
         }
     ],
     "links": [
@@ -3206,11 +3364,11 @@ const GRAMMAR = {
             "zh": "不能对自己说「私は私にあげる」。"
         },
         {
-            "zh": "对长辈或上级不能用「あげる」，改用「差し上げる」（中高级）。"
-        },
-        {
             "ja": "私は妹にプレゼントをあげます。",
             "zh": "我给妹妹礼物。（主语=给予者，に=对象）"
+        },
+        {
+            "zh": "主语是给予方还是接受方"
         },
         {
             "zh": "主语是给予方还是接受方"
@@ -3235,9 +3393,6 @@ const GRAMMAR = {
         },
         {
             "zh": "「くれます」不能用在“我给他人”。"
-        },
-        {
-            "zh": "常省略「私に」，因为默认是“给我”。"
         },
         {
             "ja": "先生がお菓子をくれました。",
@@ -3268,9 +3423,6 @@ const GRAMMAR = {
         },
         {
             "zh": "「に」和「から」都可，但「から」更强调来源。"
-        },
-        {
-            "zh": "视点：主语是接受者。"
         },
         {
             "ja": "友達から CD をもらいました。",

@@ -132,6 +132,10 @@ def is_narrative(jp: str) -> bool:
     return bool(NARRATIVE_RE.match(s)) or "ナレーション" in s
 
 
+def vis_norm(s: str) -> str:
+    return re.sub(r"[\s、，,.!?？!！:：;；「」『』""\"'（）()]", "", (s or ""))
+
+
 def audit_scene(lid: int, did: str, reps: list[dict], mp3: set[str]) -> list[str]:
     issues = []
     if len(reps) != 3:
@@ -155,6 +159,8 @@ def audit_scene(lid: int, did: str, reps: list[dict], mp3: set[str]) -> list[str
             issues.append(f"{did}: B日文= A")
         if c.get("japanese") == aj:
             issues.append(f"{did}: C日文= A")
+        if vis_norm(b.get("japanese", "")) == vis_norm(aj):
+            issues.append(f"{did}: B可见= A（仅标点/空格差异）")
     for r in reps:
         for line in fallback_lines_from_raw(r.get("japanese", "")):
             k = tts_key(line)

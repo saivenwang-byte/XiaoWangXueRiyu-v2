@@ -11,6 +11,8 @@ const KNOWLEDGE_GRAPH = {
       refs: [
         { lessonId: 1, anchorId: "l1_g1", gate: 1, label: "第1课・はです", role: "intro" },
         { lessonId: 2, anchorId: "l2_g3", gate: 1, label: "第2课・は…の…です", role: "extend" },
+        { lessonId: 3, anchorId: "l3_g3", gate: 1, label: "第3课・ここは…", role: "extend" },
+        { lessonId: 4, anchorId: "l4_g2", gate: 1, label: "第4课・位置は", role: "review" },
       ],
     },
     "particle-no": {
@@ -160,6 +162,8 @@ const KNOWLEDGE_GRAPH = {
       refs: [
         { lessonId: 12, anchorId: "l12_g1", gate: 1, label: "第12课・比较", role: "intro" },
         { lessonId: 12, anchorId: "l12_dlg_0", gate: 2, label: "第12课・会話①", role: "review" },
+        { lessonId: 17, anchorId: "l17_g1", gate: 1, label: "第17课・愿望（对照）", role: "extend" },
+        { lessonId: 20, anchorId: "l20_g1", gate: 1, label: "第20课・可能（对照）", role: "extend" },
       ],
     },
     "te-form": {
@@ -181,6 +185,7 @@ const KNOWLEDGE_GRAPH = {
       refs: [
         { lessonId: 20, anchorId: "l20_g1", gate: 1, label: "第20课・可能", role: "intro" },
         { lessonId: 20, anchorId: "l20_dlg_0", gate: 2, label: "第20课・会話①", role: "review" },
+        { lessonId: 17, anchorId: "l17_g1", gate: 1, label: "第17课・愿望（对照）", role: "preview" },
       ],
     },
     "plain-form": {
@@ -219,6 +224,7 @@ const KNOWLEDGE_GRAPH = {
       refs: [
         { lessonId: 17, anchorId: "l17_g1", gate: 1, label: "第17课・愿望", role: "intro" },
         { lessonId: 17, anchorId: "l17_dlg_0", gate: 2, label: "第17课・会話①", role: "review" },
+        { lessonId: 12, anchorId: "l12_g1", gate: 1, label: "第12课・比较（对照）", role: "preview" },
       ],
     },
     "naru-change": {

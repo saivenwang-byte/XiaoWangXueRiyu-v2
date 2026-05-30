@@ -167,7 +167,8 @@ const LessonRecap = (function () {
       dialogueHtml = `<section class="story-egg-dialogue story-egg-dialogue--comic" aria-label="会話四格">
           <p class="story-egg-block-label">会話 · 四格</p>
           <div class="story-egg-comic-inner">${StoryComicUi.renderPanelInterior(panel, {
-            maxBubbles: StoryComicUi.MAX_BUBBLES_ZOOM || 4,
+            maxBubbles: StoryComicUi.MAX_BUBBLES_ZOOM || 8,
+            includeHighlights: true,
           })}</div>
         </section>`;
     } else if (data.dialogue.length) {

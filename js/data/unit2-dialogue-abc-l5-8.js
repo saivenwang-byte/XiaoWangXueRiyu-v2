@@ -47,7 +47,7 @@ const L5_DIALOGUE_ABC = {
         rank: 2,
         japanese: "朝ごはんは？",
         chinese: "那么，早饭呢？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -73,8 +73,8 @@ const L5_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "それから、７時半に家を出ます。",
-        chinese: "总是7点吃。然后7点半出门。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）.",
+        chinese: "然后7点半出门。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（森，可沟通）.",
       },
       {
         label: "C",
@@ -101,7 +101,7 @@ const L5_DIALOGUE_ABC = {
         rank: 2,
         japanese: "会社には何時に着きる？",
         chinese: "几点到公司？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -181,8 +181,8 @@ const L5_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "そして、朝ごはんを食べて、７時に家を出ます。",
-        chinese: "我6点起床。然后吃早饭，7点出门。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        chinese: "然后吃早饭，7点出门。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -236,12 +236,12 @@ const L5_DIALOGUE_ABC = {
         rank: 2,
         japanese: "森さんも早いですよ。",
         chinese: "不，森先生您也很早啊。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
         rank: 3,
-        japanese: "いいえ、森さんも早いですよね。",
+        japanese: "いいえ、森さんも早いですます。",
         chinese: "不，森先生您也很早啊。",
         noteZh: "C 语气更软：句末「ね」等，缓和确认时用（李，非错答）.",
       },
@@ -342,9 +342,9 @@ const L5_DIALOGUE_ABC = {
       {
         label: "B",
         rank: 2,
-        japanese: "みんな頑張っていますね。",
+        japanese: "ええ、みんな、頑張っていますね。",
         chinese: "大家都很努力呢。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 同场景变体：节奏快、信息略减（小野，可沟通）.",
       },
       {
         label: "C",
@@ -374,7 +374,7 @@ const L6_DIALOGUE_ABC = {
         rank: 2,
         japanese: "京都へ行く予定です。",
         chinese: "嗯，打算去京都。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 同场景变体：节奏快、信息略减（李，可沟通）.",
       },
       {
         label: "C",
@@ -400,8 +400,8 @@ const L6_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "何で行きますか。",
-        chinese: "好啊。坐什么去？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "坐什么去。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -427,8 +427,8 @@ const L6_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "東京から京都まで２時間半ぐらいです。",
-        chinese: "坐新干线。从东京到京都大约两个半小时。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        chinese: "从东京到京都大约两个半小时。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -455,7 +455,7 @@ const L6_DIALOGUE_ABC = {
         rank: 2,
         japanese: "一人で行きる？",
         chinese: "一个人去吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -482,7 +482,7 @@ const L6_DIALOGUE_ABC = {
         rank: 2,
         japanese: "友達と一緒に行きます。",
         chinese: "不，和朋友一起去。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -508,8 +508,8 @@ const L6_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "楽しみですね。",
-        chinese: "是吗。很期待啊。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "很期待啊。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -536,7 +536,7 @@ const L6_DIALOGUE_ABC = {
         rank: 2,
         japanese: "小野さんもどこかへ行きる？",
         chinese: "小野你也打算去哪儿吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -562,8 +562,8 @@ const L6_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "温泉に行きたいです。",
-        chinese: "我还没定。想去泡温泉。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "想去泡温泉。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -616,8 +616,8 @@ const L6_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "ちょっと考えます。",
-        chinese: "箱根也不错。我再想想。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "我再想想。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -644,7 +644,7 @@ const L6_DIALOGUE_ABC = {
         rank: 2,
         japanese: "また後で。",
         chinese: "那回头再说。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -674,7 +674,7 @@ const L7_DIALOGUE_ABC = {
         rank: 2,
         japanese: "すみません、ちょっとまだ… 李さん、何にしる？",
         chinese: "不好意思，还没……小李，你点什么？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -699,9 +699,9 @@ const L7_DIALOGUE_ABC = {
       {
         label: "B",
         rank: 2,
-        japanese: "ええ、私はコーヒーにします。小野さんは？",
-        chinese: "我点咖啡。小野呢？",
-        noteZh: "B 同场景变体：节奏快、信息略减（李，可沟通）.",
+        japanese: "小野さんは？",
+        chinese: "小野呢？",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -781,8 +781,8 @@ const L7_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "それと、ケーキもありますか。",
-        chinese: "嗯。还有蛋糕吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "还有蛋糕吗。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -808,8 +808,8 @@ const L7_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "今日はチーズケーキとショートケーキです。",
-        chinese: "有的。今天是芝士蛋糕和海绵蛋糕。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（店員，可沟通）.",
+        chinese: "今天是芝士蛋糕和海绵蛋糕。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（店員，可沟通）.",
       },
       {
         label: "C",
@@ -836,7 +836,7 @@ const L7_DIALOGUE_ABC = {
         rank: 2,
         japanese: "チーズケーキを一つください。",
         chinese: "那请给我一个芝士蛋糕。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -889,8 +889,8 @@ const L7_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "少々お待ちください。",
-        chinese: "好的。请稍等。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（店員，可沟通）.",
+        chinese: "请稍等。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（店員，可沟通）.",
       },
       {
         label: "C",
@@ -944,7 +944,7 @@ const L7_DIALOGUE_ABC = {
         rank: 2,
         japanese: "李さんはよくカフェへ来る？",
         chinese: "小李常来咖啡馆吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -969,9 +969,9 @@ const L7_DIALOGUE_ABC = {
       {
         label: "B",
         rank: 2,
-        japanese: "あまり来ません。小野さんは？",
-        chinese: "不，不太来。小野呢？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        japanese: "小野さんは？",
+        chinese: "小野呢？",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -997,8 +997,8 @@ const L7_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "ここは静かでいいですね。",
-        chinese: "我偶尔来。这里很安静，不错。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "这里很安静，不错。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1024,8 +1024,8 @@ const L7_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "また一緒に来ましょう。",
-        chinese: "是啊。下次一起来吧。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        chinese: "下次一起来吧。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -1052,7 +1052,7 @@ const L7_DIALOGUE_ABC = {
         rank: 2,
         japanese: "ぜひ。",
         chinese: "好的，一定。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        noteZh: "B 同场景变体：节奏快、信息略减（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1081,8 +1081,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "開けてもいいですか。",
-        chinese: "哎呀，谢谢。可以打开吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "可以打开吗。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1109,7 +1109,7 @@ const L8_DIALOGUE_ABC = {
         rank: 2,
         japanese: "どうぞ。",
         chinese: "嗯，请。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 同场景变体：节奏快、信息略减（李，可沟通）.",
       },
       {
         label: "C",
@@ -1135,8 +1135,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "何が入っていますか。",
-        chinese: "哇，盒子好漂亮。里面是什么？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "里面是什么。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1189,8 +1189,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "とても嬉しいです。",
-        chinese: "谢谢。非常高兴。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "非常高兴。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1217,7 +1217,7 @@ const L8_DIALOGUE_ABC = {
         rank: 2,
         japanese: "どういたしまして。",
         chinese: "不客气。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -1243,8 +1243,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "私からもプレゼントです。",
-        chinese: "小李，上个月谢谢你。我也送你礼物。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）.",
+        chinese: "我也送你礼物。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（森，可沟通）.",
       },
       {
         label: "C",
@@ -1270,8 +1270,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "開けてもいいですか。",
-        chinese: "诶，可以吗。可以打开吗？",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        chinese: "可以打开吗。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -1324,8 +1324,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "とても便利そうです。",
-        chinese: "啊，是日本的文具。看起来很实用。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        chinese: "看起来很实用。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（李，可沟通）.",
       },
       {
         label: "C",
@@ -1377,9 +1377,9 @@ const L8_DIALOGUE_ABC = {
       {
         label: "B",
         rank: 2,
-        japanese: "森さん小野さん本当にありがとうございました。",
+        japanese: "ええ、森さん、小野さん、本当にありがとうございました。",
         chinese: "森先生、小野，真的非常感谢。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（李，可沟通）.",
+        noteZh: "B 同场景变体：节奏快、信息略减（李，可沟通）.",
       },
       {
         label: "C",
@@ -1459,8 +1459,8 @@ const L8_DIALOGUE_ABC = {
         label: "B",
         rank: 2,
         japanese: "日本語で書いてありますね。",
-        chinese: "小李来信了。是用日语写的呢。",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（小野，可沟通）.",
+        chinese: "是用日语写的呢。",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（小野，可沟通）.",
       },
       {
         label: "C",
@@ -1487,7 +1487,7 @@ const L8_DIALOGUE_ABC = {
         rank: 2,
         japanese: "読みましょう。『お世話になりました。』",
         chinese: "我们来读吧。「承蒙关照。在日本很开心。再会吧。」",
-        noteZh: "B 更短：省略主语或前半，同事间接上文时用（森，可沟通）.",
+        noteZh: "B 更短：省略前半或应答词，同事间接上文时用（森，可沟通）.",
       },
       {
         label: "C",

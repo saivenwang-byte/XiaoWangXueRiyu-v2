@@ -22,18 +22,33 @@
 | 日文/TTS | 项目知识库-标日日文书写 | — |
 | 发版 | hyouga-shipper + pre-ship-check | 链接 |
 
-## 二b、3.0 学员 Skill 包（已安装 · 审美/设计）
+## 二b、3.0 学员 Skill 包（项目 + 全局）
 
-> 全局：`%USERPROFILE%\.cursor\skills\` · 重装：`python scripts/install-yizhou-3-skills.py` · 目录：`yizhou-3.0-skills-INDEX.md`
+> **全局**：`%USERPROFILE%\.cursor\skills\`（55 个全量）  
+> **本项目**：`.cursor/skills/`（按文件夹精选 20 个 + hyouga 专属）  
+> **重装**：`python scripts/install-yizhou-3-skills.py`  
+> **清单**：`.cursor/skills/PROJECT-SKILLS-MANIFEST.md` · `docs/yizhou-3.0-skills-INDEX.md`
 
-| Skill | 何时派单 |
-|-------|----------|
-| **advanced-xhs-visual-design** | 封面/卡片/信息图/生图 prompt、版式系统、配色字体 |
-| **brand-voice-system** | 品牌文案、禁用词、标日あと 语气统一 |
-| **yizhou-ppt** | 演示稿、封面情绪板、一页纸视觉说明 |
-| **editable-pptx-builder** | 可编辑 PPT 结构 + 设计说明交付美工 |
-| **hook-angle-lab** | 开机页副标、引导语、点击钩子 |
-| **course-design-agent** | 入門/单元/课序教学结构（非纯 UI） |
+| 3.0 文件夹 | Skill | 何时派单 |
+|------------|-------|----------|
+| 01-AI增强 | **context-engineering-agent** | 复杂任务上下文包、规则沉淀 |
+| 01-AI增强 | **agent-eval-loop** | 交付自检表、评测闭环 |
+| 01-AI增强 | **multi-agent-orchestrator** | 多角色拆单（配合 hyouga-orchestrator） |
+| 01-AI增强 | **active-agent** | 用户说「直接帮我做」自主执行 |
+| 01-AI增强 | **skill-finder** | 缺能力时选型安装 |
+| 02-内容创作 | **advanced-xhs-visual-design** | 封面/卡片/信息图/生图 prompt |
+| 02-内容创作 | **brand-voice-system** | 品牌文案、标日あと 语气 |
+| 02-内容创作 | **hook-angle-lab** | 开机页副标、引导语钩子 |
+| 02-内容创作 | **course-design-agent** | 入門/单元/课序教学结构 |
+| 03-开发工具 | **repo-context-compiler** | 大型仓库模块图、Agent 上下文包 |
+| 03-开发工具 | **code-review-ci** | PR/CI 失败审查 |
+| 03-开发工具 | **skill-creator** · **skill-vetter** | 新建/审查 Skill |
+| 04-浏览器 | **browser-automation** | 双通道预览、冒烟 QA |
+| 06-知识学习 | **learning-loop** | 学习材料→练习/复盘（课内延伸） |
+| 06-知识学习 | **yizhou-thinking** | 产品取舍、发版节奏 |
+| 06-知识学习 | **meeting-notes-actions** | 纪要→行动项（对齐讨论优先） |
+| 07-效率工具 | **yizhou-ppt** · **editable-pptx-builder** | 演示稿/PPT 交付美工 |
+| 07-效率工具 | **workflow-automation-builder** | bat/脚本流水线设计 |
 
 ## 三、入門 Skill 模组映射（产品层）
 

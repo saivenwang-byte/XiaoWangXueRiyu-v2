@@ -313,7 +313,8 @@ const StoryReward = (function () {
     const bubbleHtml =
       typeof StoryComicUi !== "undefined" && panel
         ? `<div class="story-comic-zoom-dialogue">${StoryComicUi.renderPanelInterior(panel, {
-            maxBubbles: StoryComicUi.MAX_BUBBLES_ZOOM || 4,
+            maxBubbles: StoryComicUi.MAX_BUBBLES_ZOOM || 8,
+            includeHighlights: true,
           })}</div>`
         : "";
     el.innerHTML = `

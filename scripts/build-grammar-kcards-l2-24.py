@@ -7,8 +7,12 @@ import json
 import re
 from pathlib import Path
 
+import sys
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "js" / "data" / "lessons-data.js"
+sys.path.insert(0, str(ROOT / "scripts"))
+from l1_depth_common import grammar_lines_l1  # noqa: E402
 TIPS_FILES: list[tuple[range, Path]] = [
     (range(2, 5), ROOT / "js" / "data" / "unit1-knowledge-tips.js"),
     (range(5, 9), ROOT / "js" / "data" / "unit2-knowledge-tips.js"),
@@ -25,34 +29,7 @@ def load_lessons() -> dict[int, dict]:
 
 
 def tip_for_node(node: dict, lid: int) -> dict:
-    nid = node.get("id") or ""
-    lines: list[dict] = []
-
-    expl = (node.get("explanation") or "").strip()
-    if expl and re.search(r"[はがをにで]", expl) or "名" in expl or "動" in expl:
-        lines.append({"ja": expl, "zh": (node.get("titleZh") or node.get("title") or "").strip()})
-    elif expl:
-        lines.append({"zh": f"句型：{expl}"})
-
-    zh_parts = [t.strip() for t in (node.get("explanationZh") or "").split("\n") if t.strip()]
-    title_zh = (node.get("titleZh") or "").strip()
-    for z in zh_parts[:3]:
-        if z == title_zh and lines:
-            continue
-        if z.startswith("句型：") and any("句型" in (l.get("zh") or "") for l in lines):
-            continue
-        lines.append({"zh": z})
-
-    ex = (node.get("example") or "").strip()
-    exzh = node.get("exampleZh") or []
-    first_zh = str(exzh[0]).strip() if exzh else ""
-    if ex:
-        lines.append({"ja": ex, "zh": first_zh or "对照课文例句朗读。"})
-    elif first_zh:
-        lines.append({"zh": f"例：{first_zh}"})
-
-    if not lines:
-        lines.append({"zh": (node.get("titleZh") or node.get("title") or "对照文法例句。").strip()})
+    lines: list[dict] = list(grammar_lines_l1(node, lid))
 
     links: list[dict] = [
         {"label": "→ 会話", "gate": 2},
