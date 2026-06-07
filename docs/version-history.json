@@ -5,9 +5,10 @@
     "cache": "410",
     "date": "2026-05-30",
     "note": "v410：开机CTA下移·TTS Gitee镜像·按住录音·多渠道失败提示",
-    "git_tag": null,
+    "git_tag": "v1.0.2-ship-v410",
     "ship_doc": "docs/L1-24-收官报告-v410.md",
     "checklist": "docs/L1-24-手机验收清单-v410.md",
+    "paradigm_index": "docs/范式体系/完整手册-学习型软件从开发到收官.md",
     "baseline": "docs/iteration-baseline.json",
     "discipline": "docs/Agent文递自归.md",
     "paradigm": "docs/项目知识库-文递自归.md"

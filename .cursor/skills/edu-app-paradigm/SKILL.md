@@ -1,44 +1,31 @@
 ---
 name: edu-app-paradigm
 description: >-
-  Build or extend educational H5/apps using our Japanese-learning project paradigm:
-  curriculum catalog as source of truth, map-based home, four-gate lessons, 100% sea-star
-  grading, My-page supervision, comic rewards. Use when authoring teaching apps,
-  lesson navigation, or syncing PRD to implementation in this repo or similar products.
+  Learning-app lifecycle paradigm: discuss-first, autoregressive baseline, curriculum truth,
+  phased seed/freeze/wave/ship/close. Use for teaching apps, PRD-to-ship, or 范式/思考链路.
 ---
 
-# 教学类应用范式（本项目）
+# 教学类应用范式
 
-## 必读
+## 唯一真源（先读）
 
-1. Read `过程讨论内容/教学类应用制作范式.md` (master principles).
-2. Read `docs/我们-产品愿景-学习の道.md` (current product truth).
-3. Read `过程讨论内容/README.md` for meeting-minute index.
+**[`docs/范式体系/完整手册-学习型软件从开发到收官.md`](../../docs/范式体系/完整手册-学习型软件从开发到收官.md)**
 
-## 协作
+一篇六章 + 附录：思考 · 产品 · 工程 · UI/会話/笔记 · 标日 v410 实例 · 拍板表。
 
-- Address the user as **我们** (we); act as PM + UX officer.
-- For **global product / layout / visual / Skill decomposition**, use **`hyouga-product-pm`** first (`docs/PRODUCT-PM-全局导演手册.md`); implement only after 拍板.
-- **Discuss before act (mandatory):** On new user messages/screenshots/wireframes, restate understanding and wait for explicit approval (`可以开工` / `同意` / `按这个做`) before editing code. See `过程讨论内容/00-讨论优先铁律.md`.
-- **Do not** change frozen lesson inner content (e.g. MVP lessons 14/16/18) without explicit request.
-- Home page reads **`js/data/curriculum-catalog.js`** only for order/released/map; never flatten lessons as a supermarket grid.
-- Stage blocks on home: same inner layout as MVP lesson pills; only stage grouping and map pins change (`07-首页线框与阶段内排版.md`).
+入口索引（可选）：[`docs/范式体系/00-开发到收官-范式索引.md`](../../docs/范式体系/00-开发到收官-范式索引.md)
 
-## Implementation checklist
+## 铁律（摘要）
 
-- [ ] `CURRICULUM_RELEASED_IDS` matches shipped data
-- [ ] `journey-home.js` map + four island panels
-- [ ] Four gates unchanged contract: vocab / grammar / dialogue / quiz
-- [ ] Stars = 100% on listen/speak/read/scene/quiz; **no** writing dimension
-- [ ] `CACHE_VER` bump on asset changes
-- [ ] Run `python scripts/pre-ship-check.py` before claiming ship-ready
+- **讨论优先** → **文递自归** → **发心四问** → **pre-ship** → **双通道目视** → **收官 tag**
+- 读 `docs/iteration-baseline.json` before code
+- 不得擅自改冻结课内 / 会話 ABC §4.1 / 笔记 V1 锁
 
-## Key files
+## 本案快链
 
-| Area | Path |
-|------|------|
-| Catalog | `js/data/curriculum-catalog.js` |
-| Home UI | `js/journey-home.js`, `css/mvp.css` |
-| Lessons | `js/data/lessons-mvp.js`, `lessons-stage2-mvp.js`, `lessons-mvp-depth.js` |
-| Storage | `js/mvp-storage.js` |
-| Minutes | `过程讨论内容/` |
+| 项 | 路径 |
+|----|------|
+| 完整手册 | `docs/范式体系/完整手册-*.md` |
+| 基线 | `docs/iteration-baseline.json` |
+| 收官 | `docs/L1-24-收官报告-v410.md` |
+| UI §0 | `docs/学员端显示界面要求-会议纪要汇编.md` |

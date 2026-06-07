@@ -23,6 +23,7 @@
 | **Cursor 本机设置** | [docs/Cursor推荐设置.md](docs/Cursor推荐设置.md) |
 | **学员端双界面（首要执行）** | [docs/学员端双界面显示标准-首要执行.md](docs/学员端双界面显示标准-首要执行.md) · [docs/学员端显示界面要求-会议纪要汇编.md](docs/学员端显示界面要求-会议纪要汇编.md) |
 | **协作入口** | [AGENTS.md](AGENTS.md) |
+| **开发→收官范式（完整手册）** | [docs/范式体系/完整手册-学习型软件从开发到收官.md](docs/范式体系/完整手册-学习型软件从开发到收官.md) |
 | **多 Agent 流水线** | [docs/Agent流水线-多角色分工.md](docs/Agent流水线-多角色分工.md) · [docs/agent-pipeline.json](docs/agent-pipeline.json) |
 | **PM 任务单** | [docs/pm-tasks-template.json](docs/pm-tasks-template.json) · `docs/tasks/` |
 
