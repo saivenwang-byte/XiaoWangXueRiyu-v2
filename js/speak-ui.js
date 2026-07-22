@@ -1,5 +1,7 @@
 /** 统一小喇叭：绑定、预加载、播放态 */
 const SpeakUI = (() => {
+  const PRELOAD_LIMIT = 8;
+  const prefetchedLines = new Set();
   const SPEAKER_SVG = `<svg class="speak-icon-svg hyo-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
 
   function listenInner() {
@@ -82,7 +84,17 @@ const SpeakUI = (() => {
 
   function prefetchRoot(root) {
     if (typeof SpeechEngine === "undefined" || !SpeechEngine.warmPhrases) return;
-    SpeechEngine.warmPhrases(collectLines(root));
+    /*
+     * 折叠区域可能包含几十条语音。只预热最先出现的少量内容，
+     * 避免与用户当前点击的示范语音争抢手机网络。
+     */
+    const remaining = Math.max(0, PRELOAD_LIMIT - prefetchedLines.size);
+    if (!remaining) return;
+    const lines = collectLines(root)
+      .filter((line) => line && !prefetchedLines.has(line))
+      .slice(0, remaining);
+    lines.forEach((line) => prefetchedLines.add(line));
+    SpeechEngine.warmPhrases(lines);
   }
 
   /**
@@ -144,15 +156,6 @@ const SpeakUI = (() => {
         preferKey ? { preferTtsKey: preferKey } : undefined
       );
     }
-    if (!ok) {
-      await new Promise((r) => setTimeout(r, 420));
-      if (typeof SpeechEngine.unlockAudioOnce === "function") SpeechEngine.unlockAudioOnce();
-      ok = await SpeechEngine.speakJa(
-        payload,
-        0.85,
-        preferKey ? { preferTtsKey: preferKey } : undefined
-      );
-    }
     hideToast();
     btn.classList.remove("is-speaking");
     if (!ok) {
@@ -161,20 +164,14 @@ const SpeakUI = (() => {
       const mobile = wechat || /iPhone|iPad|iPod|Android/i.test(ua);
       const ver =
         typeof ShareWechat !== "undefined" && ShareWechat.CACHE_VER ? ShareWechat.CACHE_VER : "";
-      const gitee =
-        Array.isArray(window.HYOUGA_TTS_MIRROR_ORIGINS) && window.HYOUGA_TTS_MIRROR_ORIGINS[0]
-          ? window.HYOUGA_TTS_MIRROR_ORIGINS[0].replace(/\/$/, "")
-          : "";
       if (wechat) {
         showToast(
-          `语音加载失败：① 再点喇叭 ② 确认 ?v=${ver || "最新"} ③ 允许 WiFi/流量` +
-            (gitee ? ` ④ 国内慢可换 ${gitee}/index.html?v=${ver || "最新"}` : ""),
+          `示范语音暂时加载失败：请确认 WiFi/流量后再点一次；仍失败请用右上角 ⋯ → 在浏览器打开。录音与回放不受影响（v=${ver || "最新"}）。`,
           5200
         );
       } else if (mobile) {
         showToast(
-          `朗读失败：① 再点喇叭 ② 等 1～2 秒 ③ 刷新 ?v=${ver || "最新"}` +
-            (gitee ? " ④ GitHub 慢时试 Gitee 镜像链接" : ""),
+          `示范语音暂时加载失败：请确认网络后重试，或刷新 ?v=${ver || "最新"}。录音与回放不受影响。`,
           4200
         );
       } else {

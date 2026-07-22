@@ -82,6 +82,13 @@ const DialogueGate = (() => {
     return d.innerHTML;
   }
 
+  function escapeAttr(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;");
+  }
+
   function speakBtn(payload, attrs = "", rowId = "") {
     const id = rowId || `dg-${Math.random().toString(36).slice(2, 9)}`;
     if (typeof ShadowSpeak !== "undefined") {
@@ -114,7 +121,7 @@ const DialogueGate = (() => {
 
   function dialogueSpeakAttrs(reply) {
     const keys = replyKeywords(reply);
-    const kw = keys.length ? ` data-ss-keywords="${escapeHtml(JSON.stringify(keys))}"` : "";
+    const kw = keys.length ? ` data-ss-keywords="${escapeAttr(JSON.stringify(keys))}"` : "";
     return `class="dg-reply-speak" data-ss-dialogue="1" data-ss-score-below="1"${kw}`;
   }
 

@@ -1,6 +1,6 @@
 /**
  * 日语朗读：本地 MP3（预加载）→ 手机本机日语 TTS → 在线 TTS（短超时，走用户流量）
- * 发音评分：语音识别 + 音量分析（微信内无识别时仍可评分）
+ * 发音评分：语音识别文本 + 录音质量；无识别文本时只报告录音状态，不伪造分数
  */
 const SpeechEngine = (() => {
   let recognition = null;
@@ -11,6 +11,7 @@ const SpeechEngine = (() => {
   let speakToken = 0;
   /** 已预热的 MP3：hash → { audio, ready, failed } */
   const mp3Warm = new Map();
+  const AUTO_WARM_LIMIT = 8;
 
   const TTS_CACHE_DIR = "tts-cache/";
 
@@ -334,7 +335,15 @@ const FETCH_MP3_MS_DESKTOP = 5000;
     audio.setAttribute("playsinline", "true");
     audio.playsInline = true;
     audio.preload = "auto";
-    const entry = { audio, ready: false, failed: false, key, urls, urlIdx: 0 };
+    const entry = {
+      audio,
+      ready: false,
+      failed: false,
+      key,
+      urls,
+      urlIdx: 0,
+      sourceErrors: 0,
+    };
     const markReady = () => {
       entry.ready = true;
     };
@@ -353,7 +362,7 @@ const FETCH_MP3_MS_DESKTOP = 5000;
     audio.addEventListener("canplaythrough", markReady);
     audio.addEventListener("loadeddata", markReady);
     audio.addEventListener("error", () => {
-      entry.failCount = (entry.failCount || 0) + 1;
+      entry.sourceErrors += 1;
       if (entry.urlIdx + 1 < urls.length) loadAt(entry.urlIdx + 1);
       else entry.failed = true;
     });
@@ -370,6 +379,8 @@ const FETCH_MP3_MS_DESKTOP = 5000;
       candidates.forEach((line) => {
         if (!line || seen.has(line)) return;
         seen.add(line);
+        const key = ttsCacheKey(line);
+        if (!mp3Warm.has(key) && mp3Warm.size >= AUTO_WARM_LIMIT) return;
         warmPhrase(line);
       });
     });
@@ -412,7 +423,10 @@ const FETCH_MP3_MS_DESKTOP = 5000;
         resolve(true);
         return;
       }
+      let settled = false;
       const done = (ok) => {
+        if (settled) return;
+        settled = true;
         a.removeEventListener("canplaythrough", onOk);
         a.removeEventListener("loadeddata", onOk);
         a.removeEventListener("error", onErr);
@@ -423,9 +437,8 @@ const FETCH_MP3_MS_DESKTOP = 5000;
         done(true);
       };
       const onErr = () => {
-        entry.failCount = (entry.failCount || 0) + 1;
-        if (entry.failCount >= 2) entry.failed = true;
-        done(false);
+        /* warmPhrase 的永久监听会切换到下一来源；只有全部来源失败才结束等待。 */
+        if (entry.failed) done(false);
       };
       a.addEventListener("canplaythrough", onOk, { once: true });
       a.addEventListener("loadeddata", onOk, { once: true });
@@ -965,6 +978,13 @@ const FETCH_MP3_MS_DESKTOP = 5000;
   }
 
   function renderDialogueScoreHtml(result) {
+    if (result.score == null || result.mode === "recording-only") {
+      return `<div class="dg-score-panel dg-score-panel--inline retry">
+        <div class="dg-score-head">录音与回放正常<span class="dg-score-sub">（本次未生成自动分数）</span></div>
+        <p class="dg-score-tip">${result.feedback}</p>
+        <p class="dg-score-heard dg-score-heard--warn">可点 ▶ 回放自查；获得日文识别文字后才会显示关键词、吻合度和语调评分。</p>
+      </div>`;
+    }
     const stars =
       result.score >= 90 ? "⭐⭐⭐" : result.score >= 75 ? "⭐⭐" : result.score >= 50 ? "⭐" : "";
     const bars = result.dims
@@ -1039,6 +1059,23 @@ const FETCH_MP3_MS_DESKTOP = 5000;
     return Math.min(10, Math.round(s));
   }
 
+  function noTranscriptFeedback(asr) {
+    const status = String(asr?.status || asr?.error || "ended-empty");
+    if (status === "unsupported") {
+      return "录音成功，但当前浏览器不支持日文自动识别。录音与回放仍可用；如需自动校对，请用完整 Safari、Chrome 或 Edge 打开。";
+    }
+    if (/not-allowed|service-not-allowed|permission/i.test(status)) {
+      return "录音成功，但日文识别服务未获授权。请检查浏览器的语音识别／Siri／听写设置后重试。";
+    }
+    if (/network|aborted|start-failed|stop-failed/i.test(status)) {
+      return "录音成功，但日文识别服务本次连接失败。可先点 ▶ 回放；切换网络或在完整浏览器中重试自动校对。";
+    }
+    if (/no-speech|no-match/i.test(status)) {
+      return "录音成功，但没有获得可校对的日文文字。请靠近麦克风，完整朗读整句后再试。";
+    }
+    return "录音成功，但识别服务没有返回日文文字。本次不计分，避免把环境问题误判成发音问题。";
+  }
+
   /**
    * ② 会話：四维各 0–10，从严；须先录音再点评估
    */
@@ -1047,6 +1084,7 @@ const FETCH_MP3_MS_DESKTOP = 5000;
     heard = "",
     audioBlob = null,
     keywords = [],
+    asr = null,
   }) {
     const keys = (keywords.length ? keywords : extractKeywordsFromJapanese(expected)).map(normalizeJa);
     const heardNorm = normalizeJa(heard);
@@ -1074,6 +1112,21 @@ const FETCH_MP3_MS_DESKTOP = 5000;
       } catch (_) {}
     }
 
+    if (!heardNorm && hasAudio) {
+      return {
+        score: null,
+        passed: false,
+        feedback: noTranscriptFeedback(asr),
+        heard: "",
+        matched: [],
+        dims: null,
+        hasAudio: true,
+        mode: "recording-only",
+        asr,
+        audio,
+      };
+    }
+
     const dims = {
       keyword: dimKeywordScore(keys, heardNorm, expected, heard),
       clarity: dimClarityScore(audio, hasAudio),
@@ -1082,16 +1135,12 @@ const FETCH_MP3_MS_DESKTOP = 5000;
     };
 
     let raw40 = dims.keyword + dims.clarity + dims.match + dims.prosody;
-    if (!heardNorm && hasAudio) raw40 = Math.min(raw40, dims.clarity + 4);
     let score = Math.round((raw40 / 40) * 100);
-    if (!heardNorm) score = Math.min(score, 28);
     if (audio.ok && audio.tooQuiet) score = Math.min(score, 35);
     const passed = score >= 70;
 
     let feedback;
-    if (!heardNorm && hasAudio) {
-      feedback = "只听到声音、未识别日文。请对照上方句子完整朗读后再点 ✓ 评估。";
-    } else if (audio.ok && audio.tooQuiet) {
+    if (audio.ok && audio.tooQuiet) {
       feedback = "音量偏小。靠近麦克风，安静环境，整句读完再评估。";
     } else if (score >= 90) {
       feedback = "与示范句高度一致，关键词与语调都很好！";
@@ -1113,6 +1162,8 @@ const FETCH_MP3_MS_DESKTOP = 5000;
       matched,
       dims,
       hasAudio,
+      mode: "speech",
+      asr,
     };
   }
 
@@ -1161,15 +1212,34 @@ const FETCH_MP3_MS_DESKTOP = 5000;
   }
 
   /**
-   * 综合评分：语音识别文本 + 录音音量（微信内无识别时仍可凭音量及格）
+   * 综合评分：仅在有语音识别文本时评分；无文本时保留录音与回放并诚实降级
    */
-  async function evaluatePronunciation({ expected, heard = "", audioBlob = null, keywords = [] }) {
+  async function evaluatePronunciation({
+    expected,
+    heard = "",
+    audioBlob = null,
+    keywords = [],
+    asr = null,
+  }) {
     const textResult = scorePronunciation(expected, heard, keywords);
     let audio = { ok: false };
     if (audioBlob) {
       try {
         audio = await analyzeAudioBlob(audioBlob);
       } catch (_) {}
+    }
+
+    if (!heard && audioBlob) {
+      return {
+        score: null,
+        ok: false,
+        tip: noTranscriptFeedback(asr) + " 可点 ▶ 回放自查。",
+        heard: "",
+        expected: textResult.expected,
+        mode: "recording-only",
+        asr,
+        audio,
+      };
     }
 
     let score = textResult.score;
@@ -1185,10 +1255,6 @@ const FETCH_MP3_MS_DESKTOP = 5000;
         score = Math.min(score, 52);
         ok = false;
         tip = tip || "录音太短，请把整句说完。";
-      } else if (!heard && audio.duration >= 0.65 && !audio.tooQuiet) {
-        score = Math.max(score, 62);
-        ok = true;
-        tip = "音量清晰。若需更准，可再听示范跟读一遍。";
       } else if (heard && score < 55 && audio.duration >= 0.5) {
         score = Math.max(score, 58);
       }

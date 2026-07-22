@@ -4,9 +4,10 @@
 const ShadowSpeak = (() => {
   const clips = new Map();
   const clipsHeard = new Map();
+  const clipsAsr = new Map();
   let mediaRecorder = null;
   let recordAsr = null;
-  let recordAsrParts = [];
+  let recordAsrState = null;
   let recordStream = null;
   let recordChunks = [];
   let recordRowId = null;
@@ -66,10 +67,13 @@ const ShadowSpeak = (() => {
   }
 
   function parseKeywordsAttr(attrs) {
-    const m = /data-ss-keywords=['"]([^'"]*)['"]/.exec(attrs || "");
+    const m = /data-ss-keywords=(?:"([^"]*)"|'([^']*)')/.exec(attrs || "");
     if (!m) return [];
     try {
-      const arr = JSON.parse(m[1].replace(/&quot;/g, '"'));
+      const raw = (m[1] != null ? m[1] : m[2] || "")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'");
+      const arr = JSON.parse(raw);
       return Array.isArray(arr) ? arr : [];
     } catch (_) {
       return [];
@@ -227,44 +231,107 @@ const ShadowSpeak = (() => {
     }
   }
 
+  function emptyAsrState(status = "unsupported", error = "") {
+    return {
+      supported: status !== "unsupported",
+      started: false,
+      status,
+      error,
+      finalText: "",
+      interimText: "",
+    };
+  }
+
+  function asrTranscript(state) {
+    if (!state) return "";
+    return (state.finalText || state.interimText || "").trim();
+  }
+
   function stopRecordAsr() {
     return new Promise((resolve) => {
+      const state = recordAsrState || emptyAsrState();
       if (!recordAsr) {
-        resolve(recordAsrParts.join("").trim());
-        recordAsrParts = [];
+        resolve({ heard: asrTranscript(state), asr: { ...state } });
         return;
       }
       const rec = recordAsr;
       recordAsr = null;
-      const done = () => resolve(recordAsrParts.join("").trim());
-      rec.onend = done;
+      let settled = false;
+      const previousEnd = rec.onend;
+      const done = () => {
+        if (settled) return;
+        settled = true;
+        if (!state.status || state.status === "listening") {
+          state.status = asrTranscript(state) ? "result" : "ended-empty";
+        }
+        resolve({ heard: asrTranscript(state), asr: { ...state } });
+      };
+      rec.onend = (event) => {
+        try {
+          if (typeof previousEnd === "function") previousEnd.call(rec, event);
+        } catch (_) {}
+        done();
+      };
       try {
         rec.stop();
-      } catch (_) {
+      } catch (err) {
+        state.status = state.started ? "stop-failed" : state.status;
+        state.error = state.error || String(err?.message || err || "");
         done();
       }
-      setTimeout(done, 800);
+      setTimeout(done, 1400);
     });
   }
 
   function startRecordAsr() {
-    recordAsrParts = [];
-    if (typeof SpeechEngine === "undefined" || !SpeechEngine.getRecognition) return;
+    const state = emptyAsrState();
+    recordAsrState = state;
+    if (typeof SpeechEngine === "undefined" || !SpeechEngine.getRecognition) return state;
     const rec = SpeechEngine.getRecognition();
-    if (!rec) return;
+    if (!rec) return state;
+    state.supported = true;
+    state.status = "starting";
     recordAsr = rec;
     try {
       rec.continuous = true;
       rec.interimResults = true;
+      rec.onstart = () => {
+        state.started = true;
+        state.status = "listening";
+      };
       rec.onresult = (e) => {
+        const interim = [];
         for (let i = e.resultIndex; i < e.results.length; i++) {
-          if (e.results[i].isFinal) recordAsrParts.push(e.results[i][0].transcript);
+          const text = String(e.results[i][0]?.transcript || "").trim();
+          if (!text) continue;
+          if (e.results[i].isFinal) {
+            state.finalText = (state.finalText + text).trim();
+          } else {
+            interim.push(text);
+          }
+        }
+        if (interim.length) state.interimText = interim.join("").trim();
+        if (state.finalText || state.interimText) state.status = "result";
+      };
+      rec.onerror = (event) => {
+        state.error = String(event?.error || "recognition-error");
+        state.status = state.error;
+      };
+      rec.onnomatch = () => {
+        state.status = "no-match";
+      };
+      rec.onend = () => {
+        if (!state.status || state.status === "listening") {
+          state.status = asrTranscript(state) ? "result" : "ended-empty";
         }
       };
       rec.start();
-    } catch (_) {
+    } catch (err) {
+      state.status = "start-failed";
+      state.error = String(err?.message || err || "start-failed");
       recordAsr = null;
     }
+    return state;
   }
 
   function cleanupRecordUi() {
@@ -278,7 +345,7 @@ const ShadowSpeak = (() => {
     recordMime = "";
     recordChunks = [];
     recordAsr = null;
-    recordAsrParts = [];
+    recordAsrState = null;
     releaseStream();
   }
 
@@ -302,7 +369,8 @@ const ShadowSpeak = (() => {
 
   async function finishRecord(btn, rowId, evaluate) {
     const mime = blobMime();
-    const heardDuring = await stopRecordAsr();
+    const asrResult = await stopRecordAsr();
+    const heardDuring = asrResult.heard;
     const blob = new Blob(recordChunks, { type: mime });
     const mode = btn?.dataset?.ssMode || btn?.closest(".ss-action-row")?.dataset?.ssMode || "light";
     cleanupRecordUi();
@@ -311,7 +379,9 @@ const ShadowSpeak = (() => {
       return;
     }
     clips.set(rowId, blob);
+    clipsHeard.delete(rowId);
     if (heardDuring) clipsHeard.set(rowId, heardDuring);
+    clipsAsr.set(rowId, asrResult.asr);
     enableReplay(btn);
     if (mode === "dialogue") {
       clearDialogueScores();
@@ -340,6 +410,7 @@ const ShadowSpeak = (() => {
         heard: clipsHeard.get(rowId) || "",
         audioBlob: blob,
         keywords,
+        asr: clipsAsr.get(rowId) || null,
       });
       if (mode === "vocab") {
         toast(r.ok ? `发音 OK（${r.score}分）` : r.tip || "再听一遍跟读");
@@ -378,6 +449,7 @@ const ShadowSpeak = (() => {
         heard: clipsHeard.get(rowId) || "",
         audioBlob: blob,
         keywords,
+        asr: clipsAsr.get(rowId) || null,
       });
       if (SpeechEngine.renderDialogueScoreHtml) {
         showDialogueScore(rowId, SpeechEngine.renderDialogueScoreHtml(r));
@@ -484,8 +556,7 @@ const ShadowSpeak = (() => {
       recordRowId = rowId;
       activeRecordBtn = btn;
       recordMime = pickRecordMime();
-      btn.dataset.speakExpected =
-        typeof payload === "object" ? JSON.stringify(payload) : String(payload || "");
+      btn.dataset.speakExpected = expectedLine(payload);
       const opts = recordMime ? { mimeType: recordMime } : undefined;
       mediaRecorder = opts ? new MediaRecorder(stream, opts) : new MediaRecorder(stream);
       if (!recordMime && mediaRecorder.mimeType) recordMime = mediaRecorder.mimeType;
@@ -622,5 +693,5 @@ const ShadowSpeak = (() => {
     if (typeof SpeakUI !== "undefined") SpeakUI.bind(root);
   }
 
-  return { rowHtml, bind, clips, stopReplay: stopPlayback };
+  return { rowHtml, bind, clips, clipsAsr, stopReplay: stopPlayback };
 })();
