@@ -1,80 +1,74 @@
-import { readFileSync } from 'fs';
+import { readFileSync } from "node:fs";
 
-const files = [
-  'js/data/lessons-mvp.js',
-  'js/data/lessons-stage2-mvp.js',
-  'js/data/lessons-prd-unreleased-mvp.js',
-  'js/data/lessons-supplement-mvp.js',
-];
-
-// Naive extraction of JSON arrays
-function extractJSON(content, varName) {
+function extractJSON(file, varName) {
+  const content = readFileSync(file, "utf8");
   const re = new RegExp(`(?:const|var|let)\\s+${varName}\\s*=\\s*`);
   const match = content.match(re);
-  if (!match) return null;
+  if (!match) throw new Error(`${varName} not found in ${file}`);
   const start = match.index + match[0].length;
-  // Try to find matching bracket
   let depth = 0;
-  let inStr = false;
-  let escape = false;
-  const strChar = null;
-  for (let i = start; i < content.length; i++) {
-    const c = content[i];
-    if (escape) { escape = false; continue; }
-    if (inStr) {
-      if (c === '\\') { escape = true; }
-      else if (c === inStr) { inStr = false; }
+  let quote = "";
+  let escaped = false;
+  for (let i = start; i < content.length; i += 1) {
+    const char = content[i];
+    if (escaped) {
+      escaped = false;
       continue;
     }
-    if (c === '"' || c === "'") { inStr = c; continue; }
-    if (c === '[' || c === '{') depth++;
-    if (c === ']' || c === '}') {
-      depth--;
-      if (depth === 0) {
-        return JSON.parse(content.substring(start, i + 1));
-      }
+    if (quote) {
+      if (char === "\\") escaped = true;
+      else if (char === quote) quote = "";
+      continue;
+    }
+    if (char === '"' || char === "'") {
+      quote = char;
+      continue;
+    }
+    if (char === "[" || char === "{") depth += 1;
+    if (char === "]" || char === "}") {
+      depth -= 1;
+      if (depth === 0) return JSON.parse(content.substring(start, i + 1));
     }
   }
-  return null;
+  throw new Error(`unterminated ${varName} in ${file}`);
 }
 
-const mvp = extractJSON(readFileSync(files[0], 'utf8'), 'LESSONS_MVP');
-const stage2 = extractJSON(readFileSync(files[1], 'utf8'), 'LESSONS_STAGE2_MVP');
-const prd = extractJSON(readFileSync(files[2], 'utf8'), 'LESSONS_PRD_UNRELEASED_MVP');
-const sup = extractJSON(readFileSync(files[3], 'utf8'), 'LESSONS_SUPPLEMENT_MVP');
+const lessons = extractJSON("js/data/lessons-data.js", "LESSONS_MVP");
+const supplements = extractJSON(
+  "js/data/lessons-supplement-mvp.js",
+  "LESSONS_SUPPLEMENT_MVP"
+);
 
-console.log(`MVP: ${mvp.length} lessons (${mvp.map(l=>l.lessonId).join(',')})`);
-console.log(`Stage2: ${stage2.length} lessons (${stage2.map(l=>l.lessonId).join(',')})`);
-console.log(`PRD: ${prd.length} lessons (${prd.map(l=>l.lessonId).join(',')})`);
-console.log(`Supplement: ${sup.length} lessons`);
-
-// Simulate mergeStageLessonsIntoMvp
-const merged = [...mvp];
-function merge(list) {
-  list.forEach(l => {
-    const idx = merged.findIndex(x => x.lessonId === l.lessonId);
-    if (idx >= 0) merged[idx] = l;
-    else merged.push(l);
-  });
-  merged.sort((a, b) => a.lessonId - b.lessonId);
+const ids = lessons.map((lesson) => lesson.lessonId);
+const expectedIds = Array.from({ length: 24 }, (_, index) => index + 1);
+if (JSON.stringify(ids) !== JSON.stringify(expectedIds)) {
+  throw new Error(`LESSONS_MVP ids invalid: ${ids.join(",")}`);
 }
-merge(stage2);
-merge(prd);
 
-const l1 = merged.find(l => l.lessonId === 1);
-console.log('\n=== LESSON 1 (after merge) ===');
-console.log(`Title: ${l1.lessonTitle}`);
-console.log(`Grammar nodes: ${l1.grammarNodes?.length || 0}`);
-console.log(`Dialogues: ${l1.dialogues?.length || 0}`);
-console.log(`Quiz questions: ${l1.quizQuestions?.length || 0}`);
+const supplementIds = new Set(supplements.map((lesson) => lesson.lessonId));
+const missingSupplements = expectedIds.filter((id) => !supplementIds.has(id));
+if (missingSupplements.length) {
+  throw new Error(`supplement lessons missing: ${missingSupplements.join(",")}`);
+}
 
-// Check grammar node IDs
-console.log('\nGrammar node IDs:', l1.grammarNodes?.map(g => g.id).join(', '));
-console.log('Grammar titles:', l1.grammarNodes?.map(g => g.title.substring(0, 20)).join(' | '));
+const broken = lessons.filter(
+  (lesson) =>
+    !lesson.lessonTitle ||
+    !lesson.vocab?.length ||
+    !lesson.grammarNodes?.length ||
+    !lesson.dialogues?.length ||
+    !lesson.quizQuestions?.length
+);
+if (broken.length) {
+  throw new Error(`incomplete lessons: ${broken.map((lesson) => lesson.lessonId).join(",")}`);
+}
 
-// All lessons summary
-console.log('\n=== ALL LESSONS SUMMARY ===');
-merged.forEach(l => {
-  const s = sup.find(x => x.lessonId === l.lessonId);
-  console.log(`L${l.lessonId}: grammar=${l.grammarNodes?.length || 0} dialogs=${l.dialogues?.length || 0} quizzes=${l.quizQuestions?.length || 0} supVocab=${s?.vocab?.length || 0}`);
-});
+console.log(`LESSONS_MVP: ${lessons.length} lessons (${ids.join(",")})`);
+console.log(`LESSONS_SUPPLEMENT_MVP: ${supplements.length} lessons`);
+console.log(
+  `Totals: vocab=${lessons.reduce((sum, lesson) => sum + lesson.vocab.length, 0)} ` +
+    `grammar=${lessons.reduce((sum, lesson) => sum + lesson.grammarNodes.length, 0)} ` +
+    `dialogues=${lessons.reduce((sum, lesson) => sum + lesson.dialogues.length, 0)} ` +
+    `quiz=${lessons.reduce((sum, lesson) => sum + lesson.quizQuestions.length, 0)}`
+);
+console.log("[OK] lesson data integrity checks passed");

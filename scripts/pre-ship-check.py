@@ -6,12 +6,13 @@
 from __future__ import annotations
 
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-GITHUB_PAGES_ORIGIN = "https://saivenwang-byte.github.io/XiaoWangXueRiyu"
+GITHUB_PAGES_ORIGIN = "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2"
 AUTHOR_HINT_FILES = [
     ROOT / "怎么用.txt",
     ROOT / "微信分享说明.txt",
@@ -26,6 +27,62 @@ def fail(msg: str) -> None:
 
 def ok(msg: str) -> None:
     print(f"[OK] {msg}")
+
+
+def check_js_syntax() -> bool:
+    """阻止语法损坏的 JavaScript 被发布。"""
+    node = shutil.which("node")
+    if not node:
+        fail("未找到 Node.js，无法执行 JavaScript 语法检查")
+        return False
+
+    broken: list[str] = []
+    files = sorted((ROOT / "js").rglob("*.js"))
+    for path in files:
+        result = subprocess.run(
+            [node, "--check", str(path)],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().splitlines()
+            broken.append(f"{path.relative_to(ROOT)}: {detail[-1] if detail else 'syntax error'}")
+
+    if broken:
+        fail("JavaScript 语法错误：\n  - " + "\n  - ".join(broken))
+        return False
+    ok(f"JavaScript 语法：{len(files)} 个文件全部通过 node --check")
+    return True
+
+
+def check_node_regressions() -> bool:
+    """运行课程数据与语音链路的关键回归测试。"""
+    node = shutil.which("node")
+    if not node:
+        fail("未找到 Node.js，无法执行回归测试")
+        return False
+    commands = [
+        ("课程数据完整性", [node, "scripts/test-lesson-data.mjs"]),
+        ("语音链路回归", [node, "--test", "tests/speech-regression.test.cjs"]),
+    ]
+    for label, command in commands:
+        result = subprocess.run(
+            command,
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip()
+            fail(f"{label}失败：\n{detail}")
+            return False
+    ok("课程数据与语音链路回归测试通过")
+    return True
 
 
 def check_wendi_baseline_sync() -> bool:
@@ -535,7 +592,7 @@ def print_delivery_block(passed: bool) -> None:
     print("| 双通道目视 | 交付前须 打开双通道预览.bat → A 浏览器 + B 390×844 真机框均已刷新目视 |")
     print("\n## 链接\n")
     print(f"- 本地：http://localhost:8765/index.html?v={ver}")
-    print(f"- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu/index.html?v={ver}")
+    print(f"- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v={ver}")
     print("- 本地打开：双击 `打开本地预览.bat`")
     print("- 铁律真机预览：http://127.0.0.1:8765/cursor-miniapp-phone.html?live=1")
     print("- 双通道：`打开双通道预览.bat` · `Cursor真机持续预览.bat`")
@@ -546,6 +603,8 @@ def main() -> int:
     print("=== 发布前自检 ===\n")
     print("工作流：docs/Agent交付前工作流.md\n")
     checks = [
+        check_js_syntax(),
+        check_node_regressions(),
         check_wendi_baseline_sync(),
         check_cache_ver_sync(),
         check_author_link_hints(),

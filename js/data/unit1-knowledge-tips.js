@@ -2473,8 +2473,7 @@ const GRAMMAR = {
     if (GRAMMAR[node.id]) return GRAMMAR[node.id];
     const zh = (node.explanationZh || node.titleZh || "").trim();
     if (!zh) return null;
-    const lines = zh.split(/
-+/)
+    const lines = zh.split(/\n+/)
       .slice(0, 4)
       .map((t) => ({ zh: t.trim() }))
       .filter((l) => l.zh);

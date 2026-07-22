@@ -220,6 +220,7 @@
         <div class="meta">第${m.lessonId}课 · ${modeNames[m.mode] || m.mode}</div>
         <div class="q">${escapeHtml(m.question)}</div>
         <div class="a">你的：${escapeHtml(m.yourAnswer)} → 正确：${escapeHtml(m.correctAnswer)}</div>
+      `;
       const del = document.createElement("button");
       del.type = "button";
       del.textContent = "删除";

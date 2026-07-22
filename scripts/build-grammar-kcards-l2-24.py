@@ -98,7 +98,7 @@ def merge_into_tips(path: Path, gmap: dict[str, dict]) -> None:
 
     text = re.sub(
         r"  function grammar\(node\) \{[\s\S]*?\n  \}",
-        new_grammar_fn,
+        lambda _match: new_grammar_fn,
         text,
         count=1,
     )
