@@ -16,7 +16,7 @@ https://github.com/saivenwang-byte/XiaoWangXueRiyu-v2/settings/pages
 - **Folder**：`/ (root)`  
 - 点 **Save** → 等 1～3 分钟  
 
-**学员链接（v2）**：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=314  
+**学员固定链接（v2）**：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410
 
 详细说明：`v2-Pages-开通说明.txt` · `docs/GitHub-v2仓库说明.md`
 
@@ -31,8 +31,8 @@ https://github.com/saivenwang-byte/XiaoWangXueRiyu-v2/settings/pages
 
 ## 正式链接（发给学员 · 已自动发布）
 
-- **学习**：https://saivenwang-byte.github.io/XiaoWangXueRiyu/index.html?v=46  
-- **分享页**：https://saivenwang-byte.github.io/XiaoWangXueRiyu/share.html?v=46  
+- **学习**：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410
+- **分享页**：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/share.html?v=410
 
 双击 **`帮你发布好了.bat`** 可自动复制链接并打开网页。
 
@@ -48,7 +48,7 @@ https://github.com/saivenwang-byte/XiaoWangXueRiyu-v2/settings/pages
 python -m http.server 8765
 ```
 
-浏览器：http://localhost:8765/index.html?v=46（不要用 `file://`）
+浏览器：http://localhost:8765/index.html?v=412（不要用 `file://`）
 
 ## 项目知识库（首要）
 
@@ -64,7 +64,7 @@ python -m http.server 8765
 
 ## 版本
 
-- 当前：[VERSION.md](./VERSION.md)（产品 1.0.1 · cache v=46 · MVP 已冻结）  
+- 当前：[VERSION.md](./VERSION.md)（产品 1.0.2 · 内部 cache v412 · 固定公开链接 v410）
 - 链接说明：[docs/链接转发.md](./docs/链接转发.md)  
 - 历史冻结：[VERSION-WECHAT-v1.md](./VERSION-WECHAT-v1.md)  
 - AI/协作规则：`.cursor/rules/production-netlify.mdc`

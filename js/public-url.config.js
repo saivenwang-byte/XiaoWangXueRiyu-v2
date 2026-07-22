@@ -8,6 +8,9 @@
  */
 window.HYOUGA_PUBLIC_ORIGIN = "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2";
 
+/** 对外固定兼容链接版本；与内部资源 CACHE_VER 分离，禁止随发版递增 */
+window.HYOUGA_PUBLIC_LINK_VER = "410";
+
 /** 语音包静态根（不含 /tts-cache/）；留空 = 与当前页面同源 */
 window.HYOUGA_TTS_ORIGIN = "";
 
@@ -17,4 +20,4 @@ window.HYOUGA_TTS_MIRROR_ORIGINS = [
 ];
 
 /** 与 share-wechat.js CACHE_VER、tts-cache/sw-manifest.json 同步 */
-window.HYOUGA_TTS_CACHE_VER = "411";
+window.HYOUGA_TTS_CACHE_VER = "412";

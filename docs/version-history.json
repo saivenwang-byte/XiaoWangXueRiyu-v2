@@ -2,11 +2,13 @@
   "schema": "hyouga-version-history/v1",
   "current": {
     "product": "1.0.2",
-    "cache": "411",
-    "status": "local-validated-not-pushed",
+    "cache": "412",
+    "public_link_version": "410",
+    "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410",
+    "status": "stable-public-link-release",
     "date": "2026-07-22",
-    "note": "v411：录音回放与自动校对诚实降级·语音按需缓存·可用CDN回退·全站脚本语法门禁",
-    "git_tag": "pending-local-v411",
+    "note": "内部 v412：沿用 v411 录音回放与诚实降级修复；对外学习链接永久固定 v410，分享与发布门禁已解耦",
+    "git_tag": "main-stable-public-v410",
     "ship_doc": "docs/L1-24-收官报告-v410.md",
     "checklist": "docs/L1-24-手机验收清单-v410.md",
     "paradigm_index": "docs/范式体系/完整手册-学习型软件从开发到收官.md",
@@ -32,6 +34,15 @@
     "local": "http://localhost:8765/index.html?v=410"
   },
   "releases": [
+    {
+      "product": "1.0.2",
+      "cache": "412",
+      "public_link_version": "410",
+      "date": "2026-07-22",
+      "note": "固定公开链接 v410；内部缓存 v412；v411/v412 公网入口自动归一；分享、二维码、作者脚本和发布门禁解耦",
+      "local": "http://localhost:8765/index.html?v=412",
+      "public": "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410"
+    },
     {
       "product": "1.0.2",
       "cache": "410",

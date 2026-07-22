@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""将作者常用说明/文档中的 ?v= 与 js/share-wechat.js CACHE_VER 对齐。"""
+"""将作者常用说明/文档中的 ?v= 与固定 PUBLIC_LINK_VER 对齐。"""
 from __future__ import annotations
 
 import re
@@ -18,11 +18,11 @@ def get_public_origin() -> str:
     return m.group(1).rstrip("/")
 
 
-def get_cache_ver() -> str:
+def get_public_link_ver() -> str:
     text = (ROOT / "js" / "share-wechat.js").read_text(encoding="utf-8")
-    m = re.search(r'CACHE_VER\s*=\s*"(\d+)"', text)
+    m = re.search(r'PUBLIC_LINK_VER\s*=\s*"(\d+)"', text)
     if not m:
-        raise SystemExit("[FAIL] 无法读取 CACHE_VER")
+        raise SystemExit("[FAIL] 无法读取 PUBLIC_LINK_VER")
     return m.group(1)
 
 
@@ -76,7 +76,7 @@ def sync_file(path: Path, origin: str, ver: str) -> int:
 
 def main() -> int:
     origin = get_public_origin()
-    ver = get_cache_ver()
+    ver = get_public_link_ver()
     targets = [
         ROOT / "怎么用.txt",
         ROOT / "微信分享说明.txt",

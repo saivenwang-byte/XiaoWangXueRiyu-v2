@@ -67,6 +67,7 @@ def check_node_regressions() -> bool:
     commands = [
         ("课程数据完整性", [node, "scripts/test-lesson-data.mjs"]),
         ("语音链路回归", [node, "--test", "tests/speech-regression.test.cjs"]),
+        ("固定公开链接回归", [node, "--test", "tests/stable-public-link.test.cjs"]),
     ]
     for label, command in commands:
         result = subprocess.run(
@@ -160,6 +161,15 @@ def check_wendi_baseline_sync() -> bool:
         )
         return False
 
+    public_actual = get_public_link_ver()
+    public_baseline = str((baseline.get("current") or {}).get("public_link_version", ""))
+    if not public_actual or public_baseline != public_actual:
+        fail(
+            f"文递自归基线 public_link_version={public_baseline} ≠ "
+            f"PUBLIC_LINK_VER={public_actual}"
+        )
+        return False
+
     vh_path = ROOT / "docs" / "version-history.json"
     if vh_path.is_file():
         try:
@@ -168,20 +178,28 @@ def check_wendi_baseline_sync() -> bool:
             if cache_vh and cache_vh != cache_actual:
                 fail(f"version-history current.cache={cache_vh} ≠ CACHE_VER={cache_actual}")
                 return False
+            public_vh = str((vh.get("current") or {}).get("public_link_version", ""))
+            if public_vh and public_vh != public_actual:
+                fail(
+                    f"version-history current.public_link_version={public_vh} ≠ "
+                    f"PUBLIC_LINK_VER={public_actual}"
+                )
+                return False
         except json.JSONDecodeError:
             fail("version-history.json 无法解析")
             return False
 
     ok(
-        f"文递自归基线 OK（PROJECT_SPEC + {doc_rel} + {discipline_rel}，cache v={cache_actual}）"
+        f"文递自归基线 OK（PROJECT_SPEC + {doc_rel} + {discipline_rel}，"
+        f"内部 cache v={cache_actual}，固定公链 v={public_actual}）"
     )
     return True
 
 
 def check_author_link_hints() -> bool:
-    ver = get_cache_ver()
+    ver = get_public_link_ver()
     if not ver:
-        fail("无法读取 CACHE_VER（作者链接检查跳过失败）")
+        fail("无法读取 PUBLIC_LINK_VER（作者链接检查跳过失败）")
         return False
     needle = f"?v={ver}"
     bad: list[str] = []
@@ -194,24 +212,33 @@ def check_author_link_hints() -> bool:
     bat_path = ROOT / "帮你发布好了.bat"
     if bat_path.is_file():
         bat = bat_path.read_text(encoding="utf-8")
-        if "findstr" not in bat or "CACHE_VER" not in bat:
-            bad.append("帮你发布好了.bat(须自动读 CACHE_VER)")
+        if "findstr" not in bat or "PUBLIC_LINK_VER" not in bat:
+            bad.append("帮你发布好了.bat(须自动读 PUBLIC_LINK_VER)")
     if bad:
         fail(f"作者链接未同步 v={ver}: {bad} → 运行 同步作者链接.bat")
         return False
-    ok(f"作者链接文案已含 ?v={ver}")
+    ok(f"作者固定公开链接文案已含 ?v={ver}")
     return True
 
 
 def check_cache_ver_sync() -> bool:
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     share = (ROOT / "js" / "share-wechat.js").read_text(encoding="utf-8")
+    public_config = (ROOT / "js" / "public-url.config.js").read_text(encoding="utf-8")
     m1 = re.search(r"\?v=(\d+)", index)
     m2 = re.search(r'CACHE_VER\s*=\s*"(\d+)"', share)
     if not m1 or not m2 or m1.group(1) != m2.group(1):
         fail(f"版本号不一致 index v={m1 and m1.group(1)} vs CACHE_VER={m2 and m2.group(1)}")
         return False
-    ok(f"缓存版本 v={m1.group(1)} 已同步")
+    m3 = re.search(r'PUBLIC_LINK_VER\s*=\s*"(\d+)"', share)
+    m4 = re.search(r'HYOUGA_PUBLIC_LINK_VER\s*=\s*"(\d+)"', public_config)
+    if not m3 or not m4 or m3.group(1) != m4.group(1):
+        fail(
+            f"固定公开链接版本不一致 PUBLIC_LINK_VER={m3 and m3.group(1)} "
+            f"vs HYOUGA_PUBLIC_LINK_VER={m4 and m4.group(1)}"
+        )
+        return False
+    ok(f"内部缓存 v={m1.group(1)} 与固定公开链接 v={m3.group(1)} 已分别同步")
     return True
 
 
@@ -374,6 +401,12 @@ def check_prd_vocab_all_lessons() -> bool:
 def get_cache_ver() -> str | None:
     share = (ROOT / "js" / "share-wechat.js").read_text(encoding="utf-8")
     m = re.search(r'CACHE_VER\s*=\s*"(\d+)"', share)
+    return m.group(1) if m else None
+
+
+def get_public_link_ver() -> str | None:
+    share = (ROOT / "js" / "share-wechat.js").read_text(encoding="utf-8")
+    m = re.search(r'PUBLIC_LINK_VER\s*=\s*"(\d+)"', share)
     return m.group(1) if m else None
 
 
@@ -569,6 +602,7 @@ def get_product_version() -> str:
 
 def print_delivery_block(passed: bool) -> None:
     ver = get_cache_ver() or "?"
+    public_ver = get_public_link_ver() or "?"
     product = get_product_version()
     required, missing = tts_required_missing()
     tts_line = (
@@ -592,7 +626,7 @@ def print_delivery_block(passed: bool) -> None:
     print("| 双通道目视 | 交付前须 打开双通道预览.bat → A 浏览器 + B 390×844 真机框均已刷新目视 |")
     print("\n## 链接\n")
     print(f"- 本地：http://localhost:8765/index.html?v={ver}")
-    print(f"- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v={ver}")
+    print(f"- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v={public_ver}")
     print("- 本地打开：双击 `打开本地预览.bat`")
     print("- 铁律真机预览：http://127.0.0.1:8765/cursor-miniapp-phone.html?live=1")
     print("- 双通道：`打开双通道预览.bat` · `Cursor真机持续预览.bat`")

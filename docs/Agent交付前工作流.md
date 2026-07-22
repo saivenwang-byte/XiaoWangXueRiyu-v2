@@ -15,7 +15,7 @@
 |---|------|------|
 | P1 | **先证据后交付** | 未跑自检、未看到 `[OK]` / 通过数量，不得说「已修好 / 可发布」。 |
 | P2 | **编号对账，不手查** | 语音 = 喇叭 `data-tts-key` ↔ `tts-cache/{key}.mp3`，用脚本批量比对，不靠肉眼。 |
-| P3 | **本地 ≠ 公网** | 本机只用 `http://localhost:8765/index.html?v=当前`；公网只用 GitHub Pages 链接；禁止混用。 |
+| P3 | **本地 ≠ 公网** | 本机用内部 `CACHE_VER`；公网固定使用 `index.html?v=410`；禁止混用。 |
 | P4 | **标日日文独立** | 界面日文按《标准日本语》与 `项目知识库-标日日文书写.md`，中文只进 `*Zh` / `zh` 字段。 |
 | P5 | **一次性交互** | 会話评语只服务「当前这一句」；新录音 / 播放 / 换句 → 旧评语必须消失。 |
 
@@ -40,8 +40,9 @@
 | 要求 | 做法 |
 |------|------|
 | 发链接前跑全套自检 | `发布前自检.bat` 或 `python scripts/pre-ship-check.py` |
-| `?v=` 与 `CACHE_VER` 一致 | `index.html` 全部 script/css 与 `js/share-wechat.js` |
-| 交付写清两个链接 | **本地**：`http://localhost:8765/index.html?v=N`；**公网**：`https://saivenwang-byte.github.io/XiaoWangXueRiyu/index.html?v=N` |
+| 内部资源与 `CACHE_VER` 一致 | `index.html` 全部 script/css 与 `js/share-wechat.js` `CACHE_VER` |
+| 固定公网链接 | `PUBLIC_LINK_VER=410`；分享、二维码、作者文案统一输出 `XiaoWangXueRiyu-v2/index.html?v=410` |
+| 交付写清两个链接 | **本地**：`http://localhost:8765/index.html?v=内部缓存`；**公网**：固定 v410 |
 | **开发者必须满配** | 链接带 `testcard=1&developer=1`；电脑用 `dev-phone-preview.html`（见 [开发者验收-SOP.md](./开发者验收-SOP.md)） |
 | `index.html` UTF-8 无损 | 禁止出现大面积 `??` 或 `</a>` 标签断裂；发版前打开开发者竖屏目检 |
 | 未要求不 push | 用户没说 commit/push 时，只改本地 + 给链接说明 |
@@ -54,7 +55,7 @@
 | bat 自动带当前 v | 从 `share-wechat.js` 读 `CACHE_VER`，打开 `localhost:8765/...?v=` |
 | `index.html` 含 file→localhost 跳转 | 误双击 html 时自动跳到 8765 |
 | 8765 打不开 / ERR_EMPTY_RESPONSE | 先 `重启本地服务.bat`，再 `打开本地预览.bat`；禁止未起服务就发本地链接 |
-| 产品版 vs cache | 产品 **1.0.x** 见 `version-history.json`；`?v=40` 是缓存号，不是 1.40 |
+| 产品版 vs cache vs 公链 | 产品 **1.0.x**、内部 `CACHE_VER`、固定 `PUBLIC_LINK_VER=410` 三者分开 |
 
 ### C2. 双界面 / 双通道验收【项目级·反复 · 2026-05-25】
 
@@ -103,7 +104,7 @@
 | 步骤 | 脚本 | 通过标准 |
 |------|------|----------|
 | 0 | `pre-ship-check.py` → 文递自归基线 | `项目知识库-文递自归.md` + `Agent文递自归.md` 存在；`iteration-baseline` / `version-history` 的 cache = `CACHE_VER` |
-| 1 | `pre-ship-check.py` → 版本同步 | index `?v=` = `CACHE_VER` |
+| 1 | `pre-ship-check.py` → 版本同步 | index 静态资源 `?v=` = `CACHE_VER`；公网文案 `?v=` = `PUBLIC_LINK_VER` |
 | 2 | 单词 meaningZh | zh ≥ 95% jp |
 | 3 | 课外讲题 zh | text/list 含 zh |
 | 4 | `audit-ja-text.py` | exit 0 |
@@ -127,7 +128,7 @@
 | 维度 | 比对方式 | 结果记录 |
 |------|----------|----------|
 | 语音条数 | 脚本输出「需朗读 N · 缺失 0」 | 写入回复 |
-| 版本 | `findstr CACHE_VER` vs `index.html ?v=` | 写明 v=N |
+| 版本 | `CACHE_VER` vs index 静态资源；`PUBLIC_LINK_VER` vs 公网文案 | 写明内部 v=N、公网固定 v410 |
 | 本地可开 | `python scripts/start-local-server.py --probe` 为 OK | 给出本地 URL；探测失败写「须重启本地服务」 |
 | 公网可开 | 仅 push 后；说明「需 push 后公网才更新」 | 给出公网 URL |
 | 会話评语 | 冒烟步骤 2 通过 | 写明「已自测切换清除」 |
@@ -180,7 +181,7 @@
 ## 链接
 
 - 本地：http://localhost:8765/index.html?v=__
-- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu/index.html?v=__
+- 公网：https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410
 - 本地打开：双击 `打开本地预览.bat`
 - 双通道：双击 `打开双通道预览.bat` · 真机框 http://127.0.0.1:8765/cursor-miniapp-phone.html
 

@@ -80,7 +80,7 @@
 
 等价 `python scripts/pre-ship-check.py`：
 
-1. `?v=` = `CACHE_VER`
+1. index 内部 script/css `?v=` = `CACHE_VER`；作者与学员公网链接 `?v=` = 固定 `PUBLIC_LINK_VER=410`
 2. 单词 meaningZh、课外 zh、audit-ja-text
 3. `audit-tts-registry.py --write` → **缺失 0**
 4. 存在 `打开本地预览.bat`
@@ -209,7 +209,7 @@
 
 | 项 | 定案 |
 |----|------|
-| **首要执行** | [学员端双界面显示标准-首要执行.md](./学员端双界面显示标准-首要执行.md) — **①** Cursor `cursor-miniapp-phone.html?live=1`（390×844 **切换页壳尺寸不变**）· **②** 微信 https `?v=CACHE_VER` |
+| **首要执行** | [学员端双界面显示标准-首要执行.md](./学员端双界面显示标准-首要执行.md) — **①** Cursor `cursor-miniapp-phone.html?live=1`（390×844 **切换页壳尺寸不变**）· **②** 微信固定 https `?v=410` |
 | **真源** | [双通道验收-浏览器与手机真机框.md](./双通道验收-浏览器与手机真机框.md) |
 | **前置（改 UI/课内/マイ/笔记/入門）** | 双击 **`打开双通道预览.bat`**；`8765` 须 probe OK |
 | **通道 A** | `index.html?v=CACHE_VER` — 浏览器全宽，改码后 **Ctrl+F5** 持续对照 |
@@ -222,10 +222,24 @@
 
 ---
 
+## 16. 固定公开链接与内部缓存解耦（2026-07-22 用户拍板）
+
+| 项 | 定案 |
+|----|------|
+| **唯一对外链接** | `https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410`，以后不再改变 |
+| **公开版本常量** | `js/share-wechat.js` → `PUBLIC_LINK_VER=410` |
+| **内部缓存常量** | `CACHE_VER` 独立递增；JS/CSS/TTS 与内部版本同步 |
+| **分享行为** | 首页分享、share.html、批处理、二维码和作者文案全部输出固定 v410 |
+| **兼容行为** | 公网 v411/v412 等地址自动归一到 v410，但页面加载最新内部资源 |
+| **发布门禁** | 分别检查公网固定版本与内部缓存同步，禁止再把两者合并 |
+
+---
+
 ## 6. 修订记录（记忆库）
 
 | 日期 | 记入内容 |
 |------|----------|
+| 2026-07-22 | **固定公开链接 v410** · 内部 CACHE_VER 独立递增 · 分享/门禁/文档三轨解耦 |
 | 2026-05-25 | **铁律** · `?live=1` 持续同步 · `Cursor真机持续预览.bat` · `miniapp-real-device-preview-iron-law.mdc` |
 | 2026-05-25 | **§15 双通道验收** · `打开双通道预览.bat` · `docs/双通道验收-浏览器与手机真机框.md` · pre-ship 校验 |
 | 2026-05-26 | **双界面首要执行** · `docs/学员端双界面显示标准-首要执行.md` · Cursor L1–L3 锁定壳 · 汇编 R10/R12 |

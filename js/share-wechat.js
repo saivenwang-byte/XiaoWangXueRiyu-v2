@@ -1,6 +1,8 @@
 /** 微信链接分享 · 公网 HTTPS（GitHub Pages）；人传人转发 */
 const ShareWechat = (() => {
-  const CACHE_VER = "411";
+  // 内部资源缓存版本可持续递增；对外学习链接永久保持用户已转发的 v410。
+  const CACHE_VER = "412";
+  const PUBLIC_LINK_VER = "410";
 
   const OFFICIAL_ORIGIN = "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2";
 
@@ -18,7 +20,7 @@ const ShareWechat = (() => {
   function publicLearnUrl() {
     const base = configuredOrigin() || (isPublicHttps() ? pathBase() : "");
     if (!base) return "";
-    return `${base.replace(/\/$/, "")}/index.html?v=${CACHE_VER}`;
+    return `${base.replace(/\/$/, "")}/index.html?v=${PUBLIC_LINK_VER}`;
   }
 
   function learnUrl() {
@@ -67,7 +69,7 @@ const ShareWechat = (() => {
         "正式链接（复制发微信）：\n" +
         OFFICIAL_ORIGIN +
         "/index.html?v=" +
-        CACHE_VER +
+        PUBLIC_LINK_VER +
         "\n\n" +
         "改完内容后：双击「帮你发布好了.bat」或 push GitHub，等 1～2 分钟再发链接。\n" +
         "详见：微信分享说明.txt"
@@ -82,7 +84,7 @@ const ShareWechat = (() => {
   async function shareToWechat() {
     const url = learnUrl();
     if (location.protocol === "file:") {
-      alert("不能分享本地文件。请用公网链接：\n" + OFFICIAL_ORIGIN + "/index.html?v=" + CACHE_VER);
+      alert("不能分享本地文件。请用公网链接：\n" + OFFICIAL_ORIGIN + "/index.html?v=" + PUBLIC_LINK_VER);
       return;
     }
     if (!isPublicHttps() && !configuredOrigin()) {
@@ -158,6 +160,7 @@ const ShareWechat = (() => {
     mountButton,
     mountWechatBanner,
     CACHE_VER,
+    PUBLIC_LINK_VER,
     OFFICIAL_ORIGIN,
   };
 })();

@@ -4,10 +4,10 @@
 
 【正式学习链接 · 只发这一条】
 
-  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=411
+  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html?v=410
 
   分享页（自己复制用）：
-  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/share.html?v=411
+  https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/share.html?v=410
 
 ───────────────────────────────────────────────────────
 一、你怎么发（10 秒）
@@ -25,7 +25,7 @@
 
   改「日语学习」文件夹里的课 / 语音 → git push GitHub
   等 1～2 分钟，大家重新打开同一条链接就是新版。
-  域名不变，不用重新发新链接（除非改了 ?v= 版本号）。
+  域名和 ?v=410 永久不变，不用重新发新链接；内部缓存版本由系统自动升级。
 
 ───────────────────────────────────────────────────────
 三、录音跟读（微信里）

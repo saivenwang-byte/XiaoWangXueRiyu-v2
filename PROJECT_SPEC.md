@@ -1,7 +1,7 @@
 # 项目全局规范说明书 · Cursor Agent 终极索引
 
 > **地位**：本文件为仓库内 Agent/协作者的**总入口**。细则分册见 `docs/`，禁止在本文件重复粘贴全文。  
-> **当前阶段**：**L1–24 已收官 ship**（产品 **1.0.2** · cache **v410**）→ [docs/L1-24-收官报告-v410.md](docs/L1-24-收官报告-v410.md)。MVP 1.0.1 三课冻结存档 → [docs/MVP-FREEZE.md](docs/MVP-FREEZE.md)。下阶段见 [docs/FULL-VERSION-ROADMAP.md](docs/FULL-VERSION-ROADMAP.md) · `iteration-baseline.json` → `backlog`。
+> **当前阶段**：**L1–24 已收官 ship**（产品 **1.0.2** · 内部 cache **v412** · 固定公开链接 **v410**）→ [docs/L1-24-收官报告-v410.md](docs/L1-24-收官报告-v410.md)。MVP 1.0.1 三课冻结存档 → [docs/MVP-FREEZE.md](docs/MVP-FREEZE.md)。下阶段见 [docs/FULL-VERSION-ROADMAP.md](docs/FULL-VERSION-ROADMAP.md) · `iteration-baseline.json` → `backlog`。
 
 ---
 
@@ -76,13 +76,14 @@
 
 ---
 
-## 5. 版本双轨（ bump 时四处同步）
+## 5. 产品／公开链接／内部缓存三轨
 
 | 轨道 | 位置 | 说明 |
 |------|------|------|
 | 产品 semver | `docs/version-history.json` · `VERSION.md` | 如 1.0.1 |
-| 资源 cache | `js/share-wechat.js` `CACHE_VER` · `index.html` `?v=` · `iteration-baseline.json` `current.cache` | 如 45 |
-| 作者文案 | bump 后运行 **`同步作者链接.bat`**（或 `python scripts/sync-cache-ver-hints.py`） | `怎么用.txt` 等 |
+| 固定公开链接 | `js/share-wechat.js` `PUBLIC_LINK_VER` · `iteration-baseline.json` `current.public_link_version` | 固定 410，不随内部发版递增 |
+| 内部资源 cache | `js/share-wechat.js` `CACHE_VER` · `index.html` 静态资源 `?v=` · `iteration-baseline.json` `current.cache` | 每次技术发版递增，如 412 |
+| 作者文案 | 运行 **`同步作者链接.bat`**（或 `python scripts/sync-cache-ver-hints.py`） | 始终写固定公开链接 v410 |
 
 ---
 

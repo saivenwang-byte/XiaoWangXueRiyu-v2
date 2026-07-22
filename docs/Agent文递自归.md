@@ -65,7 +65,7 @@
 | **已确认（勿回归破坏）** | `iteration-baseline.json` → `confirmed[]` | 每条含 `id`、`since_cache`、涉及文件、验收句 |
 | **用户同意未做** | 同上 → `backlog[]` | 如 P0 灰字、P2 难词提示；**不得**混进 confirmed |
 | **踩坑与费用** | `Agent交付前工作流-记忆库.md` | 根因叙述（如评语 duplicate、localhost 僵尸） |
-| **产品/缓存版** | `version-history.json` | semver 与 `?v=` 沿革 |
+| **产品/缓存/公链** | `version-history.json` | semver、内部 `CACHE_VER` 与固定 `PUBLIC_LINK_VER=410` 沿革 |
 
 Agent **不得**用会话记忆代替上述文件；新会话 = 读文件继续叠层（文递自归），不是重写 app。
 

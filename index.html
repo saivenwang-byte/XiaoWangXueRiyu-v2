@@ -2,6 +2,9 @@
 <html lang="ja" translate="no">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -14,25 +17,30 @@
   <title>日语初级课后练习 · 学习の道</title>
   <script>
     (function () {
-      var CACHE_BOOT = "411";
+      var CACHE_BOOT = "412";
+      var PUBLIC_LINK_VER = "410";
       window.HYOUGA_CACHE_BOOT = CACHE_BOOT;
       var OFFICIAL = "https://saivenwang-byte.github.io/XiaoWangXueRiyu-v2/index.html";
       var host = location.hostname;
       var path = location.pathname || "";
       if (/github\.io$/i.test(host)) {
-        var needV2 =
+        var isOfficialRoot =
           path === "/" ||
           path === "" ||
           /^\/XiaoWangXueRiyu\/?$/i.test(path) ||
           /^\/XiaoWangXueRiyu-v2\/?$/i.test(path);
-        if (needV2) {
-          var q = location.search || "";
-          var vm = q.match(/[?&]v=(\d+)/);
-          var vNum = vm ? parseInt(vm[1], 10) : 0;
-          if (!/\/index\.html/i.test(path) || !vm || vNum < 340) {
-            location.replace(OFFICIAL + "?v=" + CACHE_BOOT);
-            return;
-          }
+        var isOfficialIndex = /^\/XiaoWangXueRiyu-v2\/index\.html$/i.test(path);
+        var q = location.search || "";
+        var vm = q.match(/[?&]v=(\d+)/);
+        if (isOfficialRoot) {
+          location.replace(OFFICIAL + "?v=" + PUBLIC_LINK_VER);
+          return;
+        }
+        if (isOfficialIndex && (!vm || vm[1] !== PUBLIC_LINK_VER)) {
+          var params = new URLSearchParams(q);
+          params.set("v", PUBLIC_LINK_VER);
+          location.replace(OFFICIAL + "?" + params.toString() + (location.hash || ""));
+          return;
         }
       }
       window.__hyougaBootFailTimer = setTimeout(function () {
@@ -44,12 +52,7 @@
         var pathOk = /\/index\.html/i.test(location.pathname || "");
         var hasV = /[?&]v=\d+/.test(location.search || "");
         if (pathOk && hasV && /github\.io$/i.test(location.hostname || "")) return;
-        var ver =
-          (typeof ShareWechat !== "undefined" && ShareWechat.CACHE_VER) ||
-          window.HYOUGA_CACHE_BOOT ||
-          (location.search.match(/[?&]v=(\d+)/) || [])[1] ||
-          CACHE_BOOT;
-        var url = OFFICIAL + "?v=" + ver;
+        var url = OFFICIAL + "?v=" + PUBLIC_LINK_VER;
         var box = document.createElement("div");
         box.id = "hyouga-boot-fallback";
         box.setAttribute(
@@ -83,16 +86,16 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon.svg" />
-  <link rel="stylesheet" href="css/design-tokens.css?v=411" />
-  <link rel="stylesheet" href="css/app.css?v=411" />
-  <link rel="stylesheet" href="css/mvp.css?v=411" />
-  <link rel="stylesheet" href="css/hyo-top-bar.css?v=411" />
-  <link rel="stylesheet" href="css/notes-ui-system.css?v=411" />
-  <link rel="stylesheet" href="css/vi-typography-sweep.css?v=411" />
-  <link rel="stylesheet" href="css/journey-catalog-mobile-fix.css?v=411" />
-  <link rel="stylesheet" href="css/journey-catalog-notes-layout.css?v=411" />
-  <link rel="stylesheet" href="css/write-l0.css?v=411" />
-  <link rel="stylesheet" href="css/miniapp-webview.css?v=411" />
+  <link rel="stylesheet" href="css/design-tokens.css?v=412" />
+  <link rel="stylesheet" href="css/app.css?v=412" />
+  <link rel="stylesheet" href="css/mvp.css?v=412" />
+  <link rel="stylesheet" href="css/hyo-top-bar.css?v=412" />
+  <link rel="stylesheet" href="css/notes-ui-system.css?v=412" />
+  <link rel="stylesheet" href="css/vi-typography-sweep.css?v=412" />
+  <link rel="stylesheet" href="css/journey-catalog-mobile-fix.css?v=412" />
+  <link rel="stylesheet" href="css/journey-catalog-notes-layout.css?v=412" />
+  <link rel="stylesheet" href="css/write-l0.css?v=412" />
+  <link rel="stylesheet" href="css/miniapp-webview.css?v=412" />
   <style>
     .gn-modal { display: none !important; pointer-events: none !important; visibility: hidden !important; }
     .mvp-backdrop { display: none !important; pointer-events: none !important; visibility: hidden !important; }
@@ -123,9 +126,9 @@
       <p class="splash-boot-loading" style="text-align:center;padding:48px 16px;font-size:15px;color:#78909c">加载中…</p>
     </div>
   </div>
-  <script src="js/product-brand.js?v=411"></script>
-  <script src="js/share-wechat.js?v=411"></script>
-  <script src="js/home-splash.js?v=411"></script>
+  <script src="js/product-brand.js?v=412"></script>
+  <script src="js/share-wechat.js?v=412"></script>
+  <script src="js/home-splash.js?v=412"></script>
 
   <div id="app">
     <header class="top-bar hyo-top-bar" data-hyo-view="home">
@@ -207,7 +210,7 @@
     <div id="story-comic-zoom" class="story-comic-zoom mvp-backdrop" hidden aria-hidden="true"></div>
 
         <nav class="bottom-nav" aria-label="主导航">
-      <a href="intro.html?v=411" class="nav-item nav-item--link" id="nav-intro" title="五十音·入門">
+      <a href="intro.html?v=412" class="nav-item nav-item--link" id="nav-intro" title="五十音·入門">
         <span class="nav-icon" aria-hidden="true"></span>
         <span class="nav-label">注音</span>
       </a>
@@ -226,65 +229,65 @@
     </nav>
   </div>
 
-  <script src="js/lesson-overview.js?v=411"></script>
-  <script src="js/image-tools.js?v=411"></script>
-  <script src="js/public-url.config.js?v=411"></script>
-  <script src="js/tts-sw-register.js?v=411"></script>
-  <script src="js/data/mini-cards.js?v=411"></script>
-  <script src="js/data/lessons-data.js?v=411"></script>
-  <script src="js/data/lessons-mvp.js?v=411"></script>
-  <script src="js/data/curriculum-catalog.js?v=411"></script>
-  <script src="js/ruby-render.js?v=411"></script>
-  <script src="js/mvp-storage.js?v=411"></script>
-  <script src="js/speech-engine.js?v=411"></script>
-  <script src="js/speak-ui.js?v=411"></script>
-  <script src="js/kana-speak.js?v=411"></script>
-  <script src="js/shadow-speak.js?v=411"></script>
-  <script src="js/ui-feedback.js?v=411"></script>
-  <script src="js/sensei-tip-card.js?v=411"></script>
-  <script src="js/hyouga-fold-overview.js?v=411"></script>
-  <script src="js/data/l1-dialogue-abc.js?v=411"></script>
-  <script src="js/data/unit1-dialogue-abc-l234.js?v=411"></script>
-  <script src="js/data/unit2-dialogue-abc-l5-8.js?v=411"></script>
-  <script src="js/data/dialogue-zh-l9-24.js?v=411"></script>
-  <script src="js/data/lessons-9-24-dialogue-abc.js?v=411"></script>
-  <script src="js/data/knowledge-graph.js?v=411"></script>
-  <script src="js/knowledge-link.js?v=411"></script>
-  <script src="js/data/l1-knowledge-tips.js?v=411"></script>
-  <script src="js/data/unit1-knowledge-tips.js?v=411"></script>
-  <script src="js/data/unit2-knowledge-tips.js?v=411"></script>
-  <script src="js/data/lessons-9-24-knowledge-tips.js?v=411"></script>
-  <script src="js/lesson-1-flow.js?v=411"></script>
-  <script src="js/l1-knowledge-card.js?v=411"></script>
-  <script src="js/grammar-network.js?v=411"></script>
-  <script src="js/dialogue-gate.js?v=411"></script>
-  <script src="js/quiz-gate.js?v=411"></script>
-  <script src="js/vocab-flash.js?v=411"></script>
-  <script src="js/scroll-hint.js?v=411"></script>
-  <script src="js/nav-icons.js?v=411"></script>
-  <script src="js/top-bar-chrome.js?v=411"></script>
-  <script src="js/data/intro-content.js?v=411"></script>
-  <script src="js/data/kana-stroke-guide.js?v=411"></script>
-  <script src="js/data/kana-nazorigaki-manifest.js?v=411"></script>
-  <script src="js/data/kana-nazorigaki-meta.js?v=411"></script>
-  <script src="js/data/kana-nazorigaki-kata-manifest.js?v=411"></script>
-  <script src="js/data/kana-nazorigaki-kata-meta.js?v=411"></script>
-  <script src="js/write-kana-stroke-ui.js?v=411"></script>
-  <script src="js/write-kana-l0.js?v=411"></script>
-  <script src="js/data/unit-strip-storyboard.js?v=411"></script>
-  <script src="js/story-comic-ui.js?v=411"></script>
-  <script src="js/data/grand-finale-cards.js?v=411"></script>
-  <script src="js/story-caption-jp.js?v=411"></script>
-  <script src="js/story-reward.js?v=411"></script>
-  <script src="js/story-egg-viewport.js?v=411"></script>
-  <script src="js/story-egg.js?v=411"></script>
-  <script src="js/lesson-recap.js?v=411"></script>
-  <script src="js/journey-home.js?v=411"></script>
-  <script src="js/hyouga-test-card.js?v=411"></script>
-  <script src="js/learning-notes.js?v=411"></script>
-  <script src="js/study-timer.js?v=411"></script>
-  <script src="js/notes-panel.js?v=411"></script>
-  <script src="js/app.js?v=411"></script>
+  <script src="js/lesson-overview.js?v=412"></script>
+  <script src="js/image-tools.js?v=412"></script>
+  <script src="js/public-url.config.js?v=412"></script>
+  <script src="js/tts-sw-register.js?v=412"></script>
+  <script src="js/data/mini-cards.js?v=412"></script>
+  <script src="js/data/lessons-data.js?v=412"></script>
+  <script src="js/data/lessons-mvp.js?v=412"></script>
+  <script src="js/data/curriculum-catalog.js?v=412"></script>
+  <script src="js/ruby-render.js?v=412"></script>
+  <script src="js/mvp-storage.js?v=412"></script>
+  <script src="js/speech-engine.js?v=412"></script>
+  <script src="js/speak-ui.js?v=412"></script>
+  <script src="js/kana-speak.js?v=412"></script>
+  <script src="js/shadow-speak.js?v=412"></script>
+  <script src="js/ui-feedback.js?v=412"></script>
+  <script src="js/sensei-tip-card.js?v=412"></script>
+  <script src="js/hyouga-fold-overview.js?v=412"></script>
+  <script src="js/data/l1-dialogue-abc.js?v=412"></script>
+  <script src="js/data/unit1-dialogue-abc-l234.js?v=412"></script>
+  <script src="js/data/unit2-dialogue-abc-l5-8.js?v=412"></script>
+  <script src="js/data/dialogue-zh-l9-24.js?v=412"></script>
+  <script src="js/data/lessons-9-24-dialogue-abc.js?v=412"></script>
+  <script src="js/data/knowledge-graph.js?v=412"></script>
+  <script src="js/knowledge-link.js?v=412"></script>
+  <script src="js/data/l1-knowledge-tips.js?v=412"></script>
+  <script src="js/data/unit1-knowledge-tips.js?v=412"></script>
+  <script src="js/data/unit2-knowledge-tips.js?v=412"></script>
+  <script src="js/data/lessons-9-24-knowledge-tips.js?v=412"></script>
+  <script src="js/lesson-1-flow.js?v=412"></script>
+  <script src="js/l1-knowledge-card.js?v=412"></script>
+  <script src="js/grammar-network.js?v=412"></script>
+  <script src="js/dialogue-gate.js?v=412"></script>
+  <script src="js/quiz-gate.js?v=412"></script>
+  <script src="js/vocab-flash.js?v=412"></script>
+  <script src="js/scroll-hint.js?v=412"></script>
+  <script src="js/nav-icons.js?v=412"></script>
+  <script src="js/top-bar-chrome.js?v=412"></script>
+  <script src="js/data/intro-content.js?v=412"></script>
+  <script src="js/data/kana-stroke-guide.js?v=412"></script>
+  <script src="js/data/kana-nazorigaki-manifest.js?v=412"></script>
+  <script src="js/data/kana-nazorigaki-meta.js?v=412"></script>
+  <script src="js/data/kana-nazorigaki-kata-manifest.js?v=412"></script>
+  <script src="js/data/kana-nazorigaki-kata-meta.js?v=412"></script>
+  <script src="js/write-kana-stroke-ui.js?v=412"></script>
+  <script src="js/write-kana-l0.js?v=412"></script>
+  <script src="js/data/unit-strip-storyboard.js?v=412"></script>
+  <script src="js/story-comic-ui.js?v=412"></script>
+  <script src="js/data/grand-finale-cards.js?v=412"></script>
+  <script src="js/story-caption-jp.js?v=412"></script>
+  <script src="js/story-reward.js?v=412"></script>
+  <script src="js/story-egg-viewport.js?v=412"></script>
+  <script src="js/story-egg.js?v=412"></script>
+  <script src="js/lesson-recap.js?v=412"></script>
+  <script src="js/journey-home.js?v=412"></script>
+  <script src="js/hyouga-test-card.js?v=412"></script>
+  <script src="js/learning-notes.js?v=412"></script>
+  <script src="js/study-timer.js?v=412"></script>
+  <script src="js/notes-panel.js?v=412"></script>
+  <script src="js/app.js?v=412"></script>
   <script>
     (function hideStaleModals() {
       document.querySelectorAll(".mvp-backdrop, .gn-modal").forEach(function (m) {
@@ -324,7 +327,7 @@
     ShareWechat.mountButton(document.getElementById("btn-share-me"));
     ShareWechat.mountWechatBanner(document.getElementById("app"));
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=411").catch(function(){});
+      navigator.serviceWorker.register("sw.js?v=412").catch(function(){});
     }
   </script>
 </body>
