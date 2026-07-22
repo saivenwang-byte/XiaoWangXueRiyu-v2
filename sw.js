@@ -1,4 +1,4 @@
-/** Service Worker · P1 语音包分批预缓存（支持独立 TTS CDN） */
+/** Service Worker · 示范语音按需缓存（支持独立 TTS CDN） */
 /* global self, caches, fetch */
 
 const MANIFEST_URL = "tts-cache/sw-manifest.json";
