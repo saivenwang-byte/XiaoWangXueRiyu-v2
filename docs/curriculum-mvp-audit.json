@@ -1,0 +1,441 @@
+{
+  "goldRef": 14,
+  "thresholds": {
+    "gold": {
+      "grammar_nodes_min": 5,
+      "quiz_min": 4,
+      "dialogue_replies_min": 3,
+      "vocab_depth_min": 8,
+      "node_patches_min": 1,
+      "coach_summary": true,
+      "difficult_hints": true
+    },
+    "silver": {
+      "grammar_nodes_min": 2,
+      "quiz_min": 3,
+      "dialogue_replies_min": 3,
+      "vocab_depth_min": 5,
+      "node_patches_min": 0,
+      "coach_summary": true,
+      "difficult_hints": false
+    }
+  },
+  "rows": [
+    {
+      "lessonId": 1,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 10,
+      "vocabDepth": 28,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": false,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 2,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 13,
+      "vocabDepth": 35,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 3,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 12,
+      "vocabDepth": 42,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 4,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 12,
+      "vocabDepth": 35,
+      "nodePatches": 6,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 5,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 13,
+      "vocabDepth": 31,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 6,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 11,
+      "vocabDepth": 35,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 7,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 15,
+      "vocabDepth": 35,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 8,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 17,
+      "vocabDepth": 40,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 9,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 13,
+      "vocabDepth": 34,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 10,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 17,
+      "vocabDepth": 39,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 11,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 14,
+      "vocabDepth": 38,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 12,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 11,
+      "vocabDepth": 34,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 13,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 13,
+      "vocabDepth": 58,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 14,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 14,
+      "vocabDepth": 47,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 15,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 19,
+      "vocabDepth": 43,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 16,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 15,
+      "vocabDepth": 52,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 17,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 17,
+      "vocabDepth": 36,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 18,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 16,
+      "vocabDepth": 59,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 19,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 19,
+      "vocabDepth": 43,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 20,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 20,
+      "vocabDepth": 51,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 21,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 20,
+      "vocabDepth": 37,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 22,
+      "grammarNodes": 6,
+      "quizQuestions": 12,
+      "dialogueReplies": 23,
+      "vocabDepth": 41,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 23,
+      "grammarNodes": 5,
+      "quizQuestions": 12,
+      "dialogueReplies": 19,
+      "vocabDepth": 51,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "gold",
+      "gaps": [],
+      "source": "lessons-data"
+    },
+    {
+      "lessonId": 24,
+      "grammarNodes": 4,
+      "quizQuestions": 12,
+      "dialogueReplies": 23,
+      "vocabDepth": 38,
+      "nodePatches": 5,
+      "coachSummary": true,
+      "difficultHints": true,
+      "hasChineseDialogue": true,
+      "hasQuestionTts": true,
+      "hasBiaoriVocab": true,
+      "level": "silver",
+      "gaps": [
+        "文法节点4/5"
+      ],
+      "source": "lessons-data"
+    }
+  ]
+}
